@@ -1,0 +1,529 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="142">
+  <defs>
+    <linearGradient id="edge-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="white" stop-opacity="0"/>
+      <stop offset="8%"   stop-color="white" stop-opacity="1"/>
+      <stop offset="92%"  stop-color="white" stop-opacity="1"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="badge-mask">
+      <rect width="720" height="142" fill="url(#edge-fade)"/>
+    </mask>
+    <clipPath id="track-clip">
+      <rect width="720" height="142"/>
+    </clipPath>
+  <style>
+    @keyframes badge-scroll-0 {
+      0.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      2.8571%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      10.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      12.8571%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      20.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      22.8571%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      30.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      32.8571%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      40.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      42.8571%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      50.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      52.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      60.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      62.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      70.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      72.8571%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      80.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      82.8571%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      90.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      92.8571%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      100.0000% { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+    }
+    @keyframes badge-scroll-1 {
+      0.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      2.8571%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      10.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      12.8571%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      20.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      22.8571%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      30.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      32.8571%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      40.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      42.8571%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      50.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      52.8571%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      60.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      62.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      70.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      72.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      80.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      82.8571%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      90.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      92.8571%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      100.0000% { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+    }
+    @keyframes badge-scroll-2 {
+      0.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      2.8571%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      10.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      12.8571%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      20.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      22.8571%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      30.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      32.8571%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      40.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      42.8571%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      50.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      52.8571%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      60.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      62.8571%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      70.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      72.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      80.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      82.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      90.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      92.8571%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      100.0000% { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+    }
+    @keyframes badge-scroll-3 {
+      0.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      2.8571%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      10.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      12.8571%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      20.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      22.8571%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      30.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      32.8571%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      40.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      42.8571%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      50.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      52.8571%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      60.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      62.8571%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      70.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      72.8571%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      80.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      82.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      90.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      92.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      100.0000% { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+    }
+    @keyframes badge-scroll-4 {
+      0.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      2.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      10.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      12.8571%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      20.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      22.8571%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      30.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      32.8571%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      40.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      42.8571%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      50.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      52.8571%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      60.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      62.8571%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      70.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      72.8571%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      80.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      82.8571%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      90.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      92.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      100.0000% { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+    }
+    @keyframes badge-scroll-5 {
+      0.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      2.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      10.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      12.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      20.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      22.8571%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      30.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      32.8571%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      40.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      42.8571%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      50.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      52.8571%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      60.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      62.8571%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      70.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      72.8571%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      80.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      82.8571%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      90.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      92.8571%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      100.0000% { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+    }
+    @keyframes badge-scroll-6 {
+      0.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      2.8571%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      10.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      12.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      20.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      22.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      30.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      32.8571%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      40.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      42.8571%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      50.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      52.8571%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      60.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      62.8571%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      70.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      72.8571%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      80.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      82.8571%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      90.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      92.8571%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      100.0000% { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+    }
+    @keyframes badge-scroll-7 {
+      0.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      2.8571%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      10.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      12.8571%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      20.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      22.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      30.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      32.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      40.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      42.8571%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      50.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      52.8571%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      60.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      62.8571%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      70.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      72.8571%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      80.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      82.8571%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      90.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      92.8571%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      100.0000% { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+    }
+    @keyframes badge-scroll-8 {
+      0.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      2.8571%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      10.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      12.8571%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      20.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      22.8571%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      30.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      32.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      40.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      42.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      50.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      52.8571%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      60.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      62.8571%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      70.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      72.8571%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      80.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      82.8571%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      90.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      92.8571%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      100.0000% { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+    }
+    @keyframes badge-scroll-9 {
+      0.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      2.8571%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      10.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      12.8571%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      20.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      22.8571%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      30.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      32.8571%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      40.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      42.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      50.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      52.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      60.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      62.8571%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      70.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      72.8571%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      80.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      82.8571%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      90.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      92.8571%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      100.0000% { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+    }
+    @keyframes tooltip-fade-0 {
+      0.0000% { opacity: 1.00; }
+      2.8571% { opacity: 1.00; }
+      3.9286% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-1 {
+      0.0000% { opacity: 0.00; }
+      6.4286% { opacity: 0.00; }
+      10.0000% { opacity: 1.00; }
+      12.8571% { opacity: 1.00; }
+      13.9286% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-2 {
+      0.0000% { opacity: 0.00; }
+      16.4286% { opacity: 0.00; }
+      20.0000% { opacity: 1.00; }
+      22.8571% { opacity: 1.00; }
+      23.9286% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-3 {
+      0.0000% { opacity: 0.00; }
+      26.4286% { opacity: 0.00; }
+      30.0000% { opacity: 1.00; }
+      32.8571% { opacity: 1.00; }
+      33.9286% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-4 {
+      0.0000% { opacity: 0.00; }
+      36.4286% { opacity: 0.00; }
+      40.0000% { opacity: 1.00; }
+      42.8571% { opacity: 1.00; }
+      43.9286% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-5 {
+      0.0000% { opacity: 0.00; }
+      46.4286% { opacity: 0.00; }
+      50.0000% { opacity: 1.00; }
+      52.8571% { opacity: 1.00; }
+      53.9286% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-6 {
+      0.0000% { opacity: 0.00; }
+      56.4286% { opacity: 0.00; }
+      60.0000% { opacity: 1.00; }
+      62.8571% { opacity: 1.00; }
+      63.9286% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-7 {
+      0.0000% { opacity: 0.00; }
+      66.4286% { opacity: 0.00; }
+      70.0000% { opacity: 1.00; }
+      72.8571% { opacity: 1.00; }
+      73.9286% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-8 {
+      0.0000% { opacity: 0.00; }
+      76.4286% { opacity: 0.00; }
+      80.0000% { opacity: 1.00; }
+      82.8571% { opacity: 1.00; }
+      83.9286% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-9 {
+      0.0000% { opacity: 0.00; }
+      86.4286% { opacity: 0.00; }
+      90.0000% { opacity: 1.00; }
+      92.8571% { opacity: 1.00; }
+      93.9286% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    svg:hover * { animation-play-state: paused; }
+    .b0 { animation: badge-scroll-0 35.0s linear infinite; animation-fill-mode: both; }
+    .b1 { animation: badge-scroll-1 35.0s linear infinite; animation-fill-mode: both; }
+    .b2 { animation: badge-scroll-2 35.0s linear infinite; animation-fill-mode: both; }
+    .b3 { animation: badge-scroll-3 35.0s linear infinite; animation-fill-mode: both; }
+    .b4 { animation: badge-scroll-4 35.0s linear infinite; animation-fill-mode: both; }
+    .b5 { animation: badge-scroll-5 35.0s linear infinite; animation-fill-mode: both; }
+    .b6 { animation: badge-scroll-6 35.0s linear infinite; animation-fill-mode: both; }
+    .b7 { animation: badge-scroll-7 35.0s linear infinite; animation-fill-mode: both; }
+    .b8 { animation: badge-scroll-8 35.0s linear infinite; animation-fill-mode: both; }
+    .b9 { animation: badge-scroll-9 35.0s linear infinite; animation-fill-mode: both; }
+    .t0 { animation: tooltip-fade-0 35.0s linear infinite; animation-fill-mode: both; }
+    .t1 { animation: tooltip-fade-1 35.0s linear infinite; animation-fill-mode: both; }
+    .t2 { animation: tooltip-fade-2 35.0s linear infinite; animation-fill-mode: both; }
+    .t3 { animation: tooltip-fade-3 35.0s linear infinite; animation-fill-mode: both; }
+    .t4 { animation: tooltip-fade-4 35.0s linear infinite; animation-fill-mode: both; }
+    .t5 { animation: tooltip-fade-5 35.0s linear infinite; animation-fill-mode: both; }
+    .t6 { animation: tooltip-fade-6 35.0s linear infinite; animation-fill-mode: both; }
+    .t7 { animation: tooltip-fade-7 35.0s linear infinite; animation-fill-mode: both; }
+    .t8 { animation: tooltip-fade-8 35.0s linear infinite; animation-fill-mode: both; }
+    .t9 { animation: tooltip-fade-9 35.0s linear infinite; animation-fill-mode: both; }
+  </style>
+  </defs>
+  <g clip-path="url(#track-clip)" mask="url(#badge-mask)">
+  <g class="b0">
+    <rect x="-32" y="-34" width="64" height="68" rx="10" fill="#f05033"/>
+    <rect x="-32" y="-34" width="64" height="68" rx="10"
+          fill="none" stroke="white" stroke-opacity="0.18" stroke-width="1.5"/>
+    <image x="-18" y="-28" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIzLjU0NiAxMC45M0wxMy4wNjcuNDUyYy0uNjA0LS42MDMtMS41ODItLjYwMy0yLjE4OCAwTDguNzA4IDIuNjI3bDIuNzYgMi43NmMuNjQ1LS4yMTUgMS4zNzktLjA3IDEuODg5LjQ0MS41MTYuNTE1LjY1OCAxLjI1OC40MzggMS45bDIuNjU4IDIuNjZjLjY0NS0uMjIzIDEuMzg3LS4wNzggMS45LjQzNS43MjEuNzIuNzIxIDEuODg0IDAgMi42MDQtLjcxOS43MTktMS44ODEuNzE5LTIuNiAwLS41MzktLjU0MS0uNjc0LTEuMzM3LS40MDQtMS45OTZMMTIuODYgOC45NTV2Ni41MjVjLjE3Ni4wODYuMzQyLjIwMy40ODguMzQ4LjcxMy43MjEuNzEzIDEuODgzIDAgMi42LS43MTkuNzIxLTEuODg5LjcyMS0yLjYwOSAwLS43MTktLjcxOS0uNzE5LTEuODc5IDAtMi41OTguMTgyLS4xOC4zODctLjMxNi42MDUtLjQwNlY4LjgzNWMtLjIxNy0uMDkxLS40MjQtLjIyMi0uNi0uNDAxLS41NDUtLjU0NS0uNjc2LTEuMzQyLS4zOTYtMi4wMDlMNy42MzYgMy43LjQ1IDEwLjg4MWMtLjYuNjA1LS42IDEuNTg0IDAgMi4xODlsMTAuNDggMTAuNDc3Yy42MDQuNjA0IDEuNTgyLjYwNCAyLjE4NiAwbDEwLjQzLTEwLjQzYy42MDUtLjYwMy42MDUtMS41ODIgMC0yLjE4NyIgZmlsbD0id2hpdGUiLz48L3N2Zz4="/>
+    <text x="0" y="25" text-anchor="middle" fill="white" font-size="8" font-weight="600" font-family="Segoe UI,Ubuntu,sans-serif">Git</text>
+  </g>
+  <g class="b1">
+    <rect x="-32" y="-34" width="64" height="68" rx="10" fill="#5c2d91"/>
+    <rect x="-32" y="-34" width="64" height="68" rx="10"
+          fill="none" stroke="white" stroke-opacity="0.18" stroke-width="1.5"/>
+    <g transform="translate(0,-10)"><path d="M-12,-14 L-12,14 L16,0 Z" fill="white" fill-opacity="0.92"/><path d="M-18,-12 Q-14,-16 -12,-14 L-12,-8 Q-16,-8 -16,-4 Q-16,4 -12,8 L-12,14 Q-14,16 -18,12 Z" fill="white" fill-opacity="0.6"/></g>
+    <text x="0" y="25" text-anchor="middle" fill="white" font-size="8" font-weight="600" font-family="Segoe UI,Ubuntu,sans-serif" textLength="56" lengthAdjust="spacingAndGlyphs">Visual Studio</text>
+  </g>
+  <g class="b2">
+    <rect x="-32" y="-34" width="64" height="68" rx="10" fill="#007acc"/>
+    <rect x="-32" y="-34" width="64" height="68" rx="10"
+          fill="none" stroke="white" stroke-opacity="0.18" stroke-width="1.5"/>
+    <image x="-18" y="-28" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTExLjU4My41NGExLjQ2NyAxLjQ2NyAwIDAgMC0uNDQxIDIuMDMyYzIuNDI2IDMuNzU4IDIuOTk5IDYuNTkyIDIuNzUgOS4wNzUtMS4wMDQgNC43NTYtMy4xODcgNS43MjEtNS4wOTQgNS43MjEtMS44NjMgMC0xLjM2NC0zLjA2NS4wMzYtMy45NjIuODM2LS41MjIgMS45MDYtLjg2MSAyLjcyOC0uODYxLjgxNCAwIDEuNDc0LS42NTggMS40NzQtMS40NyAwLS44MTItLjY2LTEuNDctMS40NzQtMS40Ny0uOTYgMC0xLjkwMS4yMDItMi43OC41NDUuMTgtLjg0Ny4yNDYtMS43NjIuMDE0LTIuNzM1LS4zNTItMS40NzctMS4zNjctMi44ODktMy4xMjgtNC4yNTdhMS40NzYgMS40NzYgMCAwIDAtMi4wNjkuMjU2Yy0uNS42NC0uMzg0IDEuNTY0LjI1OSAyLjA2MyAxLjQzNSAxLjExNCAxLjkwOCAxLjkzOSAyLjA3IDIuNjE4LjE2Mi42NzkuMDMyIDEuNDA3LS4yOTMgMi40MDgtLjQxNiAxLjM0OS0uOSAyLjU1My0xLjExIDMuNzA4LS4xMDUuNTY4LS4xMTQgMS4xODctLjE0IDEuNjgtMS4wMzQtMS4wMDYtMS40MzgtMi4zMzYtMS40MzgtNC4yNzkgMC0uODExLS42Ni0xLjQ3LTEuNDc0LTEuNDctLjgxNC4wMDEtMS40NzMuNjU5LTEuNDczIDEuNDcgMCAyLjY1NC43NzYgNS4xNzkgMi44NTUgNi44NjMgMS44ODMgMS43OTMgNi42NyAxLjEzIDYuNjcgNC4wMSAwIC44MTIgMS4xOSAxLjIwOCAyLjAwNCAxLjIwOC44MzQgMCAxLjg4NS0uNTU4IDEuODg1LTEuMjA4IDAtMy4yNjcgMy40NDMtNS4yNTMgOS4xMS01LjI0NEExLjQ3MiAxLjQ3MiAwIDAgMCAyNCAxNS43NzMgMS40NzIgMS40NzIgMCAwIDAgMjIuNTMgMTQuM2MtLjM4OCAwLS43NjUuMDEzLTEuMTM4LjAzNS42MzQtMS40OS45MTUtMy4xMy44NTctNC45MDNhMS40NzMgMS40NzMgMCAwIDAtMS41MjItMS40MiAxLjQ3MiAxLjQ3MiAwIDAgMC0xLjQyNSAxLjUxN2MuMDc2IDIuMzItLjAxIDQuMzkzLTEuNzQgNS40ODUtLjQ5LjMxLTEuMDYyLjU4LTEuNjA0LjU4LjQyLTEuMTQ1LjczOC0yLjM1My44NjktMy42NTUuMDgzLS44My4wOTEtMS44MTgtLjAwMy0yLjU4NS0uMTQ4LTEuMTg4LS4zMjUtMi41MzUuMTI2LTMuNTUuNDA1LS44NzQgMS4zMTMtMS4yNCAyLjY0NS0xLjI0LjgxNCAwIDEuNDczLS42NTkgMS40NzMtMS40NyAwLS44MTEtLjY1OS0xLjQ3LTEuNDczLTEuNDctMS45OCAwLTMuNDgxIDEuMDQyLTQuMzMyIDIuMy0uNDQ1LS45NS0uOTg3LTEuOTI5LTEuNjQyLTIuOTQzYTEuNDc0IDEuNDc0IDAgMCAwLTIuMDM3LS40NHoiIGZpbGw9IndoaXRlIi8+PC9zdmc+"/>
+    <text x="0" y="25" text-anchor="middle" fill="white" font-size="8" font-weight="600" font-family="Segoe UI,Ubuntu,sans-serif">VS Code</text>
+  </g>
+  <g class="b3">
+    <rect x="-32" y="-34" width="64" height="68" rx="10" fill="#ff9900"/>
+    <rect x="-32" y="-34" width="64" height="68" rx="10"
+          fill="none" stroke="white" stroke-opacity="0.18" stroke-width="1.5"/>
+    <g transform="translate(0,-10)"><path d="M-14,4 Q-14,-14 0,-16 Q14,-14 14,4" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M9,4 Q14,12 8,16" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M5,12 L10,16 L14,11" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <text x="0" y="25" text-anchor="middle" fill="white" font-size="8" font-weight="600" font-family="Segoe UI,Ubuntu,sans-serif">AWS</text>
+  </g>
+  <g class="b4">
+    <rect x="-32" y="-34" width="64" height="68" rx="10" fill="#003b57"/>
+    <rect x="-32" y="-34" width="64" height="68" rx="10"
+          fill="none" stroke="white" stroke-opacity="0.18" stroke-width="1.5"/>
+    <image x="-18" y="-28" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIxLjY3OC41MjFjLTEuMDMyLS45Mi0yLjI4LS41NS0zLjUxMy41NDRhOC43MSA4LjcxIDAgMCAwLS41NDcuNTM1Yy0yLjEwOSAyLjIzNy00LjA2NiA2LjM4LTQuNjc0IDkuNTQ0LjIzNy40OC40MjIgMS4wOTMuNTQ0IDEuNTYxYTEzLjA0NCAxMy4wNDQgMCAwIDEgLjE2NC43MDNzLS4wMTktLjA3MS0uMDk2LS4yOTZsLS4wNS0uMTQ2YTEuNjg5IDEuNjg5IDAgMCAwLS4wMzMtLjA4Yy0uMTM4LS4zMi0uNTE4LS45OTUtLjY4Ni0xLjI4OS0uMTQzLjQyMy0uMjcuODE4LS4zNzYgMS4xNzYuNDg0Ljg4NC43NzggMi40Ljc3OCAyLjRzLS4wMjUtLjA5OS0uMTQ3LS40NDJjLS4xMDctLjMwMy0uNjQ0LTEuMjQ0LS43NzItMS40NjQtLjIxNy44MDQtLjMwNCAxLjM0Ni0uMjI2IDEuNDc4LjE1Mi4yNTYuMjk2LjY5OC40MjIgMS4xODYuMjg2IDEuMS40ODUgMi40NC40ODUgMi40NGwuMDE3LjIyNGEyMi40MSAyMi40MSAwIDAgMCAuMDU2IDIuNzQ4Yy4wOTUgMS4xNDYuMjczIDIuMTMuNSAyLjY1N2wuMTU1LS4wODRjLS4zMzQtMS4wMzgtLjQ3LTIuMzk5LS40MS0zLjk2Ny4wOS0yLjM5OC42NDItNS4yOSAxLjY2MS04LjMwNCAxLjcyMy00LjU1IDQuMTEzLTguMjAxIDYuMy05Ljk0NS0xLjk5MyAxLjgtNC42OTIgNy42My01LjUgOS43ODgtLjkwNCAyLjQxNi0xLjU0NSA0LjY4NC0xLjkzMSA2Ljg1Ny42NjYtMi4wMzcgMi44MjEtMi45MTIgMi44MjEtMi45MTJzMS4wNTctMS4zMDQgMi4yOTItMy4xNjZjLS43NC4xNjktMS45NTUuNDU4LTIuMzYyLjYyOS0uNi4yNTEtLjc2Mi4zMzctLjc2Mi4zMzdzMS45NDUtMS4xODQgMy42MTMtMS43MkMyMS42OTUgNy45IDI0LjE5NSAyLjc2NyAyMS42NzguNTIxbS0xOC41NzMuNTQzQTEuODQyIDEuODQyIDAgMCAwIDEuMjcgMi45djE2LjYwOGExLjg0IDEuODQgMCAwIDAgMS44MzUgMS44MzRoOS40MThhMjIuOTUzIDIyLjk1MyAwIDAgMS0uMDUyLTIuNzA3Yy0uMDA2LS4wNjItLjAxMS0uMTQxLS4wMTYtLjJhMjcuMDEgMjcuMDEgMCAwIDAtLjQ3My0yLjM3OGMtLjEyMS0uNDctLjI3NS0uODk4LS4zNjktMS4wNTctLjExNi0uMTk3LS4wOTgtLjMxLS4wOTctLjQzMiAwLS4xMi4wMTUtLjI0NS4wMzctLjM4NmE5Ljk4IDkuOTggMCAwIDEgLjIzNC0xLjA0NWwuMjE3LS4wMjhjLS4wMTctLjAzNS0uMDE0LS4wNjUtLjAzMS0uMDk3bC0uMDQxLS4zODFhMzIuOCAzMi44IDAgMCAxIC4zODItMS4xOTRsLjItLjAxOWMtLjAwOC0uMDE2LS4wMS0uMDM4LS4wMTgtLjA1M2wtLjA0My0uMzE2Yy42My0zLjI4IDIuNTg3LTcuNDQzIDQuOC05Ljc5MS4wNjYtLjA2OS4xMzMtLjEyOC4xOTgtLjE5NFoiIGZpbGw9IndoaXRlIi8+PC9zdmc+"/>
+    <text x="0" y="25" text-anchor="middle" fill="white" font-size="8" font-weight="600" font-family="Segoe UI,Ubuntu,sans-serif">SQLite</text>
+  </g>
+  <g class="b5">
+    <rect x="-32" y="-34" width="64" height="68" rx="10" fill="#4479a1"/>
+    <rect x="-32" y="-34" width="64" height="68" rx="10"
+          fill="none" stroke="white" stroke-opacity="0.18" stroke-width="1.5"/>
+    <image x="-18" y="-28" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE2LjQwNSA1LjUwMWMtLjExNSAwLS4xOTMuMDE0LS4yNzQuMDMzdi4wMTNoLjAxNGMuMDU0LjEwNC4xNDYuMTguMjE0LjI3My4wNTQuMTA3LjEuMjE0LjE1NC4zMmwuMDE0LS4wMTVjLjA5NC0uMDY2LjE0LS4xNzIuMTQtLjMzMy0uMDQtLjA0Ny0uMDQ2LS4wOTQtLjA4LS4xNC0uMDQtLjA2Ny0uMTI2LS4xLS4xOC0uMTUzek01Ljc3IDE4LjY5NWgtLjkyN2E1MC44NTQgNTAuODU0IDAgMDAtLjI3LTQuNDFoLS4wMDhsLTEuNDEgNC40MUgyLjQ1bC0xLjQtNC40MWgtLjAxYTcyLjg5MiA3Mi44OTIgMCAwMC0uMTk1IDQuNDFIMGMuMDU1LTEuOTY2LjE5Mi0zLjgxLjQxLTUuNTNoMS4xNWwxLjMzNSA0LjA2NGguMDA4bDEuMzQ3LTQuMDY0aDEuMDk1Yy4yNDIgMi4wMTUuMzg0IDMuODYuNDI4IDUuNTN6bTQuMDE3LTQuMDhjLS4zNzggMi4wNDUtLjg3NiAzLjUzMy0xLjQ5MiA0LjQ2LS40ODIuNzE2LTEuMDEgMS4wNzMtMS41ODMgMS4wNzMtLjE1MyAwLS4zNC0uMDQ2LS41NjYtLjEzOHYtLjQ5NGMuMTEuMDE3LjI0LjAyNi4zODYuMDI2LjI2OCAwIC40ODMtLjA3NS42NDctLjIyMi4xOTctLjE4LjI5NS0uMzgyLjI5NS0uNjA1IDAtLjE1NS0uMDc3LS40Ny0uMjMtLjk0NEw2LjIzIDE0LjYxNWguOTFsLjcyNyAyLjM2Yy4xNjQuNTM2LjIzMy45MS4yMDUgMS4xMjMuNC0xLjA2NC42NzgtMi4yMjcuODM1LTMuNDgzem0xMi4zMjUgNC4wOGgtMi42M3YtNS41M2guODg1djQuODVoMS43NDV6bS0zLjMyLjEzNWwtMS4wMTYtLjVjLjA5LS4wNzYuMTc3LS4xNTguMjU1LS4yNS40MzMtLjUwNi42NDgtMS4yNTguNjQ4LTIuMjUzIDAtMS44My0uNzE4LTIuNzQ2LTIuMTU1LTIuNzQ2LS43MDQgMC0xLjI1NC4yMzItMS42NS42OTctLjQzLjUwOC0uNjQ2IDEuMjU2LS42NDYgMi4yNDUgMCAuOTcyLjE5IDEuNjg2LjU3NCAyLjE0LjM1LjQxLjg3Ny42MTUgMS41ODMuNjE1LjI2NCAwIC41MDYtLjAzMy43MjUtLjA5OGwxLjMyNS43NzIuMzYtLjYyMnpNMTUuNSAxNy41ODhjLS4yMjUtLjM2LS4zMzctLjk0LS4zMzctMS43MzYgMC0xLjM5My40MjQtMi4wOSAxLjI3LTIuMDkuNDQzIDAgLjc3LjE2Ny45NzcuNS4yMjQuMzYyLjMzNi45MzYuMzM2IDEuNzIzIDAgMS40MDQtLjQyNCAyLjEwOC0xLjI3IDIuMTA4LS40NDUgMC0uNzctLjE2Ny0uOTc4LS41em0tMS42NTgtLjQyNWMwIC40Ny0uMTcyLjg1Ni0uNTE2IDEuMTU2LS4zNDQuMy0uODAzLjQ1LTEuMzg0LjQ1LS41NDMgMC0xLjA2NC0uMTcyLTEuNTczLS41MTVsLjIzNy0uNDc2Yy40MzguMjIuODMzLjMyOCAxLjE5LjMyOC4zMzIgMCAuNTkzLS4wNzMuNzgzLS4yMmEuNzU0Ljc1NCAwIDAwLjMtLjYxNWMwLS4zMy0uMjMtLjYxLS42NDgtLjg0NS0uMzg4LS4yMTMtMS4xNjMtLjY1Ny0xLjE2My0uNjU3LS40MjItLjMwNy0uNjMyLS42MzYtLjYzMi0xLjE3NyAwLS40NS4xNTctLjgxLjQ3LTEuMDg1LjMxNS0uMjc4LjcyLS40MTUgMS4yMi0uNDE1LjUxMiAwIC45OC4xMzYgMS40LjQxbC0uMjEzLjQ3NmEyLjcyNiAyLjcyNiAwIDAwLTEuMDY0LS4yM2MtLjI4MyAwLS41MDIuMDY4LS42NTQuMjA2YS42ODUuNjg1IDAgMDAtLjI0OC41MjRjMCAuMzI4LjIzNC42MS42NjYuODUuMzkzLjIxNSAxLjE4Ny42NyAxLjE4Ny42Ny40MzMuMzA1LjY0OC42My42NDggMS4xNjh6bTkuMzgyLTUuODUyYy0uNTM1LS4wMTQtLjk1LjA0LTEuMjk3LjE4OC0uMS4wNC0uMjYuMDQtLjI3NC4xNjcuMDU1LjA1My4wNjMuMTQuMTEuMjE0LjA4LjEzNC4yMTguMzEzLjM0Ni40MDcuMTQuMTEuMjguMjE2LjQyNy4zMS4yNi4xNi41NTUuMjU1LjgxLjQxNi4xNDUuMDk0LjI5My4yMTMuNDQuMzEzLjA3My4wNS4xMi4xNC4yMTQuMTcydi0uMDJjLS4wNDYtLjA2LS4wNi0uMTQ3LS4xMDUtLjIxNC0uMDY3LS4wNjctLjEzNC0uMTI3LS4yLS4xOTNhMy4yMjMgMy4yMjMgMCAwMC0uNjk1LS42NzVjLS4yMTQtLjE0Ni0uNjgyLS4zNS0uNzctLjU5NWwtLjAxMy0uMDE0Yy4xNDYtLjAxMy4zMi0uMDY2LjQ2LS4xMDYuMjI3LS4wNi40MzUtLjA0Ny42Ny0uMTA2LjEwNi0uMDI3LjIxMy0uMDYuMzItLjA5NHYtLjA2Yy0uMTItLjEyLS4yMS0uMjgzLS4zMzQtLjM5NWE4Ljg2NyA4Ljg2NyAwIDAwLTEuMTA0LS44MjNjLS4yMS0uMTM0LS40NzYtLjIyLS42OTctLjMzNC0uMDgtLjA0LS4yMTQtLjA2LS4yNi0uMTI3LS4xMi0uMTQ2LS4xOS0uMzQtLjI3NS0uNTE0YTE3LjY5IDE3LjY5IDAgMDEtLjU0Ny0xLjE2M2MtLjEyLS4yNjItLjE5My0uNTIzLS4zNC0uNzYzLS42OS0xLjEzNy0xLjQzNy0xLjgyNi0yLjU4Ni0yLjUtLjI0Ny0uMTQtLjU0My0uMi0uODU2LS4yNzQtLjE2Ny0uMDA4LS4zMzQtLjAyLS41LS4wMjctLjExLS4wNDctLjIxNi0uMTc0LS4zMS0uMjM1LS4zOC0uMjQtMS4zNjQtLjc2LTEuNjQ0LS4wNzItLjE4LjQzNC4yNjcuODYyLjQyMiAxLjA4Mi4xMTUuMTUzLjI2LjMyOC4zNC41LjA0Ny4xMTYuMDYuMjM1LjEwNy4zNTYuMTA2LjI5NC4yMDcuNjIyLjM0Ny44OTcuMDczLjE0LjE1My4yODcuMjQ3LjQxMy4wNTQuMDczLjE0Ni4xMDcuMTY3LjIyNy0uMDk0LjEzNi0uMS4zMzQtLjE1NC41LS4yNC43NTctLjE0NiAxLjY5My4xOTQgMi4yNS4xMDcuMTY2LjM2Mi41MzQuNzAzLjM5My4zLS4xMi4yMzQtLjUuMzItLjgzNS4wMi0uMDguMDA3LS4xMzMuMDQ4LS4xODd2LjAxNWMuMDk0LjE4OC4xODguMzY3LjI3NC41NTUuMjA2LjMyOC41NjYuNjY4Ljg2Ny44OTUuMTYuMTIuMjg3LjMyOC40ODcuNDAydi0uMDJoLS4wMTVjLS4wNDMtLjA1OC0uMS0uMDg2LS4xNTQtLjEzM2EzLjQ0NSAzLjQ0NSAwIDAxLS4zNS0uNCA4Ljc2IDguNzYgMCAwMS0uNzQ3LTEuMjE4Yy0uMTEtLjIxLS4yMDItLjQzNi0uMjktLjY0My0uMDQtLjA4LS4wNC0uMi0uMTA3LS4yNC0uMS4xNDYtLjI0Ny4yNzMtLjMyLjQ1My0uMTI3LjI4OC0uMTQuNjQyLS4xODggMS4wMS0uMDI3LjAwNy0uMDE0IDAtLjAyNy4wMTQtLjIxNC0uMDUyLS4yODctLjI3NC0uMzY3LS40Ni0uMi0uNDc1LS4yMzMtMS4yMzgtLjA2LTEuNzg1LjA0Ny0uMTQuMjQ3LS41ODIuMTY3LS43MTYtLjA0Mi0uMTI3LS4xNzQtLjItLjI0Ny0uMzAzYTIuNDc4IDIuNDc4IDAgMDEtLjI0LS40MjdjLS4xNi0uMzc0LS4yNC0uNzg4LS40MTQtMS4xNjItLjA4LS4xNzMtLjIyLS4zNTQtLjMzNC0uNTEzLS4xMjctLjE4LS4yNjctLjMwNy0uMzY4LS41Mi0uMDMzLS4wNzMtLjA4LS4xOTQtLjAyNy0uMjc0LjAxNC0uMDU0LjA0Mi0uMDc1LjA5NC0uMDkuMDg4LS4wNzIuMzM1LjAyMi40MjIuMDYyLjI0Ny4xLjQ1NS4xOTQuNjYyLjMzNC4wOTQuMDY2LjE5NS4xOTMuMzE1LjIyNmguMTRjLjIxNC4wNDcuNDU1LjAxNC42NTUuMDczLjM1NS4xMTQuNjc1LjI4Ljk2Mi40NmE1Ljk1MyA1Ljk1MyAwIDAxMi4wODUgMi4yODZjLjA4LjE1NC4xMTUuMjk1LjE4OC40NTUuMTQuMzMuMzEzLjY2My40NTUuOTgyLjE0LjMxNS4yNzUuNjM2LjQ3Ni44OTcuMS4xNC41MDIuMjEzLjY4Mi4yODYuMTMzLjA2LjM0LjExNS40Ni4xODguMjMuMTQuNDU0LjMuNjcuNDU0LjExLjA3Ni40NDMuMjQzLjQ2My4zNzh6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg=="/>
+    <text x="0" y="25" text-anchor="middle" fill="white" font-size="8" font-weight="600" font-family="Segoe UI,Ubuntu,sans-serif">MySQL</text>
+  </g>
+  <g class="b6">
+    <rect x="-32" y="-34" width="64" height="68" rx="10" fill="#2496ed"/>
+    <rect x="-32" y="-34" width="64" height="68" rx="10"
+          fill="none" stroke="white" stroke-opacity="0.18" stroke-width="1.5"/>
+    <image x="-18" y="-28" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEzLjk4MyAxMS4wNzhoMi4xMTlhLjE4Ni4xODYgMCAwMC4xODYtLjE4NVY5LjAwNmEuMTg2LjE4NiAwIDAwLS4xODYtLjE4NmgtMi4xMTlhLjE4NS4xODUgMCAwMC0uMTg1LjE4NXYxLjg4OGMwIC4xMDIuMDgzLjE4NS4xODUuMTg1bS0yLjk1NC01LjQzaDIuMTE4YS4xODYuMTg2IDAgMDAuMTg2LS4xODZWMy41NzRhLjE4Ni4xODYgMCAwMC0uMTg2LS4xODVoLTIuMTE4YS4xODUuMTg1IDAgMDAtLjE4NS4xODV2MS44ODhjMCAuMTAyLjA4Mi4xODUuMTg1LjE4NW0wIDIuNzE2aDIuMTE4YS4xODcuMTg3IDAgMDAuMTg2LS4xODZWNi4yOWEuMTg2LjE4NiAwIDAwLS4xODYtLjE4NWgtMi4xMThhLjE4NS4xODUgMCAwMC0uMTg1LjE4NXYxLjg4N2MwIC4xMDIuMDgyLjE4NS4xODUuMTg2bS0yLjkzIDBoMi4xMmEuMTg2LjE4NiAwIDAwLjE4NC0uMTg2VjYuMjlhLjE4NS4xODUgMCAwMC0uMTg1LS4xODVIOC4xYS4xODUuMTg1IDAgMDAtLjE4NS4xODV2MS44ODdjMCAuMTAyLjA4My4xODUuMTg1LjE4Nm0tMi45NjQgMGgyLjExOWEuMTg2LjE4NiAwIDAwLjE4NS0uMTg2VjYuMjlhLjE4NS4xODUgMCAwMC0uMTg1LS4xODVINS4xMzZhLjE4Ni4xODYgMCAwMC0uMTg2LjE4NXYxLjg4N2MwIC4xMDIuMDg0LjE4NS4xODYuMTg2bTUuODkzIDIuNzE1aDIuMTE4YS4xODYuMTg2IDAgMDAuMTg2LS4xODVWOS4wMDZhLjE4Ni4xODYgMCAwMC0uMTg2LS4xODZoLTIuMTE4YS4xODUuMTg1IDAgMDAtLjE4NS4xODV2MS44ODhjMCAuMTAyLjA4Mi4xODUuMTg1LjE4NW0tMi45MyAwaDIuMTJhLjE4NS4xODUgMCAwMC4xODQtLjE4NVY5LjAwNmEuMTg1LjE4NSAwIDAwLS4xODQtLjE4NmgtMi4xMmEuMTg1LjE4NSAwIDAwLS4xODQuMTg1djEuODg4YzAgLjEwMi4wODMuMTg1LjE4NS4xODVtLTIuOTY0IDBoMi4xMTlhLjE4NS4xODUgMCAwMC4xODUtLjE4NVY5LjAwNmEuMTg1LjE4NSAwIDAwLS4xODQtLjE4NmgtMi4xMmEuMTg2LjE4NiAwIDAwLS4xODYuMTg2djEuODg3YzAgLjEwMi4wODQuMTg1LjE4Ni4xODVtLTIuOTIgMGgyLjEyYS4xODUuMTg1IDAgMDAuMTg0LS4xODVWOS4wMDZhLjE4NS4xODUgMCAwMC0uMTg0LS4xODZoLTIuMTJhLjE4NS4xODUgMCAwMC0uMTg0LjE4NXYxLjg4OGMwIC4xMDIuMDgyLjE4NS4xODUuMTg1TTIzLjc2MyA5Ljg5Yy0uMDY1LS4wNTEtLjY3Mi0uNTEtMS45NTQtLjUxLS4zMzguMDAxLS42NzYuMDMtMS4wMS4wODctLjI0OC0xLjctMS42NTMtMi41My0xLjcxNi0yLjU2NmwtLjM0NC0uMTk5LS4yMjYuMzI3Yy0uMjg0LjQzOC0uNDkuOTIyLS42MTIgMS40My0uMjMuOTctLjA5IDEuODgyLjQwMyAyLjY2MS0uNTk1LjMzMi0xLjU1LjQxMy0xLjc0NC40MkguNzUxYS43NTEuNzUxIDAgMDAtLjc1Ljc0OCAxMS4zNzYgMTEuMzc2IDAgMDAuNjkyIDQuMDYyYy41NDUgMS40MjggMS4zNTUgMi40OCAyLjQxIDMuMTI0IDEuMTguNzIzIDMuMSAxLjEzNyA1LjI3NSAxLjEzNy45ODMuMDAzIDEuOTYzLS4wODYgMi45My0uMjY2YTEyLjI0OCAxMi4yNDggMCAwMDMuODIzLTEuMzg5Yy45OC0uNTY3IDEuODYtMS4yODggMi42MS0yLjEzNiAxLjI1Mi0xLjQxOCAxLjk5OC0yLjk5NyAyLjU1My00LjRoLjIyMWMxLjM3MiAwIDIuMjE1LS41NDkgMi42OC0xLjAwOS4zMDktLjI5My41NS0uNjUuNzA3LTEuMDQ2bC4wOTgtLjI4OFoiIGZpbGw9IndoaXRlIi8+PC9zdmc+"/>
+    <text x="0" y="25" text-anchor="middle" fill="white" font-size="8" font-weight="600" font-family="Segoe UI,Ubuntu,sans-serif">Docker</text>
+  </g>
+  <g class="b7">
+    <rect x="-32" y="-34" width="64" height="68" rx="10" fill="#e16737"/>
+    <rect x="-32" y="-34" width="64" height="68" rx="10"
+          fill="none" stroke="white" stroke-opacity="0.18" stroke-width="1.5"/>
+    <g transform="translate(0,-10)"><path d="M-16,12 L-10,-8 L0,4 L8,-14 L16,4" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <text x="0" y="25" text-anchor="middle" fill="white" font-size="8" font-weight="600" font-family="Segoe UI,Ubuntu,sans-serif">MATLAB</text>
+  </g>
+  <g class="b8">
+    <rect x="-32" y="-34" width="64" height="68" rx="10" fill="#ff0000"/>
+    <rect x="-32" y="-34" width="64" height="68" rx="10"
+          fill="none" stroke="white" stroke-opacity="0.18" stroke-width="1.5"/>
+    <g transform="translate(0,-10)"><path d="M0,-16 L-12,13 M0,-16 L12,13 M-6,2 L6,2" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/></g>
+    <text x="0" y="25" text-anchor="middle" fill="white" font-size="8" font-weight="600" font-family="Segoe UI,Ubuntu,sans-serif">Adobe</text>
+  </g>
+  <g class="b9">
+    <rect x="-32" y="-34" width="64" height="68" rx="10" fill="#f24e1e"/>
+    <rect x="-32" y="-34" width="64" height="68" rx="10"
+          fill="none" stroke="white" stroke-opacity="0.18" stroke-width="1.5"/>
+    <image x="-18" y="-28" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE1Ljg1MiA4Ljk4MWgtNC41ODhWMGg0LjU4OGMyLjQ3NiAwIDQuNDkgMi4wMTQgNC40OSA0LjQ5cy0yLjAxNCA0LjQ5MS00LjQ5IDQuNDkxek0xMi43MzUgNy41MWgzLjExN2MxLjY2NSAwIDMuMDE5LTEuMzU1IDMuMDE5LTMuMDE5cy0xLjM1NS0zLjAxOS0zLjAxOS0zLjAxOWgtMy4xMTdWNy41MXptMCAxLjQ3MUg4LjE0OGMtMi40NzYgMC00LjQ5LTIuMDE0LTQuNDktNC40OVM1LjY3MiAwIDguMTQ4IDBoNC41ODh2OC45ODF6bS00LjU4Ny03LjUxYy0xLjY2NSAwLTMuMDE5IDEuMzU1LTMuMDE5IDMuMDE5czEuMzU0IDMuMDIgMy4wMTkgMy4wMmgzLjExN1YxLjQ3MUg4LjE0OHptNC41ODcgMTUuMDE5SDguMTQ4Yy0yLjQ3NiAwLTQuNDktMi4wMTQtNC40OS00LjQ5czIuMDE0LTQuNDkgNC40OS00LjQ5aDQuNTg4djguOTh6TTguMTQ4IDguOTgxYy0xLjY2NSAwLTMuMDE5IDEuMzU1LTMuMDE5IDMuMDE5czEuMzU1IDMuMDE5IDMuMDE5IDMuMDE5aDMuMTE3VjguOTgxSDguMTQ4ek04LjE3MiAyNGMtMi40ODkgMC00LjUxNS0yLjAxNC00LjUxNS00LjQ5czIuMDE0LTQuNDkgNC40OS00LjQ5aDQuNTg4djQuNDQxYzAgMi41MDMtMi4wNDcgNC41MzktNC41NjMgNC41Mzl6bS0uMDI0LTcuNTFhMy4wMjMgMy4wMjMgMCAwIDAtMy4wMTkgMy4wMTljMCAxLjY2NSAxLjM2NSAzLjAxOSAzLjA0NCAzLjAxOSAxLjcwNSAwIDMuMDkzLTEuMzc2IDMuMDkzLTMuMDY4di0yLjk3SDguMTQ4em03LjcwNCAwaC0uMDk4Yy0yLjQ3NiAwLTQuNDktMi4wMTQtNC40OS00LjQ5czIuMDE0LTQuNDkgNC40OS00LjQ5aC4wOThjMi40NzYgMCA0LjQ5IDIuMDE0IDQuNDkgNC40OXMtMi4wMTQgNC40OS00LjQ5IDQuNDl6bS0uMDk3LTcuNTA5Yy0xLjY2NSAwLTMuMDE5IDEuMzU1LTMuMDE5IDMuMDE5czEuMzU1IDMuMDE5IDMuMDE5IDMuMDE5aC4wOThjMS42NjUgMCAzLjAxOS0xLjM1NSAzLjAxOS0zLjAxOXMtMS4zNTUtMy4wMTktMy4wMTktMy4wMTloLS4wOTh6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg=="/>
+    <text x="0" y="25" text-anchor="middle" fill="white" font-size="8" font-weight="600" font-family="Segoe UI,Ubuntu,sans-serif">Figma</text>
+  </g>
+  </g>
+  <g class="t0" opacity="0">
+    <rect x="230" y="88" width="260" height="46" rx="8"
+          fill="#1e293b" fill-opacity="0.80"
+          stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">Git</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Distributed version control</text>
+  </g>
+  <g class="t1" opacity="0">
+    <rect x="230" y="88" width="260" height="46" rx="8"
+          fill="#1e293b" fill-opacity="0.80"
+          stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">Visual Studio</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Full-featured IDE for C++ &amp; .NET</text>
+  </g>
+  <g class="t2" opacity="0">
+    <rect x="230" y="88" width="260" height="46" rx="8"
+          fill="#1e293b" fill-opacity="0.80"
+          stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">VS Code</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Lightweight, extensible code editor</text>
+  </g>
+  <g class="t3" opacity="0">
+    <rect x="230" y="88" width="260" height="46" rx="8"
+          fill="#1e293b" fill-opacity="0.80"
+          stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">AWS</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Scalable cloud infrastructure</text>
+  </g>
+  <g class="t4" opacity="0">
+    <rect x="230" y="88" width="260" height="46" rx="8"
+          fill="#1e293b" fill-opacity="0.80"
+          stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">SQLite</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Embedded relational database</text>
+  </g>
+  <g class="t5" opacity="0">
+    <rect x="230" y="88" width="260" height="46" rx="8"
+          fill="#1e293b" fill-opacity="0.80"
+          stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">MySQL</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Open-source relational database</text>
+  </g>
+  <g class="t6" opacity="0">
+    <rect x="230" y="88" width="260" height="46" rx="8"
+          fill="#1e293b" fill-opacity="0.80"
+          stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">Docker</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Container-based deployment</text>
+  </g>
+  <g class="t7" opacity="0">
+    <rect x="230" y="88" width="260" height="46" rx="8"
+          fill="#1e293b" fill-opacity="0.80"
+          stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">MATLAB</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Numerical computing &amp; simulation</text>
+  </g>
+  <g class="t8" opacity="0">
+    <rect x="230" y="88" width="260" height="46" rx="8"
+          fill="#1e293b" fill-opacity="0.80"
+          stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">Adobe</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Creative Suite for design</text>
+  </g>
+  <g class="t9" opacity="0">
+    <rect x="230" y="88" width="260" height="46" rx="8"
+          fill="#1e293b" fill-opacity="0.80"
+          stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">Figma</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Collaborative UI design tool</text>
+  </g>
+</svg>

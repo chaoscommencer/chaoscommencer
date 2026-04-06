@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="50" viewBox="0 0 800 50">
+  <defs>
+    <style>
+      .tag {
+        font: 400 italic 17px Georgia, 'Times New Roman', serif;
+        fill: #94a3b8;
+      }
+      #p1 {
+        animation: cycle1 18s ease-in-out infinite;
+      }
+      #p2 {
+        opacity: 0;
+        animation: cycle2 18s ease-in-out infinite;
+      }
+      #p3 {
+        opacity: 0;
+        animation: cycle3 18s ease-in-out infinite;
+      }
+      @keyframes cycle1 {
+         0%  { opacity: 1 }
+        18%  { opacity: 1 }
+        26%  { opacity: 0 }
+        92%  { opacity: 0 }
+        100% { opacity: 1 }
+      }
+      @keyframes cycle2 {
+         0%  { opacity: 0 }
+        26%  { opacity: 0 }
+        34%  { opacity: 1 }
+        51%  { opacity: 1 }
+        59%  { opacity: 0 }
+        100% { opacity: 0 }
+      }
+      @keyframes cycle3 {
+         0%  { opacity: 0 }
+        59%  { opacity: 0 }
+        67%  { opacity: 1 }
+        84%  { opacity: 1 }
+        92%  { opacity: 0 }
+        100% { opacity: 0 }
+      }
+    </style>
+  </defs>
+  <text id="p1" x="400" y="32" text-anchor="middle" class="tag">"Architect, engineer, mathematician, artist — Renaissance man"</text>
+  <text id="p2" x="400" y="32" text-anchor="middle" class="tag">"Building elegant systems from the ground up"</text>
+  <text id="p3" x="400" y="32" text-anchor="middle" class="tag">"Turning complexity into clarity, one commit at a time"</text>
+</svg>
