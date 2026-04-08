@@ -12,6 +12,10 @@
     <clipPath id="track-clip">
       <rect width="720" height="142"/>
     </clipPath>
+    <filter id="tooltip-glow" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   <style>
     @keyframes badge-scroll-0 {
       0.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
@@ -341,7 +345,8 @@
       0.0000% { opacity: 1.00; }
       2.3810% { opacity: 1.00; }
       3.2738% { opacity: 0.00; }
-      100.0000% { opacity: 0.00; }
+      97.0238% { opacity: 0.00; }
+      100.0000% { opacity: 1.00; }
     }
     @keyframes tooltip-fade-1 {
       0.0000% { opacity: 0.00; }
@@ -431,6 +436,10 @@
       94.9405% { opacity: 0.00; }
       100.0000% { opacity: 0.00; }
     }
+    @keyframes tooltip-border-pulse {
+      0%, 100% { opacity: 0.25; }
+      50%      { opacity: 0.85; }
+    }
     svg:hover * { animation-play-state: paused; }
     .b0 { animation: badge-scroll-0 42.0s linear infinite; animation-fill-mode: both; }
     .b1 { animation: badge-scroll-1 42.0s linear infinite; animation-fill-mode: both; }
@@ -456,98 +465,55 @@
     .t9 { animation: tooltip-fade-9 42.0s linear infinite; animation-fill-mode: both; }
     .t10 { animation: tooltip-fade-10 42.0s linear infinite; animation-fill-mode: both; }
     .t11 { animation: tooltip-fade-11 42.0s linear infinite; animation-fill-mode: both; }
+    .tooltip-border { animation: tooltip-border-pulse 3.0s ease-in-out infinite; }
   </style>
   </defs>
   <g clip-path="url(#track-clip)" mask="url(#badge-mask)">
   <g class="b0">
-    <rect x="-32" y="-34" width="64" height="68" rx="10" fill="#00599c"/>
-    <rect x="-32" y="-34" width="64" height="68" rx="10"
-          fill="none" stroke="white" stroke-opacity="0.18" stroke-width="1.5"/>
-    <image x="-18" y="-28" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIyLjM5NCA2Yy0uMTY3LS4yOS0uMzk4LS41NDMtLjY1Mi0uNjlMMTIuOTI2LjIyYy0uNTA5LS4yOTQtMS4zNC0uMjk0LTEuODQ4IDBMMi4yNiA1LjMxYy0uNTA4LjI5My0uOTIzIDEuMDEzLS45MjMgMS42djEwLjE4YzAgLjI5NC4xMDQuNjIuMjcxLjkxLjE2Ny4yOS4zOTguNTQzLjY1Mi42OWw4LjgxNiA1LjA5Yy41MDguMjkzIDEuMzQuMjkzIDEuODQ4IDBsOC44MTYtNS4wOWMuMjU0LS4xNDcuNDg1LS40LjY1Mi0uNjkuMTY3LS4yOS4yNy0uNjE2LjI3LS45MVY2LjkxYy4wMDMtLjI5NC0uMS0uNjItLjI2OC0uOTF6TTEyIDE5LjExYy0zLjkyIDAtNy4xMDktMy4xOS03LjEwOS03LjExIDAtMy45MiAzLjE5LTcuMTEgNy4xMS03LjExYTcuMTMzIDcuMTMzIDAgMDE2LjE1NiAzLjU1M2wtMy4wNzYgMS43OGEzLjU2NyAzLjU2NyAwIDAwLTMuMDgtMS43OEEzLjU2IDMuNTYgMCAwMDguNDQ0IDEyIDMuNTYgMy41NiAwIDAwMTIgMTUuNTU1YTMuNTcgMy41NyAwIDAwMy4wOC0xLjc3OGwzLjA3OCAxLjc4QTcuMTM1IDcuMTM1IDAgMDExMiAxOS4xMXptNy4xMS02LjcxNWgtLjc5di43OWgtLjc5di0uNzloLS43OXYtLjc5aC43OXYtLjc5aC43OXYuNzloLjc5em0yLjk2MiAwaC0uNzl2Ljc5aC0uNzl2LS43OWgtLjc5di0uNzloLjc5di0uNzloLjc5di43OWguNzl6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg=="/>
-    <text x="0" y="25" text-anchor="middle" fill="white" font-size="8" font-weight="600" font-family="Segoe UI,Ubuntu,sans-serif">C++</text>
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+QysrPC90aXRsZT48cGF0aCBkPSJNMjIuMzk0IDZjLS4xNjctLjI5LS4zOTgtLjU0My0uNjUyLS42OUwxMi45MjYuMjJjLS41MDktLjI5NC0xLjM0LS4yOTQtMS44NDggMEwyLjI2IDUuMzFjLS41MDguMjkzLS45MjMgMS4wMTMtLjkyMyAxLjZ2MTAuMThjMCAuMjk0LjEwNC42Mi4yNzEuOTEuMTY3LjI5LjM5OC41NDMuNjUyLjY5bDguODE2IDUuMDljLjUwOC4yOTMgMS4zNC4yOTMgMS44NDggMGw4LjgxNi01LjA5Yy4yNTQtLjE0Ny40ODUtLjQuNjUyLS42OS4xNjctLjI5LjI3LS42MTYuMjctLjkxVjYuOTFjLjAwMy0uMjk0LS4xLS42Mi0uMjY4LS45MXpNMTIgMTkuMTFjLTMuOTIgMC03LjEwOS0zLjE5LTcuMTA5LTcuMTEgMC0zLjkyIDMuMTktNy4xMSA3LjExLTcuMTFhNy4xMzMgNy4xMzMgMCAwMTYuMTU2IDMuNTUzbC0zLjA3NiAxLjc4YTMuNTY3IDMuNTY3IDAgMDAtMy4wOC0xLjc4QTMuNTYgMy41NiAwIDAwOC40NDQgMTIgMy41NiAzLjU2IDAgMDAxMiAxNS41NTVhMy41NyAzLjU3IDAgMDAzLjA4LTEuNzc4bDMuMDc4IDEuNzhBNy4xMzUgNy4xMzUgMCAwMTEyIDE5LjExem03LjExLTYuNzE1aC0uNzl2Ljc5aC0uNzl2LS43OWgtLjc5di0uNzloLjc5di0uNzloLjc5di43OWguNzl6bTIuOTYyIDBoLS43OXYuNzloLS43OXYtLjc5aC0uNzl2LS43OWguNzl2LS43OWguNzl2Ljc5aC43OXoiIGZpbGw9IiMwMDU5OWMiLz48L3N2Zz4="/>
   </g>
   <g class="b1">
-    <rect x="-32" y="-34" width="64" height="68" rx="10" fill="#f89820"/>
-    <rect x="-32" y="-34" width="64" height="68" rx="10"
-          fill="none" stroke="white" stroke-opacity="0.18" stroke-width="1.5"/>
-    <image x="-18" y="-28" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTExLjkxNSAwIDExLjcuMjE1QzkuNTE1IDIuNCA3LjQ3IDYuMzkgNi4wNDYgMTAuNDgzYy0xLjA2NCAxLjAyNC0zLjYzMyAyLjgxLTMuNzExIDMuNTUxLS4wOTMuODcgMS43NDYgMi42MTEgMS41NSAzLjIzNS0uMTk4LjYyNS0xLjMwNCAxLjQwOC0xLjAxNCAxLjkzOS4xLjE4OC44MjMuMDExIDEuMjc3LS40OTFhMTMuMzg5IDEzLjM4OSAwIDAgMC0uMDE3IDIuMTRjLjA3Ni45MDYuMjcgMS42NjguNjQzIDIuMjMyLjM3Mi41NjMuOTU2LjkxMSAxLjY2Ny45MTEuMzk3IDAgLjcyNy0uMTE0IDEuMDI0LS4yNjQuMjk4LS4xNDkuNTcxLS4zMy45MS0uNS42OC0uMzQgMS42MzQtLjY2NiAzLjUzLS42MDQgMS45MDMuMDYyIDIuODcyLjM5IDMuNTU5LjcwNC42ODcuMzE0IDEuMTUuNjY0IDEuOTI1LjY2NC43NjcgMCAxLjM5NS0uMzM2IDEuODA3LS45LjQxMi0uNTYzLjYzMS0xLjMzLjcyLTIuMjQuMDYtLjYyMy4wNTUtMS4zMiAwLTIuMDY2LjQ1NC40NSAxLjExNy42MDQgMS4yMTMuNDI0LjI5LS41My0uODE2LTEuMzE0LTEuMDEzLTEuOTM3LS4xOTgtLjYyNCAxLjY0Mi0yLjM2NiAxLjU0OS0zLjIzNi0uMDgtLjc0OC0yLjcwNy0yLjU2OC0zLjc0OC0zLjU4NkMxNi40MjggNi4zNzQgMTQuMzA4IDIuMzk0IDEyLjEzLjIxNXptLjE3NSA2LjAzOGEyLjk1IDIuOTUgMCAwIDEgMi45NDMgMi45NDIgMi45NSAyLjk1IDAgMCAxLTIuOTQzIDIuOTQzQTIuOTUgMi45NSAwIDAgMSA5LjE0OCA4Ljk4YTIuOTUgMi45NSAwIDAgMSAyLjk0Mi0yLjk0MnpNOC42ODUgNy45ODNhMy41MTUgMy41MTUgMCAwIDAtLjE0NS45OTdjMCAxLjk1MSAxLjYgMy41NSAzLjU1IDMuNTUgMS45NSAwIDMuNTUtMS41OTggMy41NS0zLjU1IDAtLjMyOS0uMDQ2LS42NDgtLjEzMi0uOTUxLjMzNC4wOTUuNjQuMjA4LjkxNS4zMzZhNDIuNjk5IDQyLjY5OSAwIDAgMSAyLjA0MiA1LjgyOWMuNjc4IDIuNTQ1IDEuMDEgNC45Mi44NDYgNi42MDctLjA4Mi44NDQtLjI5IDEuNTEtLjYwNiAxLjk0LS4zMTUuNDMxLS43MTMuNjUxLTEuMzE1LjY1MS0uNTkzIDAtLjkzMi0uMjctMS42NzMtLjYxLS43NDEtLjMzOC0xLjgyNS0uNjk0LTMuNzkyLS43NTgtMS45NzQtLjA2NC0zLjA3My4yOTMtMy44MjEuNjY5LS4zNzUuMTg4LS42NTkuMzczLS45MTEuNXMtLjQ2Ni4yLS43NTIuMmMtLjUzIDAtLjg3Ni0uMjA5LTEuMTYtLjY0LS4yODUtLjQzLS40NzQtMS4xMDEtLjU0NS0xLjk0OC0uMTQxLTEuNjkzLjE3Ni00LjA2OS44MjMtNi42MTRhNDMuMTU1IDQzLjE1NSAwIDAgMSAxLjkzNC01Ljc4M2MuMzQ4LS4xNjcuNzQ5LS4zMSAxLjE5Mi0uNDI1em0tMy4zODIgNC4zNjJhLjIxNi4yMTYgMCAwIDEgLjEzLjAzMWMtLjE2Ni41Ni0uMzIzIDEuMTE2LS40NjMgMS42NjVhMzMuODQ5IDMzLjg0OSAwIDAgMC0uNTQ3IDIuNTU1IDMuOSAzLjkgMCAwIDAtLjItLjM5Yy0uNTgtMS4wMTItLjkxNC0xLjY0Mi0xLjE2LTIuMDguMzE1LS4yNCAxLjY3OS0xLjc1NSAyLjI0LTEuNzgxem0xMy4zOTQuMDFjLjU2Mi4wMjcgMS45MjYgMS41NDMgMi4yNCAxLjc4My0uMjQ2LjQzOC0uNTggMS4wNjgtMS4xNiAyLjA4YTQuNDI4IDQuNDI4IDAgMCAwLS4xNjMuMzA5IDMyLjM1NCAzMi4zNTQgMCAwIDAtLjU2Mi0yLjQ5IDQwLjU3OSA0MC41NzkgMCAwIDAtLjQ4Mi0xLjY1Mi4yMTYuMjE2IDAgMCAxIC4xMjctLjAzeiIgZmlsbD0id2hpdGUiLz48L3N2Zz4="/>
-    <text x="0" y="25" text-anchor="middle" fill="white" font-size="8" font-weight="600" font-family="Segoe UI,Ubuntu,sans-serif">Java</text>
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+SmF2YTwvdGl0bGU+PHBhdGggZD0iTTguODUxIDE4LjU2cy0uOTE3LjUzNC42NTMuNzE0YzEuOTAyLjIxOCAyLjg3NC4xODcgNC45NjktLjIxMSAwIDAgLjU1Mi4zNDYgMS4zMjEuNjQ2LTQuNjk5IDIuMDEzLTEwLjYzMy0uMTE4LTYuOTQzLTEuMTQ5TTguMjc2IDE1LjkzM3MtMS4wMjguNzYxLjU0Mi45MjRjMi4wMzIuMjA5IDMuNjM2LjIyNyA2LjQxMy0uMzA4IDAgMCAuMzg0LjM4OS45ODcuNjAyLTUuNjc5IDEuNjYxLTEyLjAwNy4xMy03Ljk0Mi0xLjIxOE0xOS4zMyAyMC41MDRzLjY3OS41NTktLjc0Ny45OTFjLTIuNzEyLjgyMi0xMS4yODggMS4wNjktMTMuNjY5LjAzMy0uODU2LS4zNzMuNzUtLjg5IDEuMjU0LS45OTguNTI3LS4xMTQuODI4LS4wOTMuODI4LS4wOTMtLjk1My0uNjcxLTYuMTU2IDEuMzE3LTIuNjQzIDEuODg3IDkuNTggMS41NTMgMTcuNDYyLS43IDE0Ljk3Ny0xLjgyTTkuMjkyIDEzLjIxcy00LjM2MiAxLjAzNi0xLjU0NCAxLjQxMmMxLjE4OS4xNTkgMy41NjEuMTIzIDUuNzctLjA2MiAxLjgwNi0uMTUyIDMuNjE4LS40NzcgMy42MTgtLjQ3N3MtLjYzNy4yNzItMS4wOTguNTg3Yy00LjQyOSAxLjE2NS0xMi45ODYuNjIzLTEwLjUyMi0uNTY4IDIuMDgyLTEuMDA2IDMuNzc2LS44OTIgMy43NzYtLjg5Mk0xNy4xMTYgMTcuNTg0YzQuNTAzLTIuMzQgMi40MjEtNC41ODkuOTY4LTQuMjg1LS4zNTUuMDc0LS41MTUuMTM4LS41MTUuMTM4cy4xMzItLjIwNy4zODUtLjI5N2MyLjg3NS0xLjAxMSA1LjA4NiAyLjk4MS0uOTI4IDQuNTYyIDAtLjAwMS4wNy0uMDYyLjA5LS4xMThNOS43MzQgMjMuOTI0YzQuMzIyLjI3NyAxMC45NTktLjE1MyAxMS4xMTYtMi4xOTggMCAwLS4zMDIuNzc1LTMuNTcyIDEuMzkxLTMuNjg4LjY5NC04LjIzOS42MTMtMTAuOTM3LjE2OCAwLS4wMDEuNTUzLjQ1NyAzLjM5My42MzkiIGZpbGw9IiM1MzgyQTEiLz48cGF0aCBkPSJNMTMuMTE2IDExLjQ3NWMxLjE1OCAxLjMzMy0uMzA0IDIuNTMzLS4zMDQgMi41MzNzMi45MzktMS41MTggMS41ODktMy40MThjLTEuMjYxLTEuNzcyLTIuMjI4LTIuNjUyIDMuMDA3LTUuNjg4IDAtLjAwMS04LjIxNiAyLjA1MS00LjI5MiA2LjU3M00xNC40MDEgMHMyLjQ5NCAyLjQ5NC0yLjM2NSA2LjMzYy0zLjg5NiAzLjA3Ny0uODg4IDQuODMyLS4wMDEgNi44MzYtMi4yNzQtMi4wNTMtMy45NDMtMy44NTgtMi44MjQtNS41MzkgMS42NDQtMi40NjkgNi4xOTctMy42NjUgNS4xOS03LjYyNyIgZmlsbD0iI2Y4OTgyMCIvPjwvc3ZnPg=="/>
   </g>
   <g class="b2">
-    <rect x="-32" y="-34" width="64" height="68" rx="10" fill="#3776ab"/>
-    <rect x="-32" y="-34" width="64" height="68" rx="10"
-          fill="none" stroke="white" stroke-opacity="0.18" stroke-width="1.5"/>
-    <image x="-18" y="-28" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE0LjI1LjE4bC45LjIuNzMuMjYuNTkuMy40NS4zMi4zNC4zNC4yNS4zNC4xNi4zMy4xLjMuMDQuMjYuMDIuMi0uMDEuMTNWOC41bC0uMDUuNjMtLjEzLjU1LS4yMS40Ni0uMjYuMzgtLjMuMzEtLjMzLjI1LS4zNS4xOS0uMzUuMTQtLjMzLjEtLjMuMDctLjI2LjA0LS4yMS4wMkg4Ljc3bC0uNjkuMDUtLjU5LjE0LS41LjIyLS40MS4yNy0uMzMuMzItLjI3LjM1LS4yLjM2LS4xNS4zNy0uMS4zNS0uMDcuMzItLjA0LjI3LS4wMi4yMXYzLjA2SDMuMTdsLS4yMS0uMDMtLjI4LS4wNy0uMzItLjEyLS4zNS0uMTgtLjM2LS4yNi0uMzYtLjM2LS4zNS0uNDYtLjMyLS41OS0uMjgtLjczLS4yMS0uODgtLjE0LTEuMDUtLjA1LTEuMjMuMDYtMS4yMi4xNi0xLjA0LjI0LS44Ny4zMi0uNzEuMzYtLjU3LjQtLjQ0LjQyLS4zMy40Mi0uMjQuNC0uMTYuMzYtLjEuMzItLjA1LjI0LS4wMWguMTZsLjA2LjAxaDguMTZ2LS44M0g2LjE4bC0uMDEtMi43NS0uMDItLjM3LjA1LS4zNC4xMS0uMzEuMTctLjI4LjI1LS4yNi4zMS0uMjMuMzgtLjIuNDQtLjE4LjUxLS4xNS41OC0uMTIuNjQtLjEuNzEtLjA2Ljc3LS4wNC44NC0uMDIgMS4yNy4wNXptLTYuMyAxLjk4bC0uMjMuMzMtLjA4LjQxLjA4LjQxLjIzLjM0LjMzLjIyLjQxLjA5LjQxLS4wOS4zMy0uMjIuMjMtLjM0LjA4LS40MS0uMDgtLjQxLS4yMy0uMzMtLjMzLS4yMi0uNDEtLjA5LS40MS4wOXptMTMuMDkgMy45NWwuMjguMDYuMzIuMTIuMzUuMTguMzYuMjcuMzYuMzUuMzUuNDcuMzIuNTkuMjguNzMuMjEuODguMTQgMS4wNC4wNSAxLjIzLS4wNiAxLjIzLS4xNiAxLjA0LS4yNC44Ni0uMzIuNzEtLjM2LjU3LS40LjQ1LS40Mi4zMy0uNDIuMjQtLjQuMTYtLjM2LjA5LS4zMi4wNS0uMjQuMDItLjE2LS4wMWgtOC4yMnYuODJoNS44NGwuMDEgMi43Ni4wMi4zNi0uMDUuMzQtLjExLjMxLS4xNy4yOS0uMjUuMjUtLjMxLjI0LS4zOC4yLS40NC4xNy0uNTEuMTUtLjU4LjEzLS42NC4wOS0uNzEuMDctLjc3LjA0LS44NC4wMS0xLjI3LS4wNC0xLjA3LS4xNC0uOS0uMi0uNzMtLjI1LS41OS0uMy0uNDUtLjMzLS4zNC0uMzQtLjI1LS4zNC0uMTYtLjMzLS4xLS4zLS4wNC0uMjUtLjAyLS4yLjAxLS4xM3YtNS4zNGwuMDUtLjY0LjEzLS41NC4yMS0uNDYuMjYtLjM4LjMtLjMyLjMzLS4yNC4zNS0uMi4zNS0uMTQuMzMtLjEuMy0uMDYuMjYtLjA0LjIxLS4wMi4xMy0uMDFoNS44NGwuNjktLjA1LjU5LS4xNC41LS4yMS40MS0uMjguMzMtLjMyLjI3LS4zNS4yLS4zNi4xNS0uMzYuMS0uMzUuMDctLjMyLjA0LS4yOC4wMi0uMjFWNi4wN2gyLjA5bC4xNC4wMXptLTYuNDcgMTQuMjVsLS4yMy4zMy0uMDguNDEuMDguNDEuMjMuMzMuMzMuMjMuNDEuMDguNDEtLjA4LjMzLS4yMy4yMy0uMzMuMDgtLjQxLS4wOC0uNDEtLjIzLS4zMy0uMzMtLjIzLS40MS0uMDgtLjQxLjA4eiIgZmlsbD0id2hpdGUiLz48L3N2Zz4="/>
-    <text x="0" y="25" text-anchor="middle" fill="white" font-size="8" font-weight="600" font-family="Segoe UI,Ubuntu,sans-serif">Python</text>
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+UHl0aG9uPC90aXRsZT48cGF0aCBkPSJNMTQuMjUuMThsLjkuMi43My4yNi41OS4zLjQ1LjMyLjM0LjM0LjI1LjM0LjE2LjMzLjEuMy4wNC4yNi4wMi4yLS4wMS4xM1Y4LjVsLS4wNS42My0uMTMuNTUtLjIxLjQ2LS4yNi4zOC0uMy4zMS0uMzMuMjUtLjM1LjE5LS4zNS4xNC0uMzMuMS0uMy4wNy0uMjYuMDQtLjIxLjAySDguNzdsLS42OS4wNS0uNTkuMTQtLjUuMjItLjQxLjI3LS4zMy4zMi0uMjcuMzUtLjIuMzYtLjE1LjM3LS4xLjM1LS4wNy4zMi0uMDQuMjctLjAyLjIxdjMuMDZIMy4xN2wtLjIxLS4wMy0uMjgtLjA3LS4zMi0uMTItLjM1LS4xOC0uMzYtLjI2LS4zNi0uMzYtLjM1LS40Ni0uMzItLjU5LS4yOC0uNzMtLjIxLS44OC0uMTQtMS4wNS0uMDUtMS4yMy4wNi0xLjIyLjE2LTEuMDQuMjQtLjg3LjMyLS43MS4zNi0uNTcuNC0uNDQuNDItLjMzLjQyLS4yNC40LS4xNi4zNi0uMS4zMi0uMDUuMjQtLjAxaC4xNmwuMDYuMDFoOC4xNnYtLjgzSDYuMThsLS4wMS0yLjc1LS4wMi0uMzcuMDUtLjM0LjExLS4zMS4xNy0uMjguMjUtLjI2LjMxLS4yMy4zOC0uMi40NC0uMTguNTEtLjE1LjU4LS4xMi42NC0uMS43MS0uMDYuNzctLjA0Ljg0LS4wMiAxLjI3LjA1ek03Ljk1IDIuMTZsLS4yMy4zMy0uMDguNDEuMDguNDEuMjMuMzQuMzMuMjIuNDEuMDkuNDEtLjA5LjMzLS4yMi4yMy0uMzQuMDgtLjQxLS4wOC0uNDEtLjIzLS4zMy0uMzMtLjIyLS40MS0uMDktLjQxLjA5eiIgZmlsbD0iIzM3NzZBQiIvPjxwYXRoIGQ9Ik0yMS4wNCA2LjExbC4yOC4wNi4zMi4xMi4zNS4xOC4zNi4yNy4zNi4zNS4zNS40Ny4zMi41OS4yOC43My4yMS44OC4xNCAxLjA0LjA1IDEuMjMtLjA2IDEuMjMtLjE2IDEuMDQtLjI0Ljg2LS4zMi43MS0uMzYuNTctLjQuNDUtLjQyLjMzLS40Mi4yNC0uNC4xNi0uMzYuMDktLjMyLjA1LS4yNC4wMi0uMTYtLjAxaC04LjIydi44Mmg1Ljg0bC4wMSAyLjc2LjAyLjM2LS4wNS4zNC0uMTEuMzEtLjE3LjI5LS4yNS4yNS0uMzEuMjQtLjM4LjItLjQ0LjE3LS41MS4xNS0uNTguMTMtLjY0LjA5LS43MS4wNy0uNzcuMDQtLjg0LjAxLTEuMjctLjA0LTEuMDctLjE0LS45LS4yLS43My0uMjUtLjU5LS4zLS40NS0uMzMtLjM0LS4zNC0uMjUtLjM0LS4xNi0uMzMtLjEtLjMtLjA0LS4yNS0uMDItLjIuMDEtLjEzdi01LjM0bC4wNS0uNjQuMTMtLjU0LjIxLS40Ni4yNi0uMzguMy0uMzIuMzMtLjI0LjM1LS4yLjM1LS4xNC4zMy0uMS4zLS4wNi4yNi0uMDQuMjEtLjAyLjEzLS4wMWg1Ljg0bC42OS0uMDUuNTktLjE0LjUtLjIxLjQxLS4yOC4zMy0uMzIuMjctLjM1LjItLjM2LjE1LS4zNi4xLS4zNS4wNy0uMzIuMDQtLjI4LjAyLS4yMVY2LjA3aDIuMDlsLjE0LjAxek0xNC41NyAyMC4zNmwtLjIzLjMzLS4wOC40MS4wOC40MS4yMy4zMy4zMy4yMy40MS4wOC40MS0uMDguMzMtLjIzLjIzLS4zMy4wOC0uNDEtLjA4LS40MS0uMjMtLjMzLS4zMy0uMjMtLjQxLS4wOC0uNDEuMDh6IiBmaWxsPSIjRkZENDNCIi8+PC9zdmc+"/>
   </g>
   <g class="b3">
-    <rect x="-32" y="-34" width="64" height="68" rx="10" fill="#3178c6"/>
-    <rect x="-32" y="-34" width="64" height="68" rx="10"
-          fill="none" stroke="white" stroke-opacity="0.18" stroke-width="1.5"/>
-    <image x="-18" y="-28" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEuMTI1IDBDLjUwMiAwIDAgLjUwMiAwIDEuMTI1djIxLjc1QzAgMjMuNDk4LjUwMiAyNCAxLjEyNSAyNGgyMS43NWMuNjIzIDAgMS4xMjUtLjUwMiAxLjEyNS0xLjEyNVYxLjEyNUMyNCAuNTAyIDIzLjQ5OCAwIDIyLjg3NSAwem0xNy4zNjMgOS43NWMuNjEyIDAgMS4xNTQuMDM3IDEuNjI3LjExMWE2LjM4IDYuMzggMCAwIDEgMS4zMDYuMzR2Mi40NThhMy45NSAzLjk1IDAgMCAwLS42NDMtLjM2MSA1LjA5MyA1LjA5MyAwIDAgMC0uNzE3LS4yNiA1LjQ1MyA1LjQ1MyAwIDAgMC0xLjQyNi0uMmMtLjMgMC0uNTczLjAyOC0uODE5LjA4NmEyLjEgMi4xIDAgMCAwLS42MjMuMjQyYy0uMTcuMTA0LS4zLjIyOS0uMzkzLjM3NGEuODg4Ljg4OCAwIDAgMC0uMTQuNDljMCAuMTk2LjA1My4zNzMuMTU2LjUyOS4xMDQuMTU2LjI1Mi4zMDQuNDQzLjQ0NHMuNDIzLjI3Ni42OTYuNDFjLjI3My4xMzUuNTgyLjI3NC45MjYuNDE2LjQ3LjE5Ny44OTIuNDA3IDEuMjY2LjYyOC4zNzQuMjIyLjY5NS40NzMuOTYzLjc1My4yNjguMjc5LjQ3Mi41OTguNjE0Ljk1Ny4xNDIuMzU5LjIxNC43NzYuMjE0IDEuMjUzIDAgLjY1Ny0uMTI1IDEuMjEtLjM3MyAxLjY1NmEzLjAzMyAzLjAzMyAwIDAgMS0xLjAxMiAxLjA4NSA0LjM4IDQuMzggMCAwIDEtMS40ODcuNTk2Yy0uNTY2LjEyLTEuMTYzLjE4LTEuNzkuMThhOS45MTYgOS45MTYgMCAwIDEtMS44NC0uMTY0IDUuNTQ0IDUuNTQ0IDAgMCAxLTEuNTEyLS40OTN2LTIuNjNhNS4wMzMgNS4wMzMgMCAwIDAgMy4yMzcgMS4yYy4zMzMgMCAuNjI0LS4wMy44NzItLjA5LjI0OS0uMDYuNDU2LS4xNDQuNjIzLS4yNS4xNjYtLjEwOC4yOS0uMjM0LjM3My0uMzhhMS4wMjMgMS4wMjMgMCAwIDAtLjA3NC0xLjA4OSAyLjEyIDIuMTIgMCAwIDAtLjUzNy0uNSA1LjU5NyA1LjU5NyAwIDAgMC0uODA3LS40NDQgMjcuNzIgMjcuNzIgMCAwIDAtMS4wMDctLjQzNmMtLjkxOC0uMzgzLTEuNjAyLS44NTItMi4wNTMtMS40MDUtLjQ1LS41NTMtLjY3Ni0xLjIyMi0uNjc2LTIuMDA1IDAtLjYxNC4xMjMtMS4xNDEuMzY5LTEuNTgyLjI0Ni0uNDQxLjU4LS44MDQgMS4wMDQtMS4wODlhNC40OTQgNC40OTQgMCAwIDEgMS40Ny0uNjI5IDcuNTM2IDcuNTM2IDAgMCAxIDEuNzctLjIwMXptLTE1LjExMy4xODhoOS41NjN2Mi4xNjZIOS41MDZ2OS42NDZINi43ODl2LTkuNjQ2SDMuMzc1eiIgZmlsbD0id2hpdGUiLz48L3N2Zz4="/>
-    <text x="0" y="25" text-anchor="middle" fill="white" font-size="8" font-weight="600" font-family="Segoe UI,Ubuntu,sans-serif">TypeScript</text>
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+VHlwZVNjcmlwdDwvdGl0bGU+PHBhdGggZD0iTTEuMTI1IDBDLjUwMiAwIDAgLjUwMiAwIDEuMTI1djIxLjc1QzAgMjMuNDk4LjUwMiAyNCAxLjEyNSAyNGgyMS43NWMuNjIzIDAgMS4xMjUtLjUwMiAxLjEyNS0xLjEyNVYxLjEyNUMyNCAuNTAyIDIzLjQ5OCAwIDIyLjg3NSAwem0xNy4zNjMgOS43NWMuNjEyIDAgMS4xNTQuMDM3IDEuNjI3LjExMWE2LjM4IDYuMzggMCAwIDEgMS4zMDYuMzR2Mi40NThhMy45NSAzLjk1IDAgMCAwLS42NDMtLjM2MSA1LjA5MyA1LjA5MyAwIDAgMC0uNzE3LS4yNiA1LjQ1MyA1LjQ1MyAwIDAgMC0xLjQyNi0uMmMtLjMgMC0uNTczLjAyOC0uODE5LjA4NmEyLjEgMi4xIDAgMCAwLS42MjMuMjQyYy0uMTcuMTA0LS4zLjIyOS0uMzkzLjM3NGEuODg4Ljg4OCAwIDAgMC0uMTQuNDljMCAuMTk2LjA1My4zNzMuMTU2LjUyOS4xMDQuMTU2LjI1Mi4zMDQuNDQzLjQ0NHMuNDIzLjI3Ni42OTYuNDFjLjI3My4xMzUuNTgyLjI3NC45MjYuNDE2LjQ3LjE5Ny44OTIuNDA3IDEuMjY2LjYyOC4zNzQuMjIyLjY5NS40NzMuOTYzLjc1My4yNjguMjc5LjQ3Mi41OTguNjE0Ljk1Ny4xNDIuMzU5LjIxNC43NzYuMjE0IDEuMjUzIDAgLjY1Ny0uMTI1IDEuMjEtLjM3MyAxLjY1NmEzLjAzMyAzLjAzMyAwIDAgMS0xLjAxMiAxLjA4NSA0LjM4IDQuMzggMCAwIDEtMS40ODcuNTk2Yy0uNTY2LjEyLTEuMTYzLjE4LTEuNzkuMThhOS45MTYgOS45MTYgMCAwIDEtMS44NC0uMTY0IDUuNTQ0IDUuNTQ0IDAgMCAxLTEuNTEyLS40OTN2LTIuNjNhNS4wMzMgNS4wMzMgMCAwIDAgMy4yMzcgMS4yYy4zMzMgMCAuNjI0LS4wMy44NzItLjA5LjI0OS0uMDYuNDU2LS4xNDQuNjIzLS4yNS4xNjYtLjEwOC4yOS0uMjM0LjM3My0uMzhhMS4wMjMgMS4wMjMgMCAwIDAtLjA3NC0xLjA4OSAyLjEyIDIuMTIgMCAwIDAtLjUzNy0uNSA1LjU5NyA1LjU5NyAwIDAgMC0uODA3LS40NDQgMjcuNzIgMjcuNzIgMCAwIDAtMS4wMDctLjQzNmMtLjkxOC0uMzgzLTEuNjAyLS44NTItMi4wNTMtMS40MDUtLjQ1LS41NTMtLjY3Ni0xLjIyMi0uNjc2LTIuMDA1IDAtLjYxNC4xMjMtMS4xNDEuMzY5LTEuNTgyLjI0Ni0uNDQxLjU4LS44MDQgMS4wMDQtMS4wODlhNC40OTQgNC40OTQgMCAwIDEgMS40Ny0uNjI5IDcuNTM2IDcuNTM2IDAgMCAxIDEuNzctLjIwMXptLTE1LjExMy4xODhoOS41NjN2Mi4xNjZIOS41MDZ2OS42NDZINi43ODl2LTkuNjQ2SDMuMzc1eiIgZmlsbD0iIzMxNzhjNiIvPjwvc3ZnPg=="/>
   </g>
   <g class="b4">
-    <rect x="-32" y="-34" width="64" height="68" rx="10" fill="#f7df1e"/>
-    <rect x="-32" y="-34" width="64" height="68" rx="10"
-          fill="none" stroke="white" stroke-opacity="0.18" stroke-width="1.5"/>
-    <image x="-18" y="-28" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTAgMGgyNHYyNEgwVjB6bTIyLjAzNCAxOC4yNzZjLS4xNzUtMS4wOTUtLjg4OC0yLjAxNS0zLjAwMy0yLjg3My0uNzM2LS4zNDUtMS41NTQtLjU4NS0xLjc5Ny0xLjE0LS4wOTEtLjMzLS4xMDUtLjUxLS4wNDYtLjcwNS4xNS0uNjQ2LjkxNS0uODQgMS41MTUtLjY2LjM5LjEyLjc1LjQyLjk3Ni45IDEuMDM0LS42NzYgMS4wMzQtLjY3NiAxLjc1NS0xLjEyNS0uMjctLjQyLS40MDQtLjYwMS0uNTg2LS43OC0uNjMtLjcwNS0xLjQ2OS0xLjA2NS0yLjgzNC0xLjAzNGwtLjcwNS4wODljLS42NzYuMTY1LTEuMzIuNTI1LTEuNzEgMS4wMDUtMS4xNCAxLjI5MS0uODExIDMuNTQxLjU2OSA0LjQ3MSAxLjM2NSAxLjAyIDMuMzYxIDEuMjQ0IDMuNjE2IDIuMjA1LjI0IDEuMTctLjg3IDEuNTQ1LTEuOTY2IDEuNDEtLjgxMS0uMTgtMS4yNi0uNTg2LTEuNzU1LTEuMzM2bC0xLjgzIDEuMDUxYy4yMS40OC40NS42ODkuODEgMS4xMDkgMS43NCAxLjc1NiA2LjA5IDEuNjY2IDYuODcxLTEuMDA0LjAyOS0uMDkuMjQtLjcwNS4wNzQtMS42NWwuMDQ2LjA2N3ptLTguOTgzLTcuMjQ1aC0yLjI0OGMwIDEuOTM4LS4wMDkgMy44NjQtLjAwOSA1LjgwNSAwIDEuMjMyLjA2MyAyLjM2My0uMTM4IDIuNzExLS4zMy42ODktMS4xOC42MDEtMS41NjYuNDgtLjM5Ni0uMTk2LS41OTctLjQ2Ni0uODMtLjg1NS0uMDYzLS4xMDUtLjExLS4xOTYtLjEyNy0uMTk2bC0xLjgyNSAxLjEyNWMuMzA1LjYzLjc1IDEuMTcyIDEuMzI0IDEuNTE3Ljg1NS41MSAyLjAwNC42NzUgMy4yMDcuNDA1Ljc4My0uMjI2IDEuNDU4LS42OTEgMS44MTEtMS40MTEuNTEtLjkzLjQwMi0yLjA3LjM5Ny0zLjM0Ni4wMTItMi4wNTQgMC00LjEwOSAwLTYuMTc5bC4wMDQtLjA1NnoiIGZpbGw9ImJsYWNrIi8+PC9zdmc+"/>
-    <text x="0" y="25" text-anchor="middle" fill="white" font-size="8" font-weight="600" font-family="Segoe UI,Ubuntu,sans-serif">JavaScript</text>
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+SmF2YVNjcmlwdDwvdGl0bGU+PHBhdGggZD0iTTAgMGgyNHYyNEgwVjB6bTIyLjAzNCAxOC4yNzZjLS4xNzUtMS4wOTUtLjg4OC0yLjAxNS0zLjAwMy0yLjg3My0uNzM2LS4zNDUtMS41NTQtLjU4NS0xLjc5Ny0xLjE0LS4wOTEtLjMzLS4xMDUtLjUxLS4wNDYtLjcwNS4xNS0uNjQ2LjkxNS0uODQgMS41MTUtLjY2LjM5LjEyLjc1LjQyLjk3Ni45IDEuMDM0LS42NzYgMS4wMzQtLjY3NiAxLjc1NS0xLjEyNS0uMjctLjQyLS40MDQtLjYwMS0uNTg2LS43OC0uNjMtLjcwNS0xLjQ2OS0xLjA2NS0yLjgzNC0xLjAzNGwtLjcwNS4wODljLS42NzYuMTY1LTEuMzIuNTI1LTEuNzEgMS4wMDUtMS4xNCAxLjI5MS0uODExIDMuNTQxLjU2OSA0LjQ3MSAxLjM2NSAxLjAyIDMuMzYxIDEuMjQ0IDMuNjE2IDIuMjA1LjI0IDEuMTctLjg3IDEuNTQ1LTEuOTY2IDEuNDEtLjgxMS0uMTgtMS4yNi0uNTg2LTEuNzU1LTEuMzM2bC0xLjgzIDEuMDUxYy4yMS40OC40NS42ODkuODEgMS4xMDkgMS43NCAxLjc1NiA2LjA5IDEuNjY2IDYuODcxLTEuMDA0LjAyOS0uMDkuMjQtLjcwNS4wNzQtMS42NWwuMDQ2LjA2N3ptLTguOTgzLTcuMjQ1aC0yLjI0OGMwIDEuOTM4LS4wMDkgMy44NjQtLjAwOSA1LjgwNSAwIDEuMjMyLjA2MyAyLjM2My0uMTM4IDIuNzExLS4zMy42ODktMS4xOC42MDEtMS41NjYuNDgtLjM5Ni0uMTk2LS41OTctLjQ2Ni0uODMtLjg1NS0uMDYzLS4xMDUtLjExLS4xOTYtLjEyNy0uMTk2bC0xLjgyNSAxLjEyNWMuMzA1LjYzLjc1IDEuMTcyIDEuMzI0IDEuNTE3Ljg1NS41MSAyLjAwNC42NzUgMy4yMDcuNDA1Ljc4My0uMjI2IDEuNDU4LS42OTEgMS44MTEtMS40MTEuNTEtLjkzLjQwMi0yLjA3LjM5Ny0zLjM0Ni4wMTItMi4wNTQgMC00LjEwOSAwLTYuMTc5bC4wMDQtLjA1NnoiIGZpbGw9IiNmN2RmMWUiLz48L3N2Zz4="/>
   </g>
   <g class="b5">
-    <rect x="-32" y="-34" width="64" height="68" rx="10" fill="#44a51c"/>
-    <rect x="-32" y="-34" width="64" height="68" rx="10"
-          fill="none" stroke="white" stroke-opacity="0.18" stroke-width="1.5"/>
-    <image x="-18" y="-28" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIxLjY5MyAzLjE2MkgzLjMzTDAgNi40OXYxNC4zNDhoMjAuNjcxTDI0IDE3LjUxVjMuMTYyek0xMi43ODUgMTguNGwtMS41NjIuNzI4LTEuMzUtMi4yMTdjLS4xOTYuMDU3LS40OTkuMDktLjkyNC4wOS0xLjU3OSAwLTIuNjgzLS40MjUtMy4zMDUtMS4yNzYtLjYyMi0uODUtLjkzMi0yLjItLjkzMi00LjAzMyAwLTEuODQuMzE5LTMuMjA2Ljk0OS00LjA5OC42My0uODkyIDEuNzI2LTEuMzQxIDMuMjg4LTEuMzQxIDEuNTYyIDAgMi42NTguNDQxIDMuMjggMS4zMzMuNjMuODgzLjk0IDIuMjUuOTQgNC4wOTggMCAxLjIxOS0uMTMgMi4yLS4zODQgMi45NDUtLjI2MS43NTItLjY3OSAxLjMyNS0xLjI2OCAxLjcxOHptNC43MzYtMS41ODdjLS44NTggMC0xLjQ0Ny0uMTk2LTEuNzY2LS41OS0uMzItLjM5Mi0uNDgzLTEuMTM2LS40ODMtMi4yMzJ2LTMuNTM0SDE0LjExVjkuMDUxaDEuMTYyVjYuODQzaDEuNjQ0VjkuMDVoMi4wOTR2MS40MTVoLTIuMDk0djMuMzQ2YzAgLjYyMi4wNSAxLjAzLjE0IDEuMjI3LjA5LjIwNC4zMjYuMzAzLjY5NS4zMDNsMS4yNDMtLjA1LjA3MyAxLjMyNmMtLjY3LjEzLTEuMTg2LjE5Ni0xLjU0Ni4xOTZ6bS04LjU4LTkuMDhjLS45NSAwLTEuNjA0LjMxMS0xLjk2My45NC0uMzUyLjYzLS41MzIgMS42MjktLjUzMiAzLjAxMSAwIDEuMzc0LjE3MiAyLjM2NC41MTUgMi45NTMuMzQ0LjU4OSAxLjAwNi44OTIgMS45OC44OTIuOTczIDAgMS42MjgtLjI5NSAxLjk3MS0uODc2LjMzNS0uNTguNTA3LTEuNTcuNTA3LTIuOTUzIDAtMS4zOS0uMTcyLTIuMzk2LS41MjMtMy4wMjYtLjM1Mi0uNjMtMS4wMDYtLjk0LTEuOTU1LS45NFoiIGZpbGw9IndoaXRlIi8+PC9zdmc+"/>
-    <text x="0" y="25" text-anchor="middle" fill="white" font-size="8" font-weight="600" font-family="Segoe UI,Ubuntu,sans-serif">QML</text>
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+UU1MPC90aXRsZT48cGF0aCBkPSJNMjEuNjkzIDMuMTYySDMuMzNMMCA2LjQ5djE0LjM0OGgyMC42NzFMMjQgMTcuNTFWMy4xNjJ6TTEyLjc4NSAxOC40bC0xLjU2Mi43MjgtMS4zNS0yLjIxN2MtLjE5Ni4wNTctLjQ5OS4wOS0uOTI0LjA5LTEuNTc5IDAtMi42ODMtLjQyNS0zLjMwNS0xLjI3Ni0uNjIyLS44NS0uOTMyLTIuMi0uOTMyLTQuMDMzIDAtMS44NC4zMTktMy4yMDYuOTQ5LTQuMDk4LjYzLS44OTIgMS43MjYtMS4zNDEgMy4yODgtMS4zNDEgMS41NjIgMCAyLjY1OC40NDEgMy4yOCAxLjMzMy42My44ODMuOTQgMi4yNS45NCA0LjA5OCAwIDEuMjE5LS4xMyAyLjItLjM4NCAyLjk0NS0uMjYxLjc1Mi0uNjc5IDEuMzI1LTEuMjY4IDEuNzE4em00LjczNi0xLjU4N2MtLjg1OCAwLTEuNDQ3LS4xOTYtMS43NjYtLjU5LS4zMi0uMzkyLS40ODMtMS4xMzYtLjQ4My0yLjIzMnYtMy41MzRIMTQuMTFWOS4wNTFoMS4xNjJWNi44NDNoMS42NDRWOS4wNWgyLjA5NHYxLjQxNWgtMi4wOTR2My4zNDZjMCAuNjIyLjA1IDEuMDMuMTQgMS4yMjcuMDkuMjA0LjMyNi4zMDMuNjk1LjMwM2wxLjI0My0uMDUuMDczIDEuMzI2Yy0uNjcuMTMtMS4xODYuMTk2LTEuNTQ2LjE5NnptLTguNTgtOS4wOGMtLjk1IDAtMS42MDQuMzExLTEuOTYzLjk0LS4zNTIuNjMtLjUzMiAxLjYyOS0uNTMyIDMuMDExIDAgMS4zNzQuMTcyIDIuMzY0LjUxNSAyLjk1My4zNDQuNTg5IDEuMDA2Ljg5MiAxLjk4Ljg5Mi45NzMgMCAxLjYyOC0uMjk1IDEuOTcxLS44NzYuMzM1LS41OC41MDctMS41Ny41MDctMi45NTMgMC0xLjM5LS4xNzItMi4zOTYtLjUyMy0zLjAyNi0uMzUyLS42My0xLjAwNi0uOTQtMS45NTUtLjk0WiIgZmlsbD0iIzQ0YTUxYyIvPjwvc3ZnPg=="/>
   </g>
   <g class="b6">
-    <rect x="-32" y="-34" width="64" height="68" rx="10" fill="#555555"/>
-    <rect x="-32" y="-34" width="64" height="68" rx="10"
-          fill="none" stroke="white" stroke-opacity="0.18" stroke-width="1.5"/>
-    <image x="-18" y="-28" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE2LjU5MjEgOS4xOTYycy0uMzU0LTMuMjk4LTMuNjI3LTMuMzljLTMuMjc0MS0uMDktNC45NTUyIDIuNDc0LTQuOTU1MiA2LjE0IDAgMy42NjUxIDEuODU4IDYuNTk3MiA1LjA0NTEgNi41OTcyIDMuMTg0IDAgMy41MzgxLTMuNjY1IDMuNTM4MS0zLjY2NWw2LjEwNDEuMzY1cy4zNiAzLjMxLTIuMTk2IDUuODM2Yy0yLjU1MiAyLjUyNDEtNS42OTAxIDIuOTM3MS03Ljg3NjIgMi45MjAxLTIuMTktLjAxNy01LjIyNjEuMDM0LTguMTYwMi0yLjk3LTIuOTM4LTMuMDEwMS0zLjQzNi01LjkzMDItMy40MzYtOC44MDAyIDAtMi44NzAxLjU1Ni02LjY3MDIgNC4wNDctOS41NTAyQzcuNDQ0LjcyIDkuODQ5IDAgMTIuMjU0IDBjMTAuMDQyMiAwIDEwLjcxNzIgOS4yNjAyIDEwLjcxNzIgOS4yNjAyeiIgZmlsbD0iYmxhY2siLz48L3N2Zz4="/>
-    <text x="0" y="25" text-anchor="middle" fill="white" font-size="8" font-weight="600" font-family="Segoe UI,Ubuntu,sans-serif">C</text>
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+QzwvdGl0bGU+PHBhdGggZD0iTTE2LjU5MjEgOS4xOTYycy0uMzU0LTMuMjk4LTMuNjI3LTMuMzljLTMuMjc0MS0uMDktNC45NTUyIDIuNDc0LTQuOTU1MiA2LjE0IDAgMy42NjUxIDEuODU4IDYuNTk3MiA1LjA0NTEgNi41OTcyIDMuMTg0IDAgMy41MzgxLTMuNjY1IDMuNTM4MS0zLjY2NWw2LjEwNDEuMzY1cy4zNiAzLjMxLTIuMTk2IDUuODM2Yy0yLjU1MiAyLjUyNDEtNS42OTAxIDIuOTM3MS03Ljg3NjIgMi45MjAxLTIuMTktLjAxNy01LjIyNjEuMDM0LTguMTYwMi0yLjk3LTIuOTM4LTMuMDEwMS0zLjQzNi01LjkzMDItMy40MzYtOC44MDAyIDAtMi44NzAxLjU1Ni02LjY3MDIgNC4wNDctOS41NTAyQzcuNDQ0LjcyIDkuODQ5IDAgMTIuMjU0IDBjMTAuMDQyMiAwIDEwLjcxNzIgOS4yNjAyIDEwLjcxNzIgOS4yNjAyeiIgZmlsbD0iIzAwNTk5QyIvPjwvc3ZnPg=="/>
   </g>
   <g class="b7">
-    <rect x="-32" y="-34" width="64" height="68" rx="10" fill="#6E4C13"/>
-    <rect x="-32" y="-34" width="64" height="68" rx="10"
-          fill="none" stroke="white" stroke-opacity="0.18" stroke-width="1.5"/>
-    <g transform="translate(0,-10)"><rect x="-11" y="-11" width="22" height="22" rx="2" fill="none" stroke="white" stroke-width="2"/><line x1="-6" y1="-17" x2="-6" y2="-11" stroke="white" stroke-width="2"/><line x1="6" y1="-17" x2="6" y2="-11" stroke="white" stroke-width="2"/><line x1="-6" y1="11" x2="-6" y2="17" stroke="white" stroke-width="2"/><line x1="6" y1="11" x2="6" y2="17" stroke="white" stroke-width="2"/><line x1="-17" y1="-6" x2="-11" y2="-6" stroke="white" stroke-width="2"/><line x1="-17" y1="6" x2="-11" y2="6" stroke="white" stroke-width="2"/><line x1="11" y1="-6" x2="17" y2="-6" stroke="white" stroke-width="2"/><line x1="11" y1="6" x2="17" y2="6" stroke="white" stroke-width="2"/></g>
-    <text x="0" y="25" text-anchor="middle" fill="white" font-size="8" font-weight="600" font-family="Segoe UI,Ubuntu,sans-serif">Assembly</text>
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+QXNzZW1ibHk8L3RpdGxlPjxkZWZzPjxtYXNrIGlkPSJtIj48cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9IndoaXRlIi8+PHRleHQgeD0iMTIiIHk9IjEyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZm9udC1mYW1pbHk9IkhlbHZldGljYSBOZXVlLEhlbHZldGljYSxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjgiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJibGFjayI+QVNNPC90ZXh0PjwvbWFzaz48L2RlZnM+PHBvbHlnb24gcG9pbnRzPSIyMiwxMiAxNywyMC42NiA3LDIwLjY2IDIsMTIgNywzLjM0IDE3LDMuMzQiIGZpbGw9IiMwMDc2QzYiIG1hc2s9InVybCgjbSkiLz48L3N2Zz4="/>
   </g>
   <g class="b8">
-    <rect x="-32" y="-34" width="64" height="68" rx="10" fill="#e4405f"/>
-    <rect x="-32" y="-34" width="64" height="68" rx="10"
-          fill="none" stroke="white" stroke-opacity="0.18" stroke-width="1.5"/>
-    <g transform="translate(0,-10)"><circle cx="-10" cy="0" r="7" fill="none" stroke="white" stroke-width="2"/><circle cx="10" cy="0" r="7" fill="none" stroke="white" stroke-width="2"/><line x1="-3" y1="0" x2="3" y2="0" stroke="white" stroke-width="2"/><path d="M0,-4 L5,0 L0,4" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
-    <text x="0" y="25" text-anchor="middle" fill="white" font-size="8" font-weight="600" font-family="Segoe UI,Ubuntu,sans-serif">SCXML</text>
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+U0NYTUw8L3RpdGxlPgo8IS0tIFZpc3VhbCBTQ1hNTCBFZGl0b3IgaWNvbjogdHdvIHN0YXRlIGNpcmNsZXMgd2l0aCByb3RhdGluZyBjeWNsZSBhcnJvd3MgLS0+CjwhLS0gU3RhdGUgMSAodG9wLWxlZnQsIGFuYWxvZ291cyB0byB0aGUgY3lhbiBzdGF0ZSBpbiB0aGUgZWRpdG9yIGljb24pIC0tPgo8Y2lyY2xlIGN4PSI1IiBjeT0iNSIgcj0iNCIgZmlsbD0iI2U0NDA1ZiIvPgo8IS0tIFN0YXRlIDIgKGJvdHRvbS1yaWdodCwgYW5hbG9nb3VzIHRvIHRoZSBtYWdlbnRhIHN0YXRlKSAtLT4KPGNpcmNsZSBjeD0iMTkiIGN5PSIxOSIgcj0iNCIgZmlsbD0iI2U0NDA1ZiIvPgo8IS0tIEN5Y2xlIGFycm93IDE6IGNvdW50ZXJjbG9ja3dpc2UgYXJjIGZyb20gYm90dG9tLXJpZ2h0IGFyZWEgdG8gdG9wLWxlZnQgYXJlYSAodmlhIHRvcC1yaWdodCkgLS0+CjxwYXRoIGQ9Ik0yMCAxMy41IEExMCAxMCAwIDAgMCAxMC41IDQiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxwYXRoIGQ9Ik0xMyAyLjUgTDEwLjUgNCBMMTIuNSA2IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8IS0tIEN5Y2xlIGFycm93IDI6IGNvdW50ZXJjbG9ja3dpc2UgYXJjIGZyb20gdG9wLWxlZnQgYXJlYSB0byBib3R0b20tcmlnaHQgYXJlYSAodmlhIGJvdHRvbS1sZWZ0KSAtLT4KPHBhdGggZD0iTTQgMTAuNSBBMTAgMTAgMCAwIDAgMTMuNSAyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPHBhdGggZD0iTTExIDIxLjUgTDEzLjUgMjAgTDExLjUgMTgiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo="/>
   </g>
   <g class="b9">
-    <rect x="-32" y="-34" width="64" height="68" rx="10" fill="#198CE7"/>
-    <rect x="-32" y="-34" width="64" height="68" rx="10"
-          fill="none" stroke="white" stroke-opacity="0.18" stroke-width="1.5"/>
-    <image x="-18" y="-28" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDIuNzQ2Yy02LjYyNyAwLTEyIDMuNTk5LTEyIDguMDM3IDAgMy44OTcgNC4xNDQgNy4xNDQgOS42NCA3Ljg4VjE2LjI2Yy0yLjkyNC0uOTE1LTQuOTI1LTIuNzU1LTQuOTI1LTQuODc3IDAtMy4wMzUgNC4wODQtNS40OTQgOS4xMi01LjQ5NCA1LjAzOCAwIDguNzU3IDEuNjgzIDguNzU3IDUuNDk0IDAgMS45NzYtLjk5OSAzLjM3OS0yLjY2MiA0LjI3Mi4wOS4wNjYuMTc0LjEyOC4yNTguMjE2LjE2OS4xNDkuMjUuMzYzLjM3Mi41NDQgMi4xMjgtMS40NSAzLjQ0LTMuNDM3IDMuNDQtNS42MzEgMC00LjQ0LTUuMzczLTguMDM4LTEyLTguMDM4em0tMi4xMTEgNC45OXYxMy41MTZsNC4wOTMtLjAwMi0uMDAyLTUuMjkxaDEuMWMuMjI1IDAgLjMyMS4wNjYuNTQ5LjI1LjI3Mi4yMi43MTUuOTgyLjcxNS45ODJsMi4xNjQgNC4wNjMgNC42MjctLjAwMi0yLjg2NC00LjgyNnMtLjA4Ni0uMTkzLS4yNjUtLjM4M2EyLjIyIDIuMjIgMCAwMC0uNTgyLS40MTZjLS40MjItLjIxNC0xLjE0OS0uNDM0LTEuMTQ5LS40MzRzMy41NzgtLjI2NCAzLjU3OC0zLjgyNmMwLTMuNTYyLTMuNzQ0LTMuNjMtMy43NDQtMy42M3ptNC4xMjcgMi45M2wyLjQ3OC4wMDJzMS4xNDktLjA2MiAxLjE0OSAxLjEyN2MwIDEuMTY1LTEuMTQ5IDEuMTctMS4xNDkgMS4xN2gtMi40Nzh6bTEuNzU0IDYuMTE5Yy0uNDk0LjA0OS0xLjAxMi4wNzktMS41NC4wODh2MS44MDdhMTYuNjIyIDE2LjYyMiAwIDAwMi4zNy0uNDczbC0uNDcxLS44OTFzLS4xMDgtLjE4My0uMjQ4LS4zOTRjLS4wMzktLjA1NC0uMDgtLjA5OC0uMTExLS4xMzd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg=="/>
-    <text x="0" y="25" text-anchor="middle" fill="white" font-size="8" font-weight="600" font-family="Segoe UI,Ubuntu,sans-serif">R</text>
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+UjwvdGl0bGU+PHBhdGggZD0iTTEyIDIuNzQ2Yy02LjYyNyAwLTEyIDMuNTk5LTEyIDguMDM3IDAgMy44OTcgNC4xNDQgNy4xNDQgOS42NCA3Ljg4VjE2LjI2Yy0yLjkyNC0uOTE1LTQuOTI1LTIuNzU1LTQuOTI1LTQuODc3IDAtMy4wMzUgNC4wODQtNS40OTQgOS4xMi01LjQ5NCA1LjAzOCAwIDguNzU3IDEuNjgzIDguNzU3IDUuNDk0IDAgMS45NzYtLjk5OSAzLjM3OS0yLjY2MiA0LjI3Mi4wOS4wNjYuMTc0LjEyOC4yNTguMjE2LjE2OS4xNDkuMjUuMzYzLjM3Mi41NDQgMi4xMjgtMS40NSAzLjQ0LTMuNDM3IDMuNDQtNS42MzEgMC00LjQ0LTUuMzczLTguMDM4LTEyLTguMDM4eiIgZmlsbD0iIzg5OEVBNCIvPjxwYXRoIGQ9Ik05Ljg4OSA3LjczNnYxMy41MTZsNC4wOTMtLjAwMi0uMDAyLTUuMjkxaDEuMWMuMjI1IDAgLjMyMS4wNjYuNTQ5LjI1LjI3Mi4yMi43MTUuOTgyLjcxNS45ODJsMi4xNjQgNC4wNjMgNC42MjctLjAwMi0yLjg2NC00LjgyNnMtLjA4Ni0uMTkzLS4yNjUtLjM4M2EyLjIyIDIuMjIgMCAwMC0uNTgyLS40MTZjLS40MjItLjIxNC0xLjE0OS0uNDM0LTEuMTQ5LS40MzRzMy41NzgtLjI2NCAzLjU3OC0zLjgyNmMwLTMuNTYyLTMuNzQ0LTMuNjMtMy43NDQtMy42M3pNMTQuMDE2IDEwLjY2NmwyLjQ3OC4wMDJzMS4xNDktLjA2MiAxLjE0OSAxLjEyN2MwIDEuMTY1LTEuMTQ5IDEuMTctMS4xNDkgMS4xN2gtMi40Nzh6TTE1Ljc3MCAxNi43ODVjLS40OTQuMDQ5LTEuMDEyLjA3OS0xLjU0LjA4OHYxLjgwN2ExNi42MjIgMTYuNjIyIDAgMDAyLjM3LS40NzNsLS40NzEtLjg5MXMtLjEwOC0uMTgzLS4yNDgtLjM5NGMtLjAzOS0uMDU0LS4wOC0uMDk4LS4xMTEtLjEzN3oiIGZpbGw9IiMyNzZEQzMiLz48L3N2Zz4="/>
   </g>
   <g class="b10">
-    <rect x="-32" y="-34" width="64" height="68" rx="10" fill="#e34c26"/>
-    <rect x="-32" y="-34" width="64" height="68" rx="10"
-          fill="none" stroke="white" stroke-opacity="0.18" stroke-width="1.5"/>
-    <image x="-18" y="-28" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEuNSAwaDIxbC0xLjkxIDIxLjU2M0wxMS45NzcgMjRsLTguNTY0LTIuNDM4TDEuNSAwem03LjAzMSA5Ljc1bC0uMjMyLTIuNzE4IDEwLjA1OS4wMDMuMjMtMi42MjJMNS40MTIgNC40MWwuNjk4IDguMDFoOS4xMjZsLS4zMjYgMy40MjYtMi45MS44MDQtMi45NTUtLjgxLS4xODgtMi4xMUg2LjI0OGwuMzMgNC4xNzFMMTIgMTkuMzUxbDUuMzc5LTEuNDQzLjc0NC04LjE1N0g4LjUzMXoiIGZpbGw9IndoaXRlIi8+PC9zdmc+"/>
-    <text x="0" y="25" text-anchor="middle" fill="white" font-size="8" font-weight="600" font-family="Segoe UI,Ubuntu,sans-serif">HTML5</text>
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+SFRNTDU8L3RpdGxlPjxwYXRoIGQ9Ik0xLjUgMGgyMWwtMS45MSAyMS41NjNMMTEuOTc3IDI0bC04LjU2NC0yLjQzOEwxLjUgMHptNy4wMzEgOS43NWwtLjIzMi0yLjcxOCAxMC4wNTkuMDAzLjIzLTIuNjIyTDUuNDEyIDQuNDFsLjY5OCA4LjAxaDkuMTI2bC0uMzI2IDMuNDI2LTIuOTEuODA0LTIuOTU1LS44MS0uMTg4LTIuMTFINi4yNDhsLjMzIDQuMTcxTDEyIDE5LjM1MWw1LjM3OS0xLjQ0My43NDQtOC4xNTdIOC41MzF6IiBmaWxsPSIjZTM0YzI2Ii8+PC9zdmc+"/>
   </g>
   <g class="b11">
-    <rect x="-32" y="-34" width="64" height="68" rx="10" fill="#563d7c"/>
-    <rect x="-32" y="-34" width="64" height="68" rx="10"
-          fill="none" stroke="white" stroke-opacity="0.18" stroke-width="1.5"/>
-    <image x="-18" y="-28" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTAgMHYyMC4xNkEzLjg0IDMuODQgMCAwIDAgMy44NCAyNGgxNi4zMkEzLjg0IDMuODQgMCAwIDAgMjQgMjAuMTZWMy44NEEzLjg0IDMuODQgMCAwIDAgMjAuMTYgMFptMTQuMjU2IDEzLjA4YzEuNTYgMCAyLjI4IDEuMDggMi4zMDQgMi42NGgtMS42MDhjLjAyNC0uMjg4LS4wNDgtLjYtLjE0NC0uODQtLjA5Ni0uMTkyLS4yODgtLjI2NC0uNTUyLS4yNjQtLjQ1NiAwLS42OTYuMjY0LS42OTYuODQtLjAyNC41NzYuMjg4Ljg4OC43NjggMS4wOC43Mi4yODggMS42MDguNzQ0IDEuOTIgMS4yOTZxLjQzMi42NDguNDMyIDEuNjU2YzAgMS42MDgtLjkxMiAyLjU5Mi0yLjQ5NiAyLjU5Mi0xLjY1NiAwLTIuNC0xLjAzMi0yLjQyNC0yLjY4OGgxLjY4YzAgLjc5Mi4yNjQgMS4xNzYuNzkyIDEuMTc2LjI2NCAwIC40NTYtLjA3Mi41NTItLjI0LjE5Mi0uMzEyLjI0LTEuMTc2LS4wNDgtMS41MTItLjMxMi0uNDA4LS45MTItLjYtMS4zMi0uODE2cS0uODI4LS4zOTYtMS4yMjQtLjkzNmMtLjI0LS4zNi0uMzYtLjg4OC0uMzYtMS41MzYgMC0xLjQ0LjkzNi0yLjQ3MiAyLjQyNC0yLjQ0OG01LjQgMGMxLjU4NCAwIDIuMzA0IDEuMDggMi4zMjggMi42NGgtMS42MDhjMC0uMjg4LS4wNDgtLjYtLjE2OC0uODQtLjA5Ni0uMTkyLS4yNjQtLjI2NC0uNTI4LS4yNjQtLjQ4IDAtLjcyLjI2NC0uNzIuODRzLjI4OC44ODguNzkyIDEuMDhjLjY5Ni4yODggMS42MDguNzQ0IDEuOTIgMS4yOTYuMjY0LjQzMi40MDguOTg0LjQwOCAxLjY1Ni4wMjQgMS42MDgtLjg4OCAyLjU5Mi0yLjQ3MiAyLjU5Mi0xLjY4IDAtMi40MjQtMS4wNTYtMi40NDgtMi42ODhoMS42OGMwIC43NDQuMjY0IDEuMTc2Ljc5MiAxLjE3Ni4yNjQgMCAuNDU2LS4wNzIuNTUyLS4yNC4yMTYtLjMxMi4yNjQtMS4xNzYtLjA0OC0xLjUxMi0uMjg4LS40MDgtLjg4OC0uNi0xLjMyLS44MTYtLjU1Mi0uMjY0LS45Ni0uNTc2LTEuMi0uOTM2cy0uMzYtLjg4OC0uMzYtMS41MzZjLS4wMjQtMS40NC45MTItMi40NzIgMi40LTIuNDQ4bS0xMS4wMzEuMDE4Yy43MTEtLjAwNiAxLjQxOS4xOTggMS44MzkuNjMuNDMyLjQzMi42NzIgMS4xMjguNjQ4IDEuOTkySDkuMzM2Yy4wMjQtLjQ1Ni0uMDk2LS43OTItLjQzMi0uOTYtLjMxMi0uMTQ0LS43NjgtLjA0OC0uODg4LjI0LS4xMi4yNjQtLjE5Mi41NzYtLjE2OC44NjR2My41MDRjMCAuNzQ0LjI2NCAxLjEyOC43NjggMS4xMjhhLjY1LjY1IDAgMCAwIC41NTItLjI2NGMuMTY4LS4yNC4xOTItLjU1Mi4xNjgtLjg0aDEuNzc2Yy4wOTYgMS42MzItLjk4NCAyLjcxMi0yLjU2OCAyLjY4OC0xLjUzNiAwLTIuNDk2LS44NjQtMi40NzItMi40NzJ2LTQuMDMyYzAtLjgxNi4yNC0xLjQ0LjY5Ni0xLjg0OC40MzItLjQwOCAxLjE0Ni0uNjI0IDEuODU3LS42MyIgZmlsbD0id2hpdGUiLz48L3N2Zz4="/>
-    <text x="0" y="25" text-anchor="middle" fill="white" font-size="8" font-weight="600" font-family="Segoe UI,Ubuntu,sans-serif">CSS3</text>
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+Q1NTMzwvdGl0bGU+PHBhdGggZD0iTTEuNSAwaDIxbC0xLjkxIDIxLjU2M0wxMS45NzcgMjRsLTguNTY1LTIuNDM4TDEuNSAwem0xNy4wOSA0LjQxM0w1LjQxIDQuNDFsLjIxMyAyLjYyMiAxMC4xMjUuMDAyLS4yNTUgMi43MTZoLTYuNjRsLjI0IDIuNTczaDYuMTgybC0uMzY2IDMuNTIzLTIuOTEuODA0LTIuOTU2LS44MS0uMTg4LTIuMTFoLTIuNjFsLjI5IDMuODU1TDEyIDE5LjI4OGw1LjM3My0xLjUzTDE4LjU5IDQuNDE0eiIgZmlsbD0iIzE1NzJCNiIvPjwvc3ZnPg=="/>
   </g>
   </g>
   <g class="t0" opacity="0">
-    <rect x="230" y="88" width="260" height="46" rx="8"
-          fill="#1e293b" fill-opacity="0.80"
-          stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#00599c" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#00599c" stroke-width="1.5"
+          class="tooltip-border" filter="url(#tooltip-glow)"/>
     <text x="360" y="106" text-anchor="middle"
           fill="#f1f5f9" font-size="12" font-weight="600"
           font-family="Segoe UI,Ubuntu,sans-serif">C++</text>
@@ -556,9 +522,13 @@
           font-family="Segoe UI,Ubuntu,sans-serif">High-performance systems &amp; applications</text>
   </g>
   <g class="t1" opacity="0">
-    <rect x="230" y="88" width="260" height="46" rx="8"
-          fill="#1e293b" fill-opacity="0.80"
-          stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#f89820" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#f89820" stroke-width="1.5"
+          class="tooltip-border" filter="url(#tooltip-glow)"/>
     <text x="360" y="106" text-anchor="middle"
           fill="#f1f5f9" font-size="12" font-weight="600"
           font-family="Segoe UI,Ubuntu,sans-serif">Java</text>
@@ -567,9 +537,13 @@
           font-family="Segoe UI,Ubuntu,sans-serif">Platform-independent enterprise language</text>
   </g>
   <g class="t2" opacity="0">
-    <rect x="230" y="88" width="260" height="46" rx="8"
-          fill="#1e293b" fill-opacity="0.80"
-          stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#3776ab" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#3776ab" stroke-width="1.5"
+          class="tooltip-border" filter="url(#tooltip-glow)"/>
     <text x="360" y="106" text-anchor="middle"
           fill="#f1f5f9" font-size="12" font-weight="600"
           font-family="Segoe UI,Ubuntu,sans-serif">Python</text>
@@ -578,9 +552,13 @@
           font-family="Segoe UI,Ubuntu,sans-serif">Versatile scripting &amp; data science</text>
   </g>
   <g class="t3" opacity="0">
-    <rect x="230" y="88" width="260" height="46" rx="8"
-          fill="#1e293b" fill-opacity="0.80"
-          stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#3178c6" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#3178c6" stroke-width="1.5"
+          class="tooltip-border" filter="url(#tooltip-glow)"/>
     <text x="360" y="106" text-anchor="middle"
           fill="#f1f5f9" font-size="12" font-weight="600"
           font-family="Segoe UI,Ubuntu,sans-serif">TypeScript</text>
@@ -589,9 +567,13 @@
           font-family="Segoe UI,Ubuntu,sans-serif">JavaScript with static types</text>
   </g>
   <g class="t4" opacity="0">
-    <rect x="230" y="88" width="260" height="46" rx="8"
-          fill="#1e293b" fill-opacity="0.80"
-          stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#f7df1e" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#f7df1e" stroke-width="1.5"
+          class="tooltip-border" filter="url(#tooltip-glow)"/>
     <text x="360" y="106" text-anchor="middle"
           fill="#f1f5f9" font-size="12" font-weight="600"
           font-family="Segoe UI,Ubuntu,sans-serif">JavaScript</text>
@@ -600,9 +582,13 @@
           font-family="Segoe UI,Ubuntu,sans-serif">The universal language of the web</text>
   </g>
   <g class="t5" opacity="0">
-    <rect x="230" y="88" width="260" height="46" rx="8"
-          fill="#1e293b" fill-opacity="0.80"
-          stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#44a51c" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#44a51c" stroke-width="1.5"
+          class="tooltip-border" filter="url(#tooltip-glow)"/>
     <text x="360" y="106" text-anchor="middle"
           fill="#f1f5f9" font-size="12" font-weight="600"
           font-family="Segoe UI,Ubuntu,sans-serif">QML</text>
@@ -611,9 +597,13 @@
           font-family="Segoe UI,Ubuntu,sans-serif">Qt declarative UI language</text>
   </g>
   <g class="t6" opacity="0">
-    <rect x="230" y="88" width="260" height="46" rx="8"
-          fill="#1e293b" fill-opacity="0.80"
-          stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#555555" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#555555" stroke-width="1.5"
+          class="tooltip-border" filter="url(#tooltip-glow)"/>
     <text x="360" y="106" text-anchor="middle"
           fill="#f1f5f9" font-size="12" font-weight="600"
           font-family="Segoe UI,Ubuntu,sans-serif">C</text>
@@ -622,9 +612,13 @@
           font-family="Segoe UI,Ubuntu,sans-serif">Foundation of systems programming</text>
   </g>
   <g class="t7" opacity="0">
-    <rect x="230" y="88" width="260" height="46" rx="8"
-          fill="#1e293b" fill-opacity="0.80"
-          stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#6E4C13" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#6E4C13" stroke-width="1.5"
+          class="tooltip-border" filter="url(#tooltip-glow)"/>
     <text x="360" y="106" text-anchor="middle"
           fill="#f1f5f9" font-size="12" font-weight="600"
           font-family="Segoe UI,Ubuntu,sans-serif">Assembly</text>
@@ -633,9 +627,13 @@
           font-family="Segoe UI,Ubuntu,sans-serif">Machine-level programming</text>
   </g>
   <g class="t8" opacity="0">
-    <rect x="230" y="88" width="260" height="46" rx="8"
-          fill="#1e293b" fill-opacity="0.80"
-          stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#e4405f" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#e4405f" stroke-width="1.5"
+          class="tooltip-border" filter="url(#tooltip-glow)"/>
     <text x="360" y="106" text-anchor="middle"
           fill="#f1f5f9" font-size="12" font-weight="600"
           font-family="Segoe UI,Ubuntu,sans-serif">SCXML</text>
@@ -644,9 +642,13 @@
           font-family="Segoe UI,Ubuntu,sans-serif">Executable state machine notation</text>
   </g>
   <g class="t9" opacity="0">
-    <rect x="230" y="88" width="260" height="46" rx="8"
-          fill="#1e293b" fill-opacity="0.80"
-          stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#198CE7" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#198CE7" stroke-width="1.5"
+          class="tooltip-border" filter="url(#tooltip-glow)"/>
     <text x="360" y="106" text-anchor="middle"
           fill="#f1f5f9" font-size="12" font-weight="600"
           font-family="Segoe UI,Ubuntu,sans-serif">R</text>
@@ -655,9 +657,13 @@
           font-family="Segoe UI,Ubuntu,sans-serif">Statistical computing &amp; visualisation</text>
   </g>
   <g class="t10" opacity="0">
-    <rect x="230" y="88" width="260" height="46" rx="8"
-          fill="#1e293b" fill-opacity="0.80"
-          stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#e34c26" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#e34c26" stroke-width="1.5"
+          class="tooltip-border" filter="url(#tooltip-glow)"/>
     <text x="360" y="106" text-anchor="middle"
           fill="#f1f5f9" font-size="12" font-weight="600"
           font-family="Segoe UI,Ubuntu,sans-serif">HTML5</text>
@@ -666,9 +672,13 @@
           font-family="Segoe UI,Ubuntu,sans-serif">Semantic markup for the web</text>
   </g>
   <g class="t11" opacity="0">
-    <rect x="230" y="88" width="260" height="46" rx="8"
-          fill="#1e293b" fill-opacity="0.80"
-          stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#1572B6" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#1572B6" stroke-width="1.5"
+          class="tooltip-border" filter="url(#tooltip-glow)"/>
     <text x="360" y="106" text-anchor="middle"
           fill="#f1f5f9" font-size="12" font-weight="600"
           font-family="Segoe UI,Ubuntu,sans-serif">CSS3</text>

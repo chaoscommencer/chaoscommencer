@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="67.25" height="28" role="img" aria-label="SCXML"><title>SCXML</title><g shape-rendering="crispEdges"><rect width="67.25" height="28" fill="#3498db"/></g><g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100"><text transform="scale(.1)" x="336.25" y="175" textLength="432.5" fill="#fff" font-weight="bold">SCXML</text></g></svg>
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>SCXML</title>
+<!-- Visual SCXML Editor icon: two state circles with rotating cycle arrows -->
+<!-- State 1 (top-left, analogous to the cyan state in the editor icon) -->
+<circle cx="5" cy="5" r="4" fill="white"/>
+<!-- State 2 (bottom-right, analogous to the magenta state) -->
+<circle cx="19" cy="19" r="4" fill="white"/>
+<!-- Cycle arrow 1: counterclockwise arc from bottom-right area to top-left area (via top-right) -->
+<path d="M20 13.5 A10 10 0 0 0 10.5 4" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M13 2.5 L10.5 4 L12.5 6" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- Cycle arrow 2: counterclockwise arc from top-left area to bottom-right area (via bottom-left) -->
+<path d="M4 10.5 A10 10 0 0 0 13.5 20" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M11 21.5 L13.5 20 L11.5 18" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

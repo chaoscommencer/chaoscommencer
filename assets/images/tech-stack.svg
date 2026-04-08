@@ -1,0 +1,1318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 830 383" width="830" height="383">
+  <defs>
+    <linearGradient id="ts-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#0d1117"/>
+      <stop offset="60%"  stop-color="#130c26"/>
+      <stop offset="100%" stop-color="#0f1b2d"/>
+    </linearGradient>
+    <linearGradient id="ts-border" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#7c3aed"/>
+      <stop offset="50%"  stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="ts-title" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#c4b5fd"/>
+      <stop offset="60%"  stop-color="#93c5fd"/>
+      <stop offset="100%" stop-color="#67e8f9"/>
+    </linearGradient>
+    <filter id="ts-glow" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      @keyframes ts-border-pulse {
+        0%, 100% { opacity: 0.50; }
+        50%      { opacity: 1.00; }
+      }
+      @keyframes ts-twinkle-a {
+        0%, 100% { opacity: 0.90; }
+        35%      { opacity: 0.20; }
+        70%      { opacity: 0.75; }
+      }
+      @keyframes ts-twinkle-b {
+        0%, 100% { opacity: 0.65; }
+        25%      { opacity: 0.95; }
+        60%      { opacity: 0.10; }
+      }
+      @keyframes ts-twinkle-c {
+        0%, 100% { opacity: 0.80; }
+        15%      { opacity: 0.10; }
+        55%      { opacity: 0.95; }
+      }
+      .ts-star-a      { animation: ts-twinkle-a 3.2s ease-in-out infinite; }
+      .ts-star-b      { animation: ts-twinkle-b 2.8s ease-in-out infinite; }
+      .ts-star-c      { animation: ts-twinkle-c 4.0s ease-in-out infinite; }
+      .ts-border-glow { animation: ts-border-pulse 3.2s ease-in-out infinite; }
+    </style>
+  </defs>
+  <!-- Background -->
+  <rect width="830" height="383" rx="14" ry="14"
+        fill="url(#ts-bg)"/>
+  <!-- Stars -->
+  <circle cx="50" cy="20" r="1.0" fill="#c4b5fd" class="ts-star-a" style="animation-delay:0.0s"/>
+  <circle cx="150" cy="35" r="0.8" fill="#93c5fd" class="ts-star-b" style="animation-delay:1.2s"/>
+  <circle cx="280" cy="18" r="1.2" fill="#818cf8" class="ts-star-c" style="animation-delay:2.5s"/>
+  <circle cx="100" cy="55" r="0.9" fill="#c4b5fd" class="ts-star-a" style="animation-delay:0.7s"/>
+  <circle cx="350" cy="40" r="0.7" fill="#93c5fd" class="ts-star-b" style="animation-delay:1.8s"/>
+  <circle cx="600" cy="22" r="1.1" fill="#818cf8" class="ts-star-c" style="animation-delay:0.4s"/>
+  <circle cx="700" cy="42" r="0.9" fill="#c4b5fd" class="ts-star-a" style="animation-delay:2.1s"/>
+  <circle cx="780" cy="18" r="1.3" fill="#93c5fd" class="ts-star-b" style="animation-delay:0.9s"/>
+  <circle cx="820" cy="50" r="0.8" fill="#818cf8" class="ts-star-c" style="animation-delay:1.5s"/>
+  <circle cx="28" cy="120" r="0.7" fill="#c4b5fd" class="ts-star-a" style="animation-delay:1.1s"/>
+  <circle cx="200" cy="100" r="0.8" fill="#93c5fd" class="ts-star-b" style="animation-delay:2.3s"/>
+  <circle cx="760" cy="115" r="0.6" fill="#818cf8" class="ts-star-c" style="animation-delay:0.6s"/>
+  <circle cx="490" cy="150" r="0.7" fill="#c4b5fd" class="ts-star-a" style="animation-delay:1.7s"/>
+  <circle cx="645" cy="88" r="0.9" fill="#93c5fd" class="ts-star-b" style="animation-delay:0.3s"/>
+  <circle cx="35" cy="215" r="0.8" fill="#818cf8" class="ts-star-c" style="animation-delay:0.8s"/>
+  <circle cx="810" cy="218" r="0.7" fill="#c4b5fd" class="ts-star-a" style="animation-delay:2.0s"/>
+  <circle cx="415" cy="220" r="0.6" fill="#93c5fd" class="ts-star-b" style="animation-delay:1.4s"/>
+  <circle cx="28" cy="300" r="0.7" fill="#93c5fd" class="ts-star-b" style="animation-delay:1.6s"/>
+  <circle cx="200" cy="278" r="0.8" fill="#818cf8" class="ts-star-c" style="animation-delay:0.5s"/>
+  <circle cx="760" cy="315" r="0.6" fill="#c4b5fd" class="ts-star-a" style="animation-delay:2.2s"/>
+  <circle cx="490" cy="345" r="0.7" fill="#818cf8" class="ts-star-c" style="animation-delay:0.2s"/>
+  <circle cx="645" cy="270" r="0.9" fill="#c4b5fd" class="ts-star-a" style="animation-delay:1.9s"/>
+  <!-- Pulsing outer border -->
+  <rect x="1.5" y="1.5" width="827" height="380"
+        rx="14" ry="14"
+        fill="none" stroke="url(#ts-border)" stroke-width="1.5"
+        class="ts-border-glow" filter="url(#ts-glow)"/>
+  <rect x="1.5" y="1.5" width="827" height="380"
+        rx="14" ry="14"
+        fill="none" stroke="url(#ts-border)" stroke-width="0.5" opacity="0.7"/>
+  <!-- Title -->
+  <text x="415" y="44"
+        font-family="'Segoe UI', Ubuntu, Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle"
+        fill="url(#ts-title)" filter="url(#ts-glow)">🛠️ Tech Stack</text>
+  <line x1="207" y1="55" x2="622" y2="55"
+        stroke="url(#ts-border)" stroke-width="1" opacity="0.45"/>
+  <!-- Languages carousel (inlined as nested SVG for animation support) -->
+  <svg x="55" y="71" width="720" height="142" xmlns="http://www.w3.org/2000/svg" overflow="hidden">
+  <defs>
+    <linearGradient id="langedge-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="white" stop-opacity="0"/>
+      <stop offset="8%"   stop-color="white" stop-opacity="1"/>
+      <stop offset="92%"  stop-color="white" stop-opacity="1"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="langbadge-mask">
+      <rect width="720" height="142" fill="url(#langedge-fade)"/>
+    </mask>
+    <clipPath id="langtrack-clip">
+      <rect width="720" height="142"/>
+    </clipPath>
+    <filter id="langtooltip-glow" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  <style>
+    @keyframes badge-scroll-lang0 {
+      0.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      2.3810%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      8.3333%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      10.7143%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      16.6667%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      19.0476%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      25.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      27.3810%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      33.3333%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      35.7143%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      41.6667%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      44.0476%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      50.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      52.3810%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      58.3333%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      60.7143%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      66.6667%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      69.0476%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      75.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      77.3810%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      83.3333%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      85.7143%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      91.6667%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      94.0476%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      100.0000% { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+    }
+    @keyframes badge-scroll-lang1 {
+      0.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      2.3810%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      8.3333%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      10.7143%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      16.6667%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      19.0476%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      25.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      27.3810%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      33.3333%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      35.7143%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      41.6667%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      44.0476%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      50.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      52.3810%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      58.3333%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      60.7143%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      66.6667%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      69.0476%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      75.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      77.3810%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      83.3333%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      85.7143%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      91.6667%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      94.0476%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      100.0000% { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+    }
+    @keyframes badge-scroll-lang2 {
+      0.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      2.3810%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      8.3333%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      10.7143%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      16.6667%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      19.0476%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      25.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      27.3810%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      33.3333%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      35.7143%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      41.6667%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      44.0476%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      50.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      52.3810%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      58.3333%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      60.7143%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      66.6667%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      69.0476%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      75.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      77.3810%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      83.3333%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      85.7143%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      91.6667%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      94.0476%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      100.0000% { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+    }
+    @keyframes badge-scroll-lang3 {
+      0.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      2.3810%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      8.3333%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      10.7143%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      16.6667%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      19.0476%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      25.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      27.3810%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      33.3333%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      35.7143%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      41.6667%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      44.0476%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      50.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      52.3810%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      58.3333%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      60.7143%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      66.6667%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      69.0476%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      75.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      77.3810%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      83.3333%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      85.7143%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      91.6667%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      94.0476%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      100.0000% { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+    }
+    @keyframes badge-scroll-lang4 {
+      0.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      2.3810%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      8.3333%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      10.7143%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      16.6667%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      19.0476%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      25.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      27.3810%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      33.3333%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      35.7143%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      41.6667%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      44.0476%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      50.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      52.3810%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      58.3333%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      60.7143%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      66.6667%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      69.0476%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      75.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      77.3810%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      83.3333%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      85.7143%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      91.6667%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      94.0476%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      100.0000% { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+    }
+    @keyframes badge-scroll-lang5 {
+      0.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      2.3810%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      8.3333%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      10.7143%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      16.6667%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      19.0476%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      25.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      27.3810%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      33.3333%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      35.7143%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      41.6667%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      44.0476%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      50.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      52.3810%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      58.3333%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      60.7143%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      66.6667%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      69.0476%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      75.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      77.3810%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      83.3333%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      85.7143%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      91.6667%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      94.0476%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      100.0000% { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+    }
+    @keyframes badge-scroll-lang6 {
+      0.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      2.3810%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      8.3333%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      10.7143%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      16.6667%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      19.0476%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      25.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      27.3810%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      33.3333%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      35.7143%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      41.6667%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      44.0476%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      50.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      52.3810%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      58.3333%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      60.7143%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      66.6667%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      69.0476%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      75.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      77.3810%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      83.3333%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      85.7143%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      91.6667%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      94.0476%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      100.0000% { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+    }
+    @keyframes badge-scroll-lang7 {
+      0.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      2.3810%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      8.3333%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      10.7143%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      16.6667%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      19.0476%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      25.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      27.3810%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      33.3333%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      35.7143%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      41.6667%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      44.0476%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      50.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      52.3810%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      58.3333%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      60.7143%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      66.6667%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      69.0476%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      75.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      77.3810%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      83.3333%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      85.7143%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      91.6667%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      94.0476%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      100.0000% { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+    }
+    @keyframes badge-scroll-lang8 {
+      0.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      2.3810%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      8.3333%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      10.7143%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      16.6667%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      19.0476%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      25.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      27.3810%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      33.3333%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      35.7143%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      41.6667%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      44.0476%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      50.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      52.3810%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      58.3333%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      60.7143%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      66.6667%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      69.0476%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      75.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      77.3810%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      83.3333%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      85.7143%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      91.6667%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      94.0476%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      100.0000% { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+    }
+    @keyframes badge-scroll-lang9 {
+      0.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      2.3810%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      8.3333%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      10.7143%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      16.6667%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      19.0476%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      25.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      27.3810%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      33.3333%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      35.7143%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      41.6667%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      44.0476%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      50.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      52.3810%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      58.3333%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      60.7143%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      66.6667%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      69.0476%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      75.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      77.3810%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      83.3333%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      85.7143%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      91.6667%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      94.0476%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      100.0000% { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+    }
+    @keyframes badge-scroll-lang10 {
+      0.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      2.3810%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      8.3333%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      10.7143%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      16.6667%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      19.0476%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      25.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      27.3810%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      33.3333%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      35.7143%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      41.6667%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      44.0476%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      50.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      52.3810%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      58.3333%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      60.7143%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      66.6667%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      69.0476%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      75.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      77.3810%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      83.3333%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      85.7143%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      91.6667%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      94.0476%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      100.0000% { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+    }
+    @keyframes badge-scroll-lang11 {
+      0.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      2.3810%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      8.3333%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      10.7143%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      16.6667%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      19.0476%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      25.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      27.3810%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      33.3333%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      35.7143%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      41.6667%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      44.0476%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      50.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      52.3810%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      58.3333%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      60.7143%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      66.6667%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      69.0476%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      75.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      77.3810%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      83.3333%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      85.7143%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      91.6667%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      94.0476%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      100.0000% { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+    }
+    @keyframes tooltip-fade-lang0 {
+      0.0000% { opacity: 1.00; }
+      2.3810% { opacity: 1.00; }
+      3.2738% { opacity: 0.00; }
+      97.0238% { opacity: 0.00; }
+      100.0000% { opacity: 1.00; }
+    }
+    @keyframes tooltip-fade-lang1 {
+      0.0000% { opacity: 0.00; }
+      5.3571% { opacity: 0.00; }
+      8.3333% { opacity: 1.00; }
+      10.7143% { opacity: 1.00; }
+      11.6071% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-lang2 {
+      0.0000% { opacity: 0.00; }
+      13.6905% { opacity: 0.00; }
+      16.6667% { opacity: 1.00; }
+      19.0476% { opacity: 1.00; }
+      19.9405% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-lang3 {
+      0.0000% { opacity: 0.00; }
+      22.0238% { opacity: 0.00; }
+      25.0000% { opacity: 1.00; }
+      27.3810% { opacity: 1.00; }
+      28.2738% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-lang4 {
+      0.0000% { opacity: 0.00; }
+      30.3571% { opacity: 0.00; }
+      33.3333% { opacity: 1.00; }
+      35.7143% { opacity: 1.00; }
+      36.6071% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-lang5 {
+      0.0000% { opacity: 0.00; }
+      38.6905% { opacity: 0.00; }
+      41.6667% { opacity: 1.00; }
+      44.0476% { opacity: 1.00; }
+      44.9405% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-lang6 {
+      0.0000% { opacity: 0.00; }
+      47.0238% { opacity: 0.00; }
+      50.0000% { opacity: 1.00; }
+      52.3810% { opacity: 1.00; }
+      53.2738% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-lang7 {
+      0.0000% { opacity: 0.00; }
+      55.3571% { opacity: 0.00; }
+      58.3333% { opacity: 1.00; }
+      60.7143% { opacity: 1.00; }
+      61.6071% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-lang8 {
+      0.0000% { opacity: 0.00; }
+      63.6905% { opacity: 0.00; }
+      66.6667% { opacity: 1.00; }
+      69.0476% { opacity: 1.00; }
+      69.9405% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-lang9 {
+      0.0000% { opacity: 0.00; }
+      72.0238% { opacity: 0.00; }
+      75.0000% { opacity: 1.00; }
+      77.3810% { opacity: 1.00; }
+      78.2738% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-lang10 {
+      0.0000% { opacity: 0.00; }
+      80.3571% { opacity: 0.00; }
+      83.3333% { opacity: 1.00; }
+      85.7143% { opacity: 1.00; }
+      86.6071% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-lang11 {
+      0.0000% { opacity: 0.00; }
+      88.6905% { opacity: 0.00; }
+      91.6667% { opacity: 1.00; }
+      94.0476% { opacity: 1.00; }
+      94.9405% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes langtooltip-border-pulse {
+      0%, 100% { opacity: 0.25; }
+      50%      { opacity: 0.85; }
+    }
+    svg:hover * { animation-play-state: paused; }
+    .langb0 { animation: badge-scroll-lang0 42.0s linear infinite; animation-fill-mode: both; }
+    .langb1 { animation: badge-scroll-lang1 42.0s linear infinite; animation-fill-mode: both; }
+    .langb2 { animation: badge-scroll-lang2 42.0s linear infinite; animation-fill-mode: both; }
+    .langb3 { animation: badge-scroll-lang3 42.0s linear infinite; animation-fill-mode: both; }
+    .langb4 { animation: badge-scroll-lang4 42.0s linear infinite; animation-fill-mode: both; }
+    .langb5 { animation: badge-scroll-lang5 42.0s linear infinite; animation-fill-mode: both; }
+    .langb6 { animation: badge-scroll-lang6 42.0s linear infinite; animation-fill-mode: both; }
+    .langb7 { animation: badge-scroll-lang7 42.0s linear infinite; animation-fill-mode: both; }
+    .langb8 { animation: badge-scroll-lang8 42.0s linear infinite; animation-fill-mode: both; }
+    .langb9 { animation: badge-scroll-lang9 42.0s linear infinite; animation-fill-mode: both; }
+    .langb10 { animation: badge-scroll-lang10 42.0s linear infinite; animation-fill-mode: both; }
+    .langb11 { animation: badge-scroll-lang11 42.0s linear infinite; animation-fill-mode: both; }
+    .langt0 { animation: tooltip-fade-lang0 42.0s linear infinite; animation-fill-mode: both; }
+    .langt1 { animation: tooltip-fade-lang1 42.0s linear infinite; animation-fill-mode: both; }
+    .langt2 { animation: tooltip-fade-lang2 42.0s linear infinite; animation-fill-mode: both; }
+    .langt3 { animation: tooltip-fade-lang3 42.0s linear infinite; animation-fill-mode: both; }
+    .langt4 { animation: tooltip-fade-lang4 42.0s linear infinite; animation-fill-mode: both; }
+    .langt5 { animation: tooltip-fade-lang5 42.0s linear infinite; animation-fill-mode: both; }
+    .langt6 { animation: tooltip-fade-lang6 42.0s linear infinite; animation-fill-mode: both; }
+    .langt7 { animation: tooltip-fade-lang7 42.0s linear infinite; animation-fill-mode: both; }
+    .langt8 { animation: tooltip-fade-lang8 42.0s linear infinite; animation-fill-mode: both; }
+    .langt9 { animation: tooltip-fade-lang9 42.0s linear infinite; animation-fill-mode: both; }
+    .langt10 { animation: tooltip-fade-lang10 42.0s linear infinite; animation-fill-mode: both; }
+    .langt11 { animation: tooltip-fade-lang11 42.0s linear infinite; animation-fill-mode: both; }
+    .langtooltip-border { animation: langtooltip-border-pulse 3.0s ease-in-out infinite; }
+  </style>
+  </defs>
+  <g clip-path="url(#langtrack-clip)" mask="url(#langbadge-mask)">
+  <g class="langb0">
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+QysrPC90aXRsZT48cGF0aCBkPSJNMjIuMzk0IDZjLS4xNjctLjI5LS4zOTgtLjU0My0uNjUyLS42OUwxMi45MjYuMjJjLS41MDktLjI5NC0xLjM0LS4yOTQtMS44NDggMEwyLjI2IDUuMzFjLS41MDguMjkzLS45MjMgMS4wMTMtLjkyMyAxLjZ2MTAuMThjMCAuMjk0LjEwNC42Mi4yNzEuOTEuMTY3LjI5LjM5OC41NDMuNjUyLjY5bDguODE2IDUuMDljLjUwOC4yOTMgMS4zNC4yOTMgMS44NDggMGw4LjgxNi01LjA5Yy4yNTQtLjE0Ny40ODUtLjQuNjUyLS42OS4xNjctLjI5LjI3LS42MTYuMjctLjkxVjYuOTFjLjAwMy0uMjk0LS4xLS42Mi0uMjY4LS45MXpNMTIgMTkuMTFjLTMuOTIgMC03LjEwOS0zLjE5LTcuMTA5LTcuMTEgMC0zLjkyIDMuMTktNy4xMSA3LjExLTcuMTFhNy4xMzMgNy4xMzMgMCAwMTYuMTU2IDMuNTUzbC0zLjA3NiAxLjc4YTMuNTY3IDMuNTY3IDAgMDAtMy4wOC0xLjc4QTMuNTYgMy41NiAwIDAwOC40NDQgMTIgMy41NiAzLjU2IDAgMDAxMiAxNS41NTVhMy41NyAzLjU3IDAgMDAzLjA4LTEuNzc4bDMuMDc4IDEuNzhBNy4xMzUgNy4xMzUgMCAwMTEyIDE5LjExem03LjExLTYuNzE1aC0uNzl2Ljc5aC0uNzl2LS43OWgtLjc5di0uNzloLjc5di0uNzloLjc5di43OWguNzl6bTIuOTYyIDBoLS43OXYuNzloLS43OXYtLjc5aC0uNzl2LS43OWguNzl2LS43OWguNzl2Ljc5aC43OXoiIGZpbGw9IiMwMDU5OWMiLz48L3N2Zz4="/>
+  </g>
+  <g class="langb1">
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+SmF2YTwvdGl0bGU+PHBhdGggZD0iTTguODUxIDE4LjU2cy0uOTE3LjUzNC42NTMuNzE0YzEuOTAyLjIxOCAyLjg3NC4xODcgNC45NjktLjIxMSAwIDAgLjU1Mi4zNDYgMS4zMjEuNjQ2LTQuNjk5IDIuMDEzLTEwLjYzMy0uMTE4LTYuOTQzLTEuMTQ5TTguMjc2IDE1LjkzM3MtMS4wMjguNzYxLjU0Mi45MjRjMi4wMzIuMjA5IDMuNjM2LjIyNyA2LjQxMy0uMzA4IDAgMCAuMzg0LjM4OS45ODcuNjAyLTUuNjc5IDEuNjYxLTEyLjAwNy4xMy03Ljk0Mi0xLjIxOE0xOS4zMyAyMC41MDRzLjY3OS41NTktLjc0Ny45OTFjLTIuNzEyLjgyMi0xMS4yODggMS4wNjktMTMuNjY5LjAzMy0uODU2LS4zNzMuNzUtLjg5IDEuMjU0LS45OTguNTI3LS4xMTQuODI4LS4wOTMuODI4LS4wOTMtLjk1My0uNjcxLTYuMTU2IDEuMzE3LTIuNjQzIDEuODg3IDkuNTggMS41NTMgMTcuNDYyLS43IDE0Ljk3Ny0xLjgyTTkuMjkyIDEzLjIxcy00LjM2MiAxLjAzNi0xLjU0NCAxLjQxMmMxLjE4OS4xNTkgMy41NjEuMTIzIDUuNzctLjA2MiAxLjgwNi0uMTUyIDMuNjE4LS40NzcgMy42MTgtLjQ3N3MtLjYzNy4yNzItMS4wOTguNTg3Yy00LjQyOSAxLjE2NS0xMi45ODYuNjIzLTEwLjUyMi0uNTY4IDIuMDgyLTEuMDA2IDMuNzc2LS44OTIgMy43NzYtLjg5Mk0xNy4xMTYgMTcuNTg0YzQuNTAzLTIuMzQgMi40MjEtNC41ODkuOTY4LTQuMjg1LS4zNTUuMDc0LS41MTUuMTM4LS41MTUuMTM4cy4xMzItLjIwNy4zODUtLjI5N2MyLjg3NS0xLjAxMSA1LjA4NiAyLjk4MS0uOTI4IDQuNTYyIDAtLjAwMS4wNy0uMDYyLjA5LS4xMThNOS43MzQgMjMuOTI0YzQuMzIyLjI3NyAxMC45NTktLjE1MyAxMS4xMTYtMi4xOTggMCAwLS4zMDIuNzc1LTMuNTcyIDEuMzkxLTMuNjg4LjY5NC04LjIzOS42MTMtMTAuOTM3LjE2OCAwLS4wMDEuNTUzLjQ1NyAzLjM5My42MzkiIGZpbGw9IiM1MzgyQTEiLz48cGF0aCBkPSJNMTMuMTE2IDExLjQ3NWMxLjE1OCAxLjMzMy0uMzA0IDIuNTMzLS4zMDQgMi41MzNzMi45MzktMS41MTggMS41ODktMy40MThjLTEuMjYxLTEuNzcyLTIuMjI4LTIuNjUyIDMuMDA3LTUuNjg4IDAtLjAwMS04LjIxNiAyLjA1MS00LjI5MiA2LjU3M00xNC40MDEgMHMyLjQ5NCAyLjQ5NC0yLjM2NSA2LjMzYy0zLjg5NiAzLjA3Ny0uODg4IDQuODMyLS4wMDEgNi44MzYtMi4yNzQtMi4wNTMtMy45NDMtMy44NTgtMi44MjQtNS41MzkgMS42NDQtMi40NjkgNi4xOTctMy42NjUgNS4xOS03LjYyNyIgZmlsbD0iI2Y4OTgyMCIvPjwvc3ZnPg=="/>
+  </g>
+  <g class="langb2">
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+UHl0aG9uPC90aXRsZT48cGF0aCBkPSJNMTQuMjUuMThsLjkuMi43My4yNi41OS4zLjQ1LjMyLjM0LjM0LjI1LjM0LjE2LjMzLjEuMy4wNC4yNi4wMi4yLS4wMS4xM1Y4LjVsLS4wNS42My0uMTMuNTUtLjIxLjQ2LS4yNi4zOC0uMy4zMS0uMzMuMjUtLjM1LjE5LS4zNS4xNC0uMzMuMS0uMy4wNy0uMjYuMDQtLjIxLjAySDguNzdsLS42OS4wNS0uNTkuMTQtLjUuMjItLjQxLjI3LS4zMy4zMi0uMjcuMzUtLjIuMzYtLjE1LjM3LS4xLjM1LS4wNy4zMi0uMDQuMjctLjAyLjIxdjMuMDZIMy4xN2wtLjIxLS4wMy0uMjgtLjA3LS4zMi0uMTItLjM1LS4xOC0uMzYtLjI2LS4zNi0uMzYtLjM1LS40Ni0uMzItLjU5LS4yOC0uNzMtLjIxLS44OC0uMTQtMS4wNS0uMDUtMS4yMy4wNi0xLjIyLjE2LTEuMDQuMjQtLjg3LjMyLS43MS4zNi0uNTcuNC0uNDQuNDItLjMzLjQyLS4yNC40LS4xNi4zNi0uMS4zMi0uMDUuMjQtLjAxaC4xNmwuMDYuMDFoOC4xNnYtLjgzSDYuMThsLS4wMS0yLjc1LS4wMi0uMzcuMDUtLjM0LjExLS4zMS4xNy0uMjguMjUtLjI2LjMxLS4yMy4zOC0uMi40NC0uMTguNTEtLjE1LjU4LS4xMi42NC0uMS43MS0uMDYuNzctLjA0Ljg0LS4wMiAxLjI3LjA1ek03Ljk1IDIuMTZsLS4yMy4zMy0uMDguNDEuMDguNDEuMjMuMzQuMzMuMjIuNDEuMDkuNDEtLjA5LjMzLS4yMi4yMy0uMzQuMDgtLjQxLS4wOC0uNDEtLjIzLS4zMy0uMzMtLjIyLS40MS0uMDktLjQxLjA5eiIgZmlsbD0iIzM3NzZBQiIvPjxwYXRoIGQ9Ik0yMS4wNCA2LjExbC4yOC4wNi4zMi4xMi4zNS4xOC4zNi4yNy4zNi4zNS4zNS40Ny4zMi41OS4yOC43My4yMS44OC4xNCAxLjA0LjA1IDEuMjMtLjA2IDEuMjMtLjE2IDEuMDQtLjI0Ljg2LS4zMi43MS0uMzYuNTctLjQuNDUtLjQyLjMzLS40Mi4yNC0uNC4xNi0uMzYuMDktLjMyLjA1LS4yNC4wMi0uMTYtLjAxaC04LjIydi44Mmg1Ljg0bC4wMSAyLjc2LjAyLjM2LS4wNS4zNC0uMTEuMzEtLjE3LjI5LS4yNS4yNS0uMzEuMjQtLjM4LjItLjQ0LjE3LS41MS4xNS0uNTguMTMtLjY0LjA5LS43MS4wNy0uNzcuMDQtLjg0LjAxLTEuMjctLjA0LTEuMDctLjE0LS45LS4yLS43My0uMjUtLjU5LS4zLS40NS0uMzMtLjM0LS4zNC0uMjUtLjM0LS4xNi0uMzMtLjEtLjMtLjA0LS4yNS0uMDItLjIuMDEtLjEzdi01LjM0bC4wNS0uNjQuMTMtLjU0LjIxLS40Ni4yNi0uMzguMy0uMzIuMzMtLjI0LjM1LS4yLjM1LS4xNC4zMy0uMS4zLS4wNi4yNi0uMDQuMjEtLjAyLjEzLS4wMWg1Ljg0bC42OS0uMDUuNTktLjE0LjUtLjIxLjQxLS4yOC4zMy0uMzIuMjctLjM1LjItLjM2LjE1LS4zNi4xLS4zNS4wNy0uMzIuMDQtLjI4LjAyLS4yMVY2LjA3aDIuMDlsLjE0LjAxek0xNC41NyAyMC4zNmwtLjIzLjMzLS4wOC40MS4wOC40MS4yMy4zMy4zMy4yMy40MS4wOC40MS0uMDguMzMtLjIzLjIzLS4zMy4wOC0uNDEtLjA4LS40MS0uMjMtLjMzLS4zMy0uMjMtLjQxLS4wOC0uNDEuMDh6IiBmaWxsPSIjRkZENDNCIi8+PC9zdmc+"/>
+  </g>
+  <g class="langb3">
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+VHlwZVNjcmlwdDwvdGl0bGU+PHBhdGggZD0iTTEuMTI1IDBDLjUwMiAwIDAgLjUwMiAwIDEuMTI1djIxLjc1QzAgMjMuNDk4LjUwMiAyNCAxLjEyNSAyNGgyMS43NWMuNjIzIDAgMS4xMjUtLjUwMiAxLjEyNS0xLjEyNVYxLjEyNUMyNCAuNTAyIDIzLjQ5OCAwIDIyLjg3NSAwem0xNy4zNjMgOS43NWMuNjEyIDAgMS4xNTQuMDM3IDEuNjI3LjExMWE2LjM4IDYuMzggMCAwIDEgMS4zMDYuMzR2Mi40NThhMy45NSAzLjk1IDAgMCAwLS42NDMtLjM2MSA1LjA5MyA1LjA5MyAwIDAgMC0uNzE3LS4yNiA1LjQ1MyA1LjQ1MyAwIDAgMC0xLjQyNi0uMmMtLjMgMC0uNTczLjAyOC0uODE5LjA4NmEyLjEgMi4xIDAgMCAwLS42MjMuMjQyYy0uMTcuMTA0LS4zLjIyOS0uMzkzLjM3NGEuODg4Ljg4OCAwIDAgMC0uMTQuNDljMCAuMTk2LjA1My4zNzMuMTU2LjUyOS4xMDQuMTU2LjI1Mi4zMDQuNDQzLjQ0NHMuNDIzLjI3Ni42OTYuNDFjLjI3My4xMzUuNTgyLjI3NC45MjYuNDE2LjQ3LjE5Ny44OTIuNDA3IDEuMjY2LjYyOC4zNzQuMjIyLjY5NS40NzMuOTYzLjc1My4yNjguMjc5LjQ3Mi41OTguNjE0Ljk1Ny4xNDIuMzU5LjIxNC43NzYuMjE0IDEuMjUzIDAgLjY1Ny0uMTI1IDEuMjEtLjM3MyAxLjY1NmEzLjAzMyAzLjAzMyAwIDAgMS0xLjAxMiAxLjA4NSA0LjM4IDQuMzggMCAwIDEtMS40ODcuNTk2Yy0uNTY2LjEyLTEuMTYzLjE4LTEuNzkuMThhOS45MTYgOS45MTYgMCAwIDEtMS44NC0uMTY0IDUuNTQ0IDUuNTQ0IDAgMCAxLTEuNTEyLS40OTN2LTIuNjNhNS4wMzMgNS4wMzMgMCAwIDAgMy4yMzcgMS4yYy4zMzMgMCAuNjI0LS4wMy44NzItLjA5LjI0OS0uMDYuNDU2LS4xNDQuNjIzLS4yNS4xNjYtLjEwOC4yOS0uMjM0LjM3My0uMzhhMS4wMjMgMS4wMjMgMCAwIDAtLjA3NC0xLjA4OSAyLjEyIDIuMTIgMCAwIDAtLjUzNy0uNSA1LjU5NyA1LjU5NyAwIDAgMC0uODA3LS40NDQgMjcuNzIgMjcuNzIgMCAwIDAtMS4wMDctLjQzNmMtLjkxOC0uMzgzLTEuNjAyLS44NTItMi4wNTMtMS40MDUtLjQ1LS41NTMtLjY3Ni0xLjIyMi0uNjc2LTIuMDA1IDAtLjYxNC4xMjMtMS4xNDEuMzY5LTEuNTgyLjI0Ni0uNDQxLjU4LS44MDQgMS4wMDQtMS4wODlhNC40OTQgNC40OTQgMCAwIDEgMS40Ny0uNjI5IDcuNTM2IDcuNTM2IDAgMCAxIDEuNzctLjIwMXptLTE1LjExMy4xODhoOS41NjN2Mi4xNjZIOS41MDZ2OS42NDZINi43ODl2LTkuNjQ2SDMuMzc1eiIgZmlsbD0iIzMxNzhjNiIvPjwvc3ZnPg=="/>
+  </g>
+  <g class="langb4">
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+SmF2YVNjcmlwdDwvdGl0bGU+PHBhdGggZD0iTTAgMGgyNHYyNEgwVjB6bTIyLjAzNCAxOC4yNzZjLS4xNzUtMS4wOTUtLjg4OC0yLjAxNS0zLjAwMy0yLjg3My0uNzM2LS4zNDUtMS41NTQtLjU4NS0xLjc5Ny0xLjE0LS4wOTEtLjMzLS4xMDUtLjUxLS4wNDYtLjcwNS4xNS0uNjQ2LjkxNS0uODQgMS41MTUtLjY2LjM5LjEyLjc1LjQyLjk3Ni45IDEuMDM0LS42NzYgMS4wMzQtLjY3NiAxLjc1NS0xLjEyNS0uMjctLjQyLS40MDQtLjYwMS0uNTg2LS43OC0uNjMtLjcwNS0xLjQ2OS0xLjA2NS0yLjgzNC0xLjAzNGwtLjcwNS4wODljLS42NzYuMTY1LTEuMzIuNTI1LTEuNzEgMS4wMDUtMS4xNCAxLjI5MS0uODExIDMuNTQxLjU2OSA0LjQ3MSAxLjM2NSAxLjAyIDMuMzYxIDEuMjQ0IDMuNjE2IDIuMjA1LjI0IDEuMTctLjg3IDEuNTQ1LTEuOTY2IDEuNDEtLjgxMS0uMTgtMS4yNi0uNTg2LTEuNzU1LTEuMzM2bC0xLjgzIDEuMDUxYy4yMS40OC40NS42ODkuODEgMS4xMDkgMS43NCAxLjc1NiA2LjA5IDEuNjY2IDYuODcxLTEuMDA0LjAyOS0uMDkuMjQtLjcwNS4wNzQtMS42NWwuMDQ2LjA2N3ptLTguOTgzLTcuMjQ1aC0yLjI0OGMwIDEuOTM4LS4wMDkgMy44NjQtLjAwOSA1LjgwNSAwIDEuMjMyLjA2MyAyLjM2My0uMTM4IDIuNzExLS4zMy42ODktMS4xOC42MDEtMS41NjYuNDgtLjM5Ni0uMTk2LS41OTctLjQ2Ni0uODMtLjg1NS0uMDYzLS4xMDUtLjExLS4xOTYtLjEyNy0uMTk2bC0xLjgyNSAxLjEyNWMuMzA1LjYzLjc1IDEuMTcyIDEuMzI0IDEuNTE3Ljg1NS41MSAyLjAwNC42NzUgMy4yMDcuNDA1Ljc4My0uMjI2IDEuNDU4LS42OTEgMS44MTEtMS40MTEuNTEtLjkzLjQwMi0yLjA3LjM5Ny0zLjM0Ni4wMTItMi4wNTQgMC00LjEwOSAwLTYuMTc5bC4wMDQtLjA1NnoiIGZpbGw9IiNmN2RmMWUiLz48L3N2Zz4="/>
+  </g>
+  <g class="langb5">
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+UU1MPC90aXRsZT48cGF0aCBkPSJNMjEuNjkzIDMuMTYySDMuMzNMMCA2LjQ5djE0LjM0OGgyMC42NzFMMjQgMTcuNTFWMy4xNjJ6TTEyLjc4NSAxOC40bC0xLjU2Mi43MjgtMS4zNS0yLjIxN2MtLjE5Ni4wNTctLjQ5OS4wOS0uOTI0LjA5LTEuNTc5IDAtMi42ODMtLjQyNS0zLjMwNS0xLjI3Ni0uNjIyLS44NS0uOTMyLTIuMi0uOTMyLTQuMDMzIDAtMS44NC4zMTktMy4yMDYuOTQ5LTQuMDk4LjYzLS44OTIgMS43MjYtMS4zNDEgMy4yODgtMS4zNDEgMS41NjIgMCAyLjY1OC40NDEgMy4yOCAxLjMzMy42My44ODMuOTQgMi4yNS45NCA0LjA5OCAwIDEuMjE5LS4xMyAyLjItLjM4NCAyLjk0NS0uMjYxLjc1Mi0uNjc5IDEuMzI1LTEuMjY4IDEuNzE4em00LjczNi0xLjU4N2MtLjg1OCAwLTEuNDQ3LS4xOTYtMS43NjYtLjU5LS4zMi0uMzkyLS40ODMtMS4xMzYtLjQ4My0yLjIzMnYtMy41MzRIMTQuMTFWOS4wNTFoMS4xNjJWNi44NDNoMS42NDRWOS4wNWgyLjA5NHYxLjQxNWgtMi4wOTR2My4zNDZjMCAuNjIyLjA1IDEuMDMuMTQgMS4yMjcuMDkuMjA0LjMyNi4zMDMuNjk1LjMwM2wxLjI0My0uMDUuMDczIDEuMzI2Yy0uNjcuMTMtMS4xODYuMTk2LTEuNTQ2LjE5NnptLTguNTgtOS4wOGMtLjk1IDAtMS42MDQuMzExLTEuOTYzLjk0LS4zNTIuNjMtLjUzMiAxLjYyOS0uNTMyIDMuMDExIDAgMS4zNzQuMTcyIDIuMzY0LjUxNSAyLjk1My4zNDQuNTg5IDEuMDA2Ljg5MiAxLjk4Ljg5Mi45NzMgMCAxLjYyOC0uMjk1IDEuOTcxLS44NzYuMzM1LS41OC41MDctMS41Ny41MDctMi45NTMgMC0xLjM5LS4xNzItMi4zOTYtLjUyMy0zLjAyNi0uMzUyLS42My0xLjAwNi0uOTQtMS45NTUtLjk0WiIgZmlsbD0iIzQ0YTUxYyIvPjwvc3ZnPg=="/>
+  </g>
+  <g class="langb6">
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+QzwvdGl0bGU+PHBhdGggZD0iTTE2LjU5MjEgOS4xOTYycy0uMzU0LTMuMjk4LTMuNjI3LTMuMzljLTMuMjc0MS0uMDktNC45NTUyIDIuNDc0LTQuOTU1MiA2LjE0IDAgMy42NjUxIDEuODU4IDYuNTk3MiA1LjA0NTEgNi41OTcyIDMuMTg0IDAgMy41MzgxLTMuNjY1IDMuNTM4MS0zLjY2NWw2LjEwNDEuMzY1cy4zNiAzLjMxLTIuMTk2IDUuODM2Yy0yLjU1MiAyLjUyNDEtNS42OTAxIDIuOTM3MS03Ljg3NjIgMi45MjAxLTIuMTktLjAxNy01LjIyNjEuMDM0LTguMTYwMi0yLjk3LTIuOTM4LTMuMDEwMS0zLjQzNi01LjkzMDItMy40MzYtOC44MDAyIDAtMi44NzAxLjU1Ni02LjY3MDIgNC4wNDctOS41NTAyQzcuNDQ0LjcyIDkuODQ5IDAgMTIuMjU0IDBjMTAuMDQyMiAwIDEwLjcxNzIgOS4yNjAyIDEwLjcxNzIgOS4yNjAyeiIgZmlsbD0iIzAwNTk5QyIvPjwvc3ZnPg=="/>
+  </g>
+  <g class="langb7">
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+QXNzZW1ibHk8L3RpdGxlPjxkZWZzPjxtYXNrIGlkPSJtIj48cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9IndoaXRlIi8+PHRleHQgeD0iMTIiIHk9IjEyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZm9udC1mYW1pbHk9IkhlbHZldGljYSBOZXVlLEhlbHZldGljYSxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjgiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJibGFjayI+QVNNPC90ZXh0PjwvbWFzaz48L2RlZnM+PHBvbHlnb24gcG9pbnRzPSIyMiwxMiAxNywyMC42NiA3LDIwLjY2IDIsMTIgNywzLjM0IDE3LDMuMzQiIGZpbGw9IiMwMDc2QzYiIG1hc2s9InVybCgjbSkiLz48L3N2Zz4="/>
+  </g>
+  <g class="langb8">
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+U0NYTUw8L3RpdGxlPgo8IS0tIFZpc3VhbCBTQ1hNTCBFZGl0b3IgaWNvbjogdHdvIHN0YXRlIGNpcmNsZXMgd2l0aCByb3RhdGluZyBjeWNsZSBhcnJvd3MgLS0+CjwhLS0gU3RhdGUgMSAodG9wLWxlZnQsIGFuYWxvZ291cyB0byB0aGUgY3lhbiBzdGF0ZSBpbiB0aGUgZWRpdG9yIGljb24pIC0tPgo8Y2lyY2xlIGN4PSI1IiBjeT0iNSIgcj0iNCIgZmlsbD0iI2U0NDA1ZiIvPgo8IS0tIFN0YXRlIDIgKGJvdHRvbS1yaWdodCwgYW5hbG9nb3VzIHRvIHRoZSBtYWdlbnRhIHN0YXRlKSAtLT4KPGNpcmNsZSBjeD0iMTkiIGN5PSIxOSIgcj0iNCIgZmlsbD0iI2U0NDA1ZiIvPgo8IS0tIEN5Y2xlIGFycm93IDE6IGNvdW50ZXJjbG9ja3dpc2UgYXJjIGZyb20gYm90dG9tLXJpZ2h0IGFyZWEgdG8gdG9wLWxlZnQgYXJlYSAodmlhIHRvcC1yaWdodCkgLS0+CjxwYXRoIGQ9Ik0yMCAxMy41IEExMCAxMCAwIDAgMCAxMC41IDQiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxwYXRoIGQ9Ik0xMyAyLjUgTDEwLjUgNCBMMTIuNSA2IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8IS0tIEN5Y2xlIGFycm93IDI6IGNvdW50ZXJjbG9ja3dpc2UgYXJjIGZyb20gdG9wLWxlZnQgYXJlYSB0byBib3R0b20tcmlnaHQgYXJlYSAodmlhIGJvdHRvbS1sZWZ0KSAtLT4KPHBhdGggZD0iTTQgMTAuNSBBMTAgMTAgMCAwIDAgMTMuNSAyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPHBhdGggZD0iTTExIDIxLjUgTDEzLjUgMjAgTDExLjUgMTgiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo="/>
+  </g>
+  <g class="langb9">
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+UjwvdGl0bGU+PHBhdGggZD0iTTEyIDIuNzQ2Yy02LjYyNyAwLTEyIDMuNTk5LTEyIDguMDM3IDAgMy44OTcgNC4xNDQgNy4xNDQgOS42NCA3Ljg4VjE2LjI2Yy0yLjkyNC0uOTE1LTQuOTI1LTIuNzU1LTQuOTI1LTQuODc3IDAtMy4wMzUgNC4wODQtNS40OTQgOS4xMi01LjQ5NCA1LjAzOCAwIDguNzU3IDEuNjgzIDguNzU3IDUuNDk0IDAgMS45NzYtLjk5OSAzLjM3OS0yLjY2MiA0LjI3Mi4wOS4wNjYuMTc0LjEyOC4yNTguMjE2LjE2OS4xNDkuMjUuMzYzLjM3Mi41NDQgMi4xMjgtMS40NSAzLjQ0LTMuNDM3IDMuNDQtNS42MzEgMC00LjQ0LTUuMzczLTguMDM4LTEyLTguMDM4eiIgZmlsbD0iIzg5OEVBNCIvPjxwYXRoIGQ9Ik05Ljg4OSA3LjczNnYxMy41MTZsNC4wOTMtLjAwMi0uMDAyLTUuMjkxaDEuMWMuMjI1IDAgLjMyMS4wNjYuNTQ5LjI1LjI3Mi4yMi43MTUuOTgyLjcxNS45ODJsMi4xNjQgNC4wNjMgNC42MjctLjAwMi0yLjg2NC00LjgyNnMtLjA4Ni0uMTkzLS4yNjUtLjM4M2EyLjIyIDIuMjIgMCAwMC0uNTgyLS40MTZjLS40MjItLjIxNC0xLjE0OS0uNDM0LTEuMTQ5LS40MzRzMy41NzgtLjI2NCAzLjU3OC0zLjgyNmMwLTMuNTYyLTMuNzQ0LTMuNjMtMy43NDQtMy42M3pNMTQuMDE2IDEwLjY2NmwyLjQ3OC4wMDJzMS4xNDktLjA2MiAxLjE0OSAxLjEyN2MwIDEuMTY1LTEuMTQ5IDEuMTctMS4xNDkgMS4xN2gtMi40Nzh6TTE1Ljc3MCAxNi43ODVjLS40OTQuMDQ5LTEuMDEyLjA3OS0xLjU0LjA4OHYxLjgwN2ExNi42MjIgMTYuNjIyIDAgMDAyLjM3LS40NzNsLS40NzEtLjg5MXMtLjEwOC0uMTgzLS4yNDgtLjM5NGMtLjAzOS0uMDU0LS4wOC0uMDk4LS4xMTEtLjEzN3oiIGZpbGw9IiMyNzZEQzMiLz48L3N2Zz4="/>
+  </g>
+  <g class="langb10">
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+SFRNTDU8L3RpdGxlPjxwYXRoIGQ9Ik0xLjUgMGgyMWwtMS45MSAyMS41NjNMMTEuOTc3IDI0bC04LjU2NC0yLjQzOEwxLjUgMHptNy4wMzEgOS43NWwtLjIzMi0yLjcxOCAxMC4wNTkuMDAzLjIzLTIuNjIyTDUuNDEyIDQuNDFsLjY5OCA4LjAxaDkuMTI2bC0uMzI2IDMuNDI2LTIuOTEuODA0LTIuOTU1LS44MS0uMTg4LTIuMTFINi4yNDhsLjMzIDQuMTcxTDEyIDE5LjM1MWw1LjM3OS0xLjQ0My43NDQtOC4xNTdIOC41MzF6IiBmaWxsPSIjZTM0YzI2Ii8+PC9zdmc+"/>
+  </g>
+  <g class="langb11">
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+Q1NTMzwvdGl0bGU+PHBhdGggZD0iTTEuNSAwaDIxbC0xLjkxIDIxLjU2M0wxMS45NzcgMjRsLTguNTY1LTIuNDM4TDEuNSAwem0xNy4wOSA0LjQxM0w1LjQxIDQuNDFsLjIxMyAyLjYyMiAxMC4xMjUuMDAyLS4yNTUgMi43MTZoLTYuNjRsLjI0IDIuNTczaDYuMTgybC0uMzY2IDMuNTIzLTIuOTEuODA0LTIuOTU2LS44MS0uMTg4LTIuMTFoLTIuNjFsLjI5IDMuODU1TDEyIDE5LjI4OGw1LjM3My0xLjUzTDE4LjU5IDQuNDE0eiIgZmlsbD0iIzE1NzJCNiIvPjwvc3ZnPg=="/>
+  </g>
+  </g>
+  <g class="langt0" opacity="0">
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#00599c" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#00599c" stroke-width="1.5"
+          class="langtooltip-border" filter="url(#langtooltip-glow)"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">C++</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">High-performance systems &amp; applications</text>
+  </g>
+  <g class="langt1" opacity="0">
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#f89820" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#f89820" stroke-width="1.5"
+          class="langtooltip-border" filter="url(#langtooltip-glow)"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">Java</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Platform-independent enterprise language</text>
+  </g>
+  <g class="langt2" opacity="0">
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#3776ab" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#3776ab" stroke-width="1.5"
+          class="langtooltip-border" filter="url(#langtooltip-glow)"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">Python</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Versatile scripting &amp; data science</text>
+  </g>
+  <g class="langt3" opacity="0">
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#3178c6" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#3178c6" stroke-width="1.5"
+          class="langtooltip-border" filter="url(#langtooltip-glow)"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">TypeScript</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">JavaScript with static types</text>
+  </g>
+  <g class="langt4" opacity="0">
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#f7df1e" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#f7df1e" stroke-width="1.5"
+          class="langtooltip-border" filter="url(#langtooltip-glow)"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">JavaScript</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">The universal language of the web</text>
+  </g>
+  <g class="langt5" opacity="0">
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#44a51c" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#44a51c" stroke-width="1.5"
+          class="langtooltip-border" filter="url(#langtooltip-glow)"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">QML</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Qt declarative UI language</text>
+  </g>
+  <g class="langt6" opacity="0">
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#555555" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#555555" stroke-width="1.5"
+          class="langtooltip-border" filter="url(#langtooltip-glow)"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">C</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Foundation of systems programming</text>
+  </g>
+  <g class="langt7" opacity="0">
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#6E4C13" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#6E4C13" stroke-width="1.5"
+          class="langtooltip-border" filter="url(#langtooltip-glow)"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">Assembly</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Machine-level programming</text>
+  </g>
+  <g class="langt8" opacity="0">
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#e4405f" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#e4405f" stroke-width="1.5"
+          class="langtooltip-border" filter="url(#langtooltip-glow)"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">SCXML</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Executable state machine notation</text>
+  </g>
+  <g class="langt9" opacity="0">
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#198CE7" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#198CE7" stroke-width="1.5"
+          class="langtooltip-border" filter="url(#langtooltip-glow)"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">R</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Statistical computing &amp; visualisation</text>
+  </g>
+  <g class="langt10" opacity="0">
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#e34c26" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#e34c26" stroke-width="1.5"
+          class="langtooltip-border" filter="url(#langtooltip-glow)"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">HTML5</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Semantic markup for the web</text>
+  </g>
+  <g class="langt11" opacity="0">
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#1572B6" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#1572B6" stroke-width="1.5"
+          class="langtooltip-border" filter="url(#langtooltip-glow)"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">CSS3</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Visual styles for the web</text>
+  </g>  </svg>
+  <!-- Tools carousel (inlined as nested SVG for animation support) -->
+  <svg x="55" y="229" width="720" height="142" xmlns="http://www.w3.org/2000/svg" overflow="hidden">
+  <defs>
+    <linearGradient id="toolsedge-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="white" stop-opacity="0"/>
+      <stop offset="8%"   stop-color="white" stop-opacity="1"/>
+      <stop offset="92%"  stop-color="white" stop-opacity="1"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="toolsbadge-mask">
+      <rect width="720" height="142" fill="url(#toolsedge-fade)"/>
+    </mask>
+    <clipPath id="toolstrack-clip">
+      <rect width="720" height="142"/>
+    </clipPath>
+    <filter id="toolstooltip-glow" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  <style>
+    @keyframes badge-scroll-tools0 {
+      0.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      2.8571%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      10.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      12.8571%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      20.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      22.8571%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      30.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      32.8571%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      40.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      42.8571%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      50.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      52.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      60.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      62.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      70.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      72.8571%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      80.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      82.8571%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      90.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      92.8571%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      100.0000% { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+    }
+    @keyframes badge-scroll-tools1 {
+      0.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      2.8571%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      10.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      12.8571%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      20.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      22.8571%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      30.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      32.8571%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      40.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      42.8571%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      50.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      52.8571%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      60.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      62.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      70.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      72.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      80.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      82.8571%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      90.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      92.8571%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      100.0000% { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+    }
+    @keyframes badge-scroll-tools2 {
+      0.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      2.8571%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      10.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      12.8571%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      20.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      22.8571%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      30.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      32.8571%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      40.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      42.8571%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      50.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      52.8571%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      60.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      62.8571%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      70.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      72.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      80.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      82.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      90.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      92.8571%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      100.0000% { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+    }
+    @keyframes badge-scroll-tools3 {
+      0.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      2.8571%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      10.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      12.8571%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      20.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      22.8571%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      30.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      32.8571%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      40.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      42.8571%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      50.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      52.8571%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      60.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      62.8571%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      70.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      72.8571%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      80.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      82.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      90.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      92.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      100.0000% { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+    }
+    @keyframes badge-scroll-tools4 {
+      0.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      2.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      10.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      12.8571%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      20.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      22.8571%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      30.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      32.8571%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      40.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      42.8571%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      50.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      52.8571%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      60.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      62.8571%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      70.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      72.8571%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      80.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      82.8571%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      90.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      92.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      100.0000% { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+    }
+    @keyframes badge-scroll-tools5 {
+      0.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      2.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      10.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      12.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      20.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      22.8571%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      30.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      32.8571%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      40.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      42.8571%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      50.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      52.8571%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      60.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      62.8571%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      70.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      72.8571%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      80.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      82.8571%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      90.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      92.8571%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      100.0000% { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+    }
+    @keyframes badge-scroll-tools6 {
+      0.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      2.8571%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      10.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      12.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      20.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      22.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      30.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      32.8571%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      40.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      42.8571%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      50.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      52.8571%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      60.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      62.8571%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      70.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      72.8571%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      80.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      82.8571%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      90.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      92.8571%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      100.0000% { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+    }
+    @keyframes badge-scroll-tools7 {
+      0.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      2.8571%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      10.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      12.8571%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      20.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      22.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      30.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      32.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      40.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      42.8571%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      50.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      52.8571%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      60.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      62.8571%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      70.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      72.8571%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      80.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      82.8571%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      90.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      92.8571%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      100.0000% { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+    }
+    @keyframes badge-scroll-tools8 {
+      0.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      2.8571%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      10.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      12.8571%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      20.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      22.8571%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      30.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      32.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      40.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      42.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      50.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      52.8571%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      60.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      62.8571%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      70.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      72.8571%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      80.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      82.8571%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      90.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      92.8571%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      100.0000% { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+    }
+    @keyframes badge-scroll-tools9 {
+      0.0000%  { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      2.8571%   { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+      10.0000%  { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      12.8571%   { transform: translate(165px, 46px) scale(0.55); opacity: 0.80; }
+      20.0000%  { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      22.8571%   { transform: translate(90px, 46px) scale(0.50); opacity: 0.00; }
+      30.0000%  { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      32.8571%   { transform: translate(-30px, 46px) scale(0.50); opacity: 0.00; }
+      40.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      42.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      50.0000%  { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      52.8571%   { transform: translate(740px, 46px) scale(0.50); opacity: 0.00; }
+      60.0000%  { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      62.8571%   { transform: translate(652px, 46px) scale(0.50); opacity: 0.00; }
+      70.0000%  { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      72.8571%   { transform: translate(555px, 46px) scale(0.55); opacity: 0.80; }
+      80.0000%  { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      82.8571%   { transform: translate(458px, 46px) scale(0.70); opacity: 1.00; }
+      90.0000%  { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      92.8571%   { transform: translate(360px, 46px) scale(1.00); opacity: 1.00; }
+      100.0000% { transform: translate(262px, 46px) scale(0.70); opacity: 1.00; }
+    }
+    @keyframes tooltip-fade-tools0 {
+      0.0000% { opacity: 1.00; }
+      2.8571% { opacity: 1.00; }
+      3.9286% { opacity: 0.00; }
+      96.4286% { opacity: 0.00; }
+      100.0000% { opacity: 1.00; }
+    }
+    @keyframes tooltip-fade-tools1 {
+      0.0000% { opacity: 0.00; }
+      6.4286% { opacity: 0.00; }
+      10.0000% { opacity: 1.00; }
+      12.8571% { opacity: 1.00; }
+      13.9286% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-tools2 {
+      0.0000% { opacity: 0.00; }
+      16.4286% { opacity: 0.00; }
+      20.0000% { opacity: 1.00; }
+      22.8571% { opacity: 1.00; }
+      23.9286% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-tools3 {
+      0.0000% { opacity: 0.00; }
+      26.4286% { opacity: 0.00; }
+      30.0000% { opacity: 1.00; }
+      32.8571% { opacity: 1.00; }
+      33.9286% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-tools4 {
+      0.0000% { opacity: 0.00; }
+      36.4286% { opacity: 0.00; }
+      40.0000% { opacity: 1.00; }
+      42.8571% { opacity: 1.00; }
+      43.9286% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-tools5 {
+      0.0000% { opacity: 0.00; }
+      46.4286% { opacity: 0.00; }
+      50.0000% { opacity: 1.00; }
+      52.8571% { opacity: 1.00; }
+      53.9286% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-tools6 {
+      0.0000% { opacity: 0.00; }
+      56.4286% { opacity: 0.00; }
+      60.0000% { opacity: 1.00; }
+      62.8571% { opacity: 1.00; }
+      63.9286% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-tools7 {
+      0.0000% { opacity: 0.00; }
+      66.4286% { opacity: 0.00; }
+      70.0000% { opacity: 1.00; }
+      72.8571% { opacity: 1.00; }
+      73.9286% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-tools8 {
+      0.0000% { opacity: 0.00; }
+      76.4286% { opacity: 0.00; }
+      80.0000% { opacity: 1.00; }
+      82.8571% { opacity: 1.00; }
+      83.9286% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes tooltip-fade-tools9 {
+      0.0000% { opacity: 0.00; }
+      86.4286% { opacity: 0.00; }
+      90.0000% { opacity: 1.00; }
+      92.8571% { opacity: 1.00; }
+      93.9286% { opacity: 0.00; }
+      100.0000% { opacity: 0.00; }
+    }
+    @keyframes toolstooltip-border-pulse {
+      0%, 100% { opacity: 0.25; }
+      50%      { opacity: 0.85; }
+    }
+    svg:hover * { animation-play-state: paused; }
+    .toolsb0 { animation: badge-scroll-tools0 35.0s linear infinite; animation-fill-mode: both; }
+    .toolsb1 { animation: badge-scroll-tools1 35.0s linear infinite; animation-fill-mode: both; }
+    .toolsb2 { animation: badge-scroll-tools2 35.0s linear infinite; animation-fill-mode: both; }
+    .toolsb3 { animation: badge-scroll-tools3 35.0s linear infinite; animation-fill-mode: both; }
+    .toolsb4 { animation: badge-scroll-tools4 35.0s linear infinite; animation-fill-mode: both; }
+    .toolsb5 { animation: badge-scroll-tools5 35.0s linear infinite; animation-fill-mode: both; }
+    .toolsb6 { animation: badge-scroll-tools6 35.0s linear infinite; animation-fill-mode: both; }
+    .toolsb7 { animation: badge-scroll-tools7 35.0s linear infinite; animation-fill-mode: both; }
+    .toolsb8 { animation: badge-scroll-tools8 35.0s linear infinite; animation-fill-mode: both; }
+    .toolsb9 { animation: badge-scroll-tools9 35.0s linear infinite; animation-fill-mode: both; }
+    .toolst0 { animation: tooltip-fade-tools0 35.0s linear infinite; animation-fill-mode: both; }
+    .toolst1 { animation: tooltip-fade-tools1 35.0s linear infinite; animation-fill-mode: both; }
+    .toolst2 { animation: tooltip-fade-tools2 35.0s linear infinite; animation-fill-mode: both; }
+    .toolst3 { animation: tooltip-fade-tools3 35.0s linear infinite; animation-fill-mode: both; }
+    .toolst4 { animation: tooltip-fade-tools4 35.0s linear infinite; animation-fill-mode: both; }
+    .toolst5 { animation: tooltip-fade-tools5 35.0s linear infinite; animation-fill-mode: both; }
+    .toolst6 { animation: tooltip-fade-tools6 35.0s linear infinite; animation-fill-mode: both; }
+    .toolst7 { animation: tooltip-fade-tools7 35.0s linear infinite; animation-fill-mode: both; }
+    .toolst8 { animation: tooltip-fade-tools8 35.0s linear infinite; animation-fill-mode: both; }
+    .toolst9 { animation: tooltip-fade-tools9 35.0s linear infinite; animation-fill-mode: both; }
+    .toolstooltip-border { animation: toolstooltip-border-pulse 3.0s ease-in-out infinite; }
+  </style>
+  </defs>
+  <g clip-path="url(#toolstrack-clip)" mask="url(#toolsbadge-mask)">
+  <g class="toolsb0">
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+R2l0PC90aXRsZT48cGF0aCBkPSJNMjMuNTQ2IDEwLjkzTDEzLjA2Ny40NTJjLS42MDQtLjYwMy0xLjU4Mi0uNjAzLTIuMTg4IDBMOC43MDggMi42MjdsMi43NiAyLjc2Yy42NDUtLjIxNSAxLjM3OS0uMDcgMS44ODkuNDQxLjUxNi41MTUuNjU4IDEuMjU4LjQzOCAxLjlsMi42NTggMi42NmMuNjQ1LS4yMjMgMS4zODctLjA3OCAxLjkuNDM1LjcyMS43Mi43MjEgMS44ODQgMCAyLjYwNC0uNzE5LjcxOS0xLjg4MS43MTktMi42IDAtLjUzOS0uNTQxLS42NzQtMS4zMzctLjQwNC0xLjk5NkwxMi44NiA4Ljk1NXY2LjUyNWMuMTc2LjA4Ni4zNDIuMjAzLjQ4OC4zNDguNzEzLjcyMS43MTMgMS44ODMgMCAyLjYtLjcxOS43MjEtMS44ODkuNzIxLTIuNjA5IDAtLjcxOS0uNzE5LS43MTktMS44NzkgMC0yLjU5OC4xODItLjE4LjM4Ny0uMzE2LjYwNS0uNDA2VjguODM1Yy0uMjE3LS4wOTEtLjQyNC0uMjIyLS42LS40MDEtLjU0NS0uNTQ1LS42NzYtMS4zNDItLjM5Ni0yLjAwOUw3LjYzNiAzLjcuNDUgMTAuODgxYy0uNi42MDUtLjYgMS41ODQgMCAyLjE4OWwxMC40OCAxMC40NzdjLjYwNC42MDQgMS41ODIuNjA0IDIuMTg2IDBsMTAuNDMtMTAuNDNjLjYwNS0uNjAzLjYwNS0xLjU4MiAwLTIuMTg3IiBmaWxsPSIjZjA1MDMzIi8+PC9zdmc+"/>
+  </g>
+  <g class="toolsb1">
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+VmlzdWFsIFN0dWRpbzwvdGl0bGU+PHBhdGggZD0iTTE3LjU4My4wNjNhMS41IDEuNSAwIDAwLTEuMDMyLjM5MiAxLjUgMS41IDAgMDAtLjAwMSAwQS44OC44OCAwIDAwMTYuNS41TDguNTI4IDkuMzE2IDMuODc1IDUuNWwtLjQwNy0uMzVhMSAxIDAgMDAtMS4wMjQtLjE1NCAxIDEgMCAwMC0uMDEyLjAwNWwtMS44MTcuNzVhMSAxIDAgMDAtLjA3Ny4wMzYgMSAxIDAgMDAtLjA0Ny4wMjggMSAxIDAgMDAtLjAzOC4wMjIgMSAxIDAgMDAtLjA0OC4wMzQgMSAxIDAgMDAtLjAzLjAyNCAxIDEgMCAwMC0uMDQ0LjAzNiAxIDEgMCAwMC0uMDM2LjAzMyAxIDEgMCAwMC0uMDMyLjAzNSAxIDEgMCAwMC0uMDMzLjAzOCAxIDEgMCAwMC0uMDM1LjA0NCAxIDEgMCAwMC0uMDI0LjAzNCAxIDEgMCAwMC0uMDMyLjA1IDEgMSAwIDAwLS4wMi4wMzUgMSAxIDAgMDAtLjAyNC4wNSAxIDEgMCAwMC0uMDIuMDQ1IDEgMSAwIDAwLS4wMTYuMDQ0IDEgMSAwIDAwLS4wMTYuMDQ3IDEgMSAwIDAwLS4wMTUuMDU1IDEgMSAwIDAwLS4wMS4wNCAxIDEgMCAwMC0uMDA4LjA1NCAxIDEgMCAwMC0uMDA2LjA1QTEgMSAwIDAwMCA2LjY2OHYxMC42NjZhMSAxIDAgMDAuNjE1LjkxN2wxLjgxNy43NjRhMSAxIDAgMDAxLjAzNS0uMTY0bC40MDgtLjM1IDQuNjUzLTMuODE1IDcuOTczIDguODE1YTEuNSAxLjUgMCAwMC4wNzIuMDY1IDEuNSAxLjUgMCAwMC4wNTcuMDUgMS41IDEuNSAwIDAwLjA1OC4wNDIgMS41IDEuNSAwIDAwLjA2My4wNDQgMS41IDEuNSAwIDAwLjA2NS4wMzggMS41IDEuNSAwIDAwLjA2NS4wMzYgMS41IDEuNSAwIDAwLjA2OC4wMzEgMS41IDEuNSAwIDAwLjA3LjAzIDEuNSAxLjUgMCAwMC4wNzMuMDI1IDEuNSAxLjUgMCAwMC4wNjYuMDIgMS41IDEuNSAwIDAwLjA4LjAyIDEuNSAxLjUgMCAwMC4wNjguMDE0IDEuNSAxLjUgMCAwMC4wNzUuMDEgMS41IDEuNSAwIDAwLjA3NS4wMDggMS41IDEuNSAwIDAwLjA3My4wMDMgMS41IDEuNSAwIDAwLjA3NyAwIDEuNSAxLjUgMCAwMC4wNzgtLjAwNSAxLjUgMS41IDAgMDAuMDY3LS4wMDcgMS41IDEuNSAwIDAwLjA4Ny0uMDE1IDEuNSAxLjUgMCAwMC4wNi0uMDEyIDEuNSAxLjUgMCAwMC4wOC0uMDIyIDEuNSAxLjUgMCAwMC4wNjgtLjAyIDEuNSAxLjUgMCAwMC4wNy0uMDI4IDEuNSAxLjUgMCAwMC4wOS0uMDM3bDQuOTQ0LTIuMzc3YTEuNSAxLjUgMCAwMC40NzYtLjM2MiAxLjUgMS41IDAgMDAuMDktLjExMiAxLjUgMS41IDAgMDAuMDA0LS4wMDcgMS41IDEuNSAwIDAwLjA4LS4xMjUgMS41IDEuNSAwIDAwLjA2Mi0uMTIgMS41IDEuNSAwIDAwLjAwOS0uMDE3IDEuNSAxLjUgMCAwMC4wNC0uMTA4IDEuNSAxLjUgMCAwMC4wMTUtLjAzNyAxLjUgMS41IDAgMDAuMDMtLjEwNyAxLjUgMS41IDAgMDAuMDA5LS4wMzcgMS41IDEuNSAwIDAwLjAxNy0uMSAxLjUgMS41IDAgMDAuMDA4LS4wNSAxLjUgMS41IDAgMDAuMDA2LS4wOSAxLjUgMS41IDAgMDAuMDA0LS4wOFYzLjk0MmExLjUgMS41IDAgMDAwLS4wMDMgMS41IDEuNSAwIDAwMC0uMDMyIDEuNSAxLjUgMCAwMC0uMDEtLjE1IDEuNSAxLjUgMCAwMC0uODQtMS4xN0wxOC4yMDYuMjFhMS41IDEuNSAwIDAwLS42MjItLjE0NnpNMTggNi45MnYxMC4xNjNsLTYuMTk4LTUuMDh6TTMgOC41NzRsMy4wOTkgMy40MjctMy4xIDMuNDI2eiIgZmlsbD0iIzVjMmQ5MSIvPjwvc3ZnPg=="/>
+  </g>
+  <g class="toolsb2">
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+VlMgQ29kZTwvdGl0bGU+PHBhdGggZD0iTTIzLjE1IDIuNTg3TDE4LjIxLjIxYTEuNDk0IDEuNDk0IDAgMCAwLTEuNzA1LjI5bC05LjQ2IDguNjMtNC4xMi0zLjEyOGEuOTk5Ljk5OSAwIDAgMC0xLjI3Ni4wNTdMLjMyNyA3LjI2MUExIDEgMCAwIDAgLjMyNiA4Ljc0TDMuODk5IDEyIC4zMjYgMTUuMjZhMSAxIDAgMCAwIC4wMDEgMS40NzlMMS42NSAxNy45NGEuOTk5Ljk5OSAwIDAgMCAxLjI3Ni4wNTdsNC4xMi0zLjEyOCA5LjQ2IDguNjNhMS40OTIgMS40OTIgMCAwIDAgMS43MDQuMjlsNC45NDItMi4zNzdBMS41IDEuNSAwIDAgMCAyNCAyMC4wNlYzLjkzOWExLjUgMS41IDAgMCAwLS44NS0xLjM1MnptLTUuMTQ2IDE0Ljg2MUwxMC44MjYgMTJsNy4xNzgtNS40NDh2MTAuODk2eiIgZmlsbD0iIzAwN2FjYyIvPjwvc3ZnPg=="/>
+  </g>
+  <g class="toolsb3">
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+QVdTPC90aXRsZT48cGF0aCBkPSJNNi43NjMgMTAuMDM2YzAgLjI5Ni4wMzIuNTM1LjA4OC43MS4wNjQuMTc2LjE0NC4zNjguMjU2LjU3Ni4wNC4wNjMuMDU2LjEyNy4wNTYuMTgzIDAgLjA4LS4wNDguMTYtLjE1Mi4yNGwtLjUwMy4zMzVhLjM4My4zODMgMCAwIDEtLjIwOC4wNzJjLS4wOCAwLS4xNi0uMDQtLjIzOS0uMTEyYTIuNDcgMi40NyAwIDAgMS0uMjg3LS4zNzUgNi4xOCA2LjE4IDAgMCAxLS4yNDgtLjQ3MWMtLjYyMi43MzQtMS40MDUgMS4xMDEtMi4zNDcgMS4xMDEtLjY3IDAtMS4yMDUtLjE5MS0xLjU5Ni0uNTc0LS4zOTEtLjM4NC0uNTktLjg5NC0uNTktMS41MzMgMC0uNjc4LjIzOS0xLjIzLjcyNi0xLjY0NC40ODctLjQxNSAxLjEzMy0uNjIzIDEuOTU1LS42MjMuMjcyIDAgLjU1MS4wMjQuODQ2LjA2NC4yOTYuMDQuNi4xMDQuOTE4LjE3NnYtLjU4M2MwLS42MDctLjEyNy0xLjAzLS4zNzUtMS4yNzctLjI1NS0uMjQ4LS42ODYtLjM2Ny0xLjMtLjM2Ny0uMjggMC0uNTY4LjAzMS0uODYzLjEwMy0uMjk1LjA3Mi0uNTgzLjE2LS44NjIuMjcyYTIuMjg3IDIuMjg3IDAgMCAxLS4yOC4xMDQuNDg4LjQ4OCAwIDAgMS0uMTI3LjAyM2MtLjExMiAwLS4xNjgtLjA4LS4xNjgtLjI0N3YtLjM5MWMwLS4xMjguMDE2LS4yMjQuMDU2LS4yOGEuNTk3LjU5NyAwIDAgMSAuMjI0LS4xNjdjLjI3OS0uMTQ0LjYxNC0uMjY0IDEuMDA1LS4zNmE0Ljg0IDQuODQgMCAwIDEgMS4yNDYtLjE1MWMuOTUgMCAxLjY0NC4yMTYgMi4wOTEuNjQ3LjQzOS40My42NjIgMS4wODUuNjYyIDEuOTYzdjIuNTg2em0tMy4yNCAxLjIxNGMuMjYzIDAgLjUzNC0uMDQ4LjgyMi0uMTQ0LjI4Ny0uMDk2LjU0My0uMjcxLjc1OC0uNTEuMTI4LS4xNTIuMjI0LS4zMi4yNzItLjUxMi4wNDctLjE5MS4wOC0uNDIzLjA4LS42OTR2LS4zMzVhNi42NiA2LjY2IDAgMCAwLS43MzUtLjEzNiA2LjAyIDYuMDIgMCAwIDAtLjc1LS4wNDhjLS41MzUgMC0uOTI2LjEwNC0xLjE5LjMyLS4yNjMuMjE1LS4zOS41MTgtLjM5LjkxNyAwIC4zNzUuMDk1LjY1NS4yOTUuODQ2LjE5MS4yLjQ3LjI5Ni44MzguMjk2em02LjQxLjg2MmMtLjE0NCAwLS4yNC0uMDI0LS4zMDQtLjA4LS4wNjQtLjA0OC0uMTItLjE2LS4xNjgtLjMxMUw3LjU4NiA1LjU1YTEuMzk4IDEuMzk4IDAgMCAxLS4wNzItLjMyYzAtLjEyOC4wNjQtLjIuMTkxLS4yaC43ODNjLjE1MSAwIC4yNTUuMDI1LjMxLjA4LjA2NS4wNDguMTEzLjE2LjE2LjMxMmwxLjM0MiA1LjI4NCAxLjI0NS01LjI4NGMuMDQtLjE2LjA4OC0uMjY0LjE1MS0uMzEyYS41NDkuNTQ5IDAgMCAxIC4zMi0uMDhoLjYzOGMuMTUyIDAgLjI1Ni4wMjUuMzIuMDguMDYzLjA0OC4xMi4xNi4xNTEuMzEybDEuMjYxIDUuMzQ4IDEuMzgxLTUuMzQ4Yy4wNDgtLjE2LjEwNC0uMjY0LjE2LS4zMTJhLjUyLjUyIDAgMCAxIC4zMTEtLjA4aC43NDNjLjEyNyAwIC4yLjA2NS4yLjIgMCAuMDQtLjAwOS4wOC0uMDE3LjEyOGExLjEzNyAxLjEzNyAwIDAgMS0uMDU2LjJsLTEuOTIzIDYuMTdjLS4wNDguMTYtLjEwNC4yNjMtLjE2OC4zMTFhLjUxLjUxIDAgMCAxLS4zMDMuMDhoLS42ODdjLS4xNTEgMC0uMjU1LS4wMjQtLjMyLS4wOC0uMDYzLS4wNTYtLjExOS0uMTYtLjE1LS4zMmwtMS4yMzgtNS4xNDgtMS4yMyA1LjE0Yy0uMDQuMTYtLjA4Ny4yNjQtLjE1LjMyLS4wNjUuMDU2LS4xNzcuMDgtLjMyLjA4em0xMC4yNTYuMjE1Yy0uNDE1IDAtLjgzLS4wNDgtMS4yMjktLjE0My0uMzk5LS4wOTYtLjcxLS4yLS45MTgtLjMyLS4xMjgtLjA3MS0uMjE1LS4xNTEtLjI0Ny0uMjIzYS41NjMuNTYzIDAgMCAxLS4wNDgtLjIyNHYtLjQwN2MwLS4xNjcuMDY0LS4yNDcuMTgzLS4yNDcuMDQ4IDAgLjA5Ni4wMDguMTQ0LjAyNC4wNDguMDE2LjEyLjA0OC4yLjA4LjI3MS4xMi41NjYuMjE1Ljg3OC4yNzkuMzE5LjA2NC42My4wOTYuOTUuMDk2LjUwMiAwIC44OTQtLjA4OCAxLjE2NS0uMjY0YS44Ni44NiAwIDAgMCAuNDE1LS43NTguNzc3Ljc3NyAwIDAgMC0uMjE1LS41NTljLS4xNDQtLjE1MS0uNDE2LS4yODctLjgwNy0uNDE1bC0xLjE1Ny0uMzZjLS41ODMtLjE4My0xLjAxNC0uNDU0LTEuMjc3LS44MTNhMS45MDIgMS45MDIgMCAwIDEtLjQtMS4xNThjMC0uMzM1LjA3My0uNjMuMjE2LS44ODYuMTQ0LS4yNTUuMzM1LS40NzkuNTc1LS42NTQuMjQtLjE4NC41MS0uMzIuODMtLjQxNS4zMi0uMDk2LjY1NS0uMTM2IDEuMDA2LS4xMzYuMTc1IDAgLjM1OS4wMDguNTM1LjAzMi4xODMuMDI0LjM1LjA1Ni41MTguMDg4LjE2LjA0LjMxMi4wOC40NTUuMTI3LjE0NC4wNDguMjU2LjA5Ni4zMzYuMTQ0YS42OS42OSAwIDAgMSAuMjQuMi40My40MyAwIDAgMSAuMDcxLjI2M3YuMzc1YzAgLjE2OC0uMDY0LjI1Ni0uMTg0LjI1NmEuODMuODMgMCAwIDEtLjMwMy0uMDk2IDMuNjUyIDMuNjUyIDAgMCAwLTEuNTMyLS4zMTFjLS40NTUgMC0uODE1LjA3MS0xLjA2Mi4yMjMtLjI0OC4xNTItLjM3NS4zODMtLjM3NS43MSAwIC4yMjQuMDguNDE2LjI0LjU2Ny4xNTkuMTUyLjQ1NC4zMDQuODc3LjQ0bDEuMTM0LjM1OGMuNTc0LjE4NC45OS40NCAxLjIzNy43NjcuMjQ3LjMyNy4zNjcuNzAyLjM2NyAxLjExNyAwIC4zNDMtLjA3Mi42NTUtLjIwNy45MjYtLjE0NC4yNzItLjMzNi41MTEtLjU4My43MDMtLjI0OC4yLS41NDMuMzQzLS44ODYuNDQ3LS4zNi4xMTEtLjczNC4xNjctMS4xNDIuMTY3eiIgZmlsbD0id2hpdGUiLz48cGF0aCBkPSJNMjEuNjk4IDE2LjIwN2MtMi42MjYgMS45NC02LjQ0MiAyLjk2OS05LjcyMiAyLjk2OS00LjU5OCAwLTguNzQtMS43LTExLjg3LTQuNTI2LS4yNDctLjIyMy0uMDI0LS41MjcuMjcyLS4zNTEgMy4zODQgMS45NjMgNy41NTkgMy4xNTMgMTEuODc3IDMuMTUzIDIuOTE0IDAgNi4xMTQtLjYwNyA5LjA2LTEuODUyLjQzOS0uMi44MTQuMjg3LjM4My42MDd6TTIyLjc5MiAxNC45NjFjLS4zMzYtLjQzLTIuMjItLjIwNy0zLjA3NC0uMTAzLS4yNTUuMDMyLS4yOTUtLjE5Mi0uMDYzLS4zNiAxLjUtMS4wNTMgMy45NjctLjc1IDQuMjU0LS4zOTkuMjg3LjM2LS4wOCAyLjgyNi0xLjQ4NSA0LjAwNy0uMjE1LjE4NC0uNDIzLjA4OC0uMzI3LS4xNTEuMzItLjc5IDEuMDMtMi41Ny42OTUtMi45OTR6IiBmaWxsPSIjRkY5OTAwIi8+PC9zdmc+"/>
+  </g>
+  <g class="toolsb4">
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+U1FMaXRlPC90aXRsZT48cGF0aCBkPSJNMjEuNjc4LjUyMWMtMS4wMzItLjkyLTIuMjgtLjU1LTMuNTEzLjU0NGE4LjcxIDguNzEgMCAwIDAtLjU0Ny41MzVjLTIuMTA5IDIuMjM3LTQuMDY2IDYuMzgtNC42NzQgOS41NDQuMjM3LjQ4LjQyMiAxLjA5My41NDQgMS41NjFhMTMuMDQ0IDEzLjA0NCAwIDAgMSAuMTY0LjcwM3MtLjAxOS0uMDcxLS4wOTYtLjI5NmwtLjA1LS4xNDZhMS42ODkgMS42ODkgMCAwIDAtLjAzMy0uMDhjLS4xMzgtLjMyLS41MTgtLjk5NS0uNjg2LTEuMjg5LS4xNDMuNDIzLS4yNy44MTgtLjM3NiAxLjE3Ni40ODQuODg0Ljc3OCAyLjQuNzc4IDIuNHMtLjAyNS0uMDk5LS4xNDctLjQ0MmMtLjEwNy0uMzAzLS42NDQtMS4yNDQtLjc3Mi0xLjQ2NC0uMjE3LjgwNC0uMzA0IDEuMzQ2LS4yMjYgMS40NzguMTUyLjI1Ni4yOTYuNjk4LjQyMiAxLjE4Ni4yODYgMS4xLjQ4NSAyLjQ0LjQ4NSAyLjQ0bC4wMTcuMjI0YTIyLjQxIDIyLjQxIDAgMCAwIC4wNTYgMi43NDhjLjA5NSAxLjE0Ni4yNzMgMi4xMy41IDIuNjU3bC4xNTUtLjA4NGMtLjMzNC0xLjAzOC0uNDctMi4zOTktLjQxLTMuOTY3LjA5LTIuMzk4LjY0Mi01LjI5IDEuNjYxLTguMzA0IDEuNzIzLTQuNTUgNC4xMTMtOC4yMDEgNi4zLTkuOTQ1LTEuOTkzIDEuOC00LjY5MiA3LjYzLTUuNSA5Ljc4OC0uOTA0IDIuNDE2LTEuNTQ1IDQuNjg0LTEuOTMxIDYuODU3LjY2Ni0yLjAzNyAyLjgyMS0yLjkxMiAyLjgyMS0yLjkxMnMxLjA1Ny0xLjMwNCAyLjI5Mi0zLjE2NmMtLjc0LjE2OS0xLjk1NS40NTgtMi4zNjIuNjI5LS42LjI1MS0uNzYyLjMzNy0uNzYyLjMzN3MxLjk0NS0xLjE4NCAzLjYxMy0xLjcyQzIxLjY5NSA3LjkgMjQuMTk1IDIuNzY3IDIxLjY3OC41MjEiIGZpbGw9IiM1Qjk4QzIiLz48cGF0aCBkPSJNMy4xMDUgMS4wNjRBMS44NDIgMS44NDIgMCAwIDAgMS4yNyAyLjl2MTYuNjA4YTEuODQgMS44NCAwIDAgMCAxLjgzNSAxLjgzNGg5LjQxOGEyMi45NTMgMjIuOTUzIDAgMCAxLS4wNTItMi43MDdjLS4wMDYtLjA2Mi0uMDExLS4xNDEtLjAxNi0uMmEyNy4wMSAyNy4wMSAwIDAgMC0uNDczLTIuMzc4Yy0uMTIxLS40Ny0uMjc1LS44OTgtLjM2OS0xLjA1Ny0uMTE2LS4xOTctLjA5OC0uMzEtLjA5Ny0uNDMyIDAtLjEyLjAxNS0uMjQ1LjAzNy0uMzg2YTkuOTggOS45OCAwIDAgMSAuMjM0LTEuMDQ1bC4yMTctLjAyOGMtLjAxNy0uMDM1LS4wMTQtLjA2NS0uMDMxLS4wOTdsLS4wNDEtLjM4MWEzMi44IDMyLjggMCAwIDEgLjM4Mi0xLjE5NGwuMi0uMDE5Yy0uMDA4LS4wMTYtLjAxLS4wMzgtLjAxOC0uMDUzbC0uMDQzLS4zMTZjLjYzLTMuMjggMi41ODctNy40NDMgNC44LTkuNzkxLjA2Ni0uMDY5LjEzMy0uMTI4LjE5OC0uMTk0WiIgZmlsbD0iI0IwRDlFOCIvPjwvc3ZnPg=="/>
+  </g>
+  <g class="toolsb5">
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+TXlTUUw8L3RpdGxlPjxwYXRoIGQ9Ik0xNi40MDUgNS41MDFjLS4xMTUgMC0uMTkzLjAxNC0uMjc0LjAzM3YuMDEzaC4wMTRjLjA1NC4xMDQuMTQ2LjE4LjIxNC4yNzMuMDU0LjEwNy4xLjIxNC4xNTQuMzJsLjAxNC0uMDE1Yy4wOTQtLjA2Ni4xNC0uMTcyLjE0LS4zMzMtLjA0LS4wNDctLjA0Ni0uMDk0LS4wOC0uMTQtLjA0LS4wNjctLjEyNi0uMS0uMTgtLjE1M3pNNS43NyAxOC42OTVoLS45MjdhNTAuODU0IDUwLjg1NCAwIDAwLS4yNy00LjQxaC0uMDA4bC0xLjQxIDQuNDFIMi40NWwtMS40LTQuNDFoLS4wMWE3Mi44OTIgNzIuODkyIDAgMDAtLjE5NSA0LjQxSDBjLjA1NS0xLjk2Ni4xOTItMy44MS40MS01LjUzaDEuMTVsMS4zMzUgNC4wNjRoLjAwOGwxLjM0Ny00LjA2NGgxLjA5NWMuMjQyIDIuMDE1LjM4NCAzLjg2LjQyOCA1LjUzek05Ljc4NyAxNC42MTVjLS4zNzggMi4wNDUtLjg3NiAzLjUzMy0xLjQ5MiA0LjQ2LS40ODIuNzE2LTEuMDEgMS4wNzMtMS41ODMgMS4wNzMtLjE1MyAwLS4zNC0uMDQ2LS41NjYtLjEzOHYtLjQ5NGMuMTEuMDE3LjI0LjAyNi4zODYuMDI2LjI2OCAwIC40ODMtLjA3NS42NDctLjIyMi4xOTctLjE4LjI5NS0uMzgyLjI5NS0uNjA1IDAtLjE1NS0uMDc3LS40Ny0uMjMtLjk0NEw2LjIzIDE0LjYxNWguOTFsLjcyNyAyLjM2Yy4xNjQuNTM2LjIzMy45MS4yMDUgMS4xMjMuNC0xLjA2NC42NzgtMi4yMjcuODM1LTMuNDgzek0yMy4yMjQgMTEuMzExYy0uNTM1LS4wMTQtLjk1LjA0LTEuMjk3LjE4OC0uMS4wNC0uMjYuMDQtLjI3NC4xNjcuMDU1LjA1My4wNjMuMTQuMTEuMjE0LjA4LjEzNC4yMTguMzEzLjM0Ni40MDcuMTQuMTEuMjguMjE2LjQyNy4zMS4yNi4xNi41NTUuMjU1LjgxLjQxNi4xNDUuMDk0LjI5My4yMTMuNDQuMzEzLjA3My4wNS4xMi4xNC4yMTQuMTcydi0uMDJjLS4wNDYtLjA2LS4wNi0uMTQ3LS4xMDUtLjIxNC0uMDY3LS4wNjctLjEzNC0uMTI3LS4yLS4xOTNhMy4yMjMgMy4yMjMgMCAwMC0uNjk1LS42NzVjLS4yMTQtLjE0Ni0uNjgyLS4zNS0uNzctLjU5NWwtLjAxMy0uMDE0Yy4xNDYtLjAxMy4zMi0uMDY2LjQ2LS4xMDYuMjI3LS4wNi40MzUtLjA0Ny42Ny0uMTA2LjEwNi0uMDI3LjIxMy0uMDYuMzItLjA5NHYtLjA2Yy0uMTItLjEyLS4yMS0uMjgzLS4zMzQtLjM5NWE4Ljg2NyA4Ljg2NyAwIDAwLTEuMTA0LS44MjNjLS4yMS0uMTM0LS40NzYtLjIyLS42OTctLjMzNC0uMDgtLjA0LS4yMTQtLjA2LS4yNi0uMTI3LS4xMi0uMTQ2LS4xOS0uMzQtLjI3NS0uNTE0YTE3LjY5IDE3LjY5IDAgMDEtLjU0Ny0xLjE2M2MtLjEyLS4yNjItLjE5My0uNTIzLS4zNC0uNzYzLS42OS0xLjEzNy0xLjQzNy0xLjgyNi0yLjU4Ni0yLjUtLjI0Ny0uMTQtLjU0My0uMi0uODU2LS4yNzQtLjE2Ny0uMDA4LS4zMzQtLjAyLS41LS4wMjctLjExLS4wNDctLjIxNi0uMTc0LS4zMS0uMjM1LS4zOC0uMjQtMS4zNjQtLjc2LTEuNjQ0LS4wNzItLjE4LjQzNC4yNjcuODYyLjQyMiAxLjA4Mi4xMTUuMTUzLjI2LjMyOC4zNC41LjA0Ny4xMTYuMDYuMjM1LjEwNy4zNTYuMTA2LjI5NC4yMDcuNjIyLjM0Ny44OTcuMDczLjE0LjE1My4yODcuMjQ3LjQxMy4wNTQuMDczLjE0Ni4xMDcuMTY3LjIyNy0uMDk0LjEzNi0uMS4zMzQtLjE1NC41LS4yNC43NTctLjE0NiAxLjY5My4xOTQgMi4yNS4xMDcuMTY2LjM2Mi41MzQuNzAzLjM5My4zLS4xMi4yMzQtLjUuMzItLjgzNS4wMi0uMDguMDA3LS4xMzMuMDQ4LS4xODd2LjAxNWMuMDk0LjE4OC4xODguMzY3LjI3NC41NTUuMjA2LjMyOC41NjYuNjY4Ljg2Ny44OTUuMTYuMTIuMjg3LjMyOC40ODcuNDAydi0uMDJoLS4wMTVjLS4wNDMtLjA1OC0uMS0uMDg2LS4xNTQtLjEzM2EzLjQ0NSAzLjQ0NSAwIDAxLS4zNS0uNCA4Ljc2IDguNzYgMCAwMS0uNzQ3LTEuMjE4Yy0uMTEtLjIxLS4yMDItLjQzNi0uMjktLjY0My0uMDQtLjA4LS4wNC0uMi0uMTA3LS4yNC0uMS4xNDYtLjI0Ny4yNzMtLjMyLjQ1My0uMTI3LjI4OC0uMTQuNjQyLS4xODggMS4wMS0uMDI3LjAwNy0uMDE0IDAtLjAyNy4wMTQtLjIxNC0uMDUyLS4yODctLjI3NC0uMzY3LS40Ni0uMi0uNDc1LS4yMzMtMS4yMzgtLjA2LTEuNzg1LjA0Ny0uMTQuMjQ3LS41ODIuMTY3LS43MTYtLjA0Mi0uMTI3LS4xNzQtLjItLjI0Ny0uMzAzYTIuNDc4IDIuNDc4IDAgMDEtLjI0LS40MjdjLS4xNi0uMzc0LS4yNC0uNzg4LS40MTQtMS4xNjItLjA4LS4xNzMtLjIyLS4zNTQtLjMzNC0uNTEzLS4xMjctLjE4LS4yNjctLjMwNy0uMzY4LS41Mi0uMDMzLS4wNzMtLjA4LS4xOTQtLjAyNy0uMjc0LjAxNC0uMDU0LjA0Mi0uMDc1LjA5NC0uMDkuMDg4LS4wNzIuMzM1LjAyMi40MjIuMDYyLjI0Ny4xLjQ1NS4xOTQuNjYyLjMzNC4wOTQuMDY2LjE5NS4xOTMuMzE1LjIyNmguMTRjLjIxNC4wNDcuNDU1LjAxNC42NTUuMDczLjM1NS4xMTQuNjc1LjI4Ljk2Mi40NmE1Ljk1MyA1Ljk1MyAwIDAxMi4wODUgMi4yODZjLjA4LjE1NC4xMTUuMjk1LjE4OC40NTUuMTQuMzMuMzEzLjY2My40NTUuOTgyLjE0LjMxNS4yNzUuNjM2LjQ3Ni44OTcuMS4xNC41MDIuMjEzLjY4Mi4yODYuMTMzLjA2LjM0LjExNS40Ni4xODguMjMuMTQuNDU0LjMuNjcuNDU0LjExLjA3Ni40NDMuMjQzLjQ2My4zNzh6IiBmaWxsPSIjMDA3NThGIi8+PHBhdGggZD0iTTIyLjExMiAxOC42OTVoLTIuNjN2LTUuNTNoLjg4NXY0Ljg1aDEuNzQ1ek0xOC43OTIgMTguODNsLTEuMDE2LS41Yy4wOS0uMDc2LjE3Ny0uMTU4LjI1NS0uMjUuNDMzLS41MDYuNjQ4LTEuMjU4LjY0OC0yLjI1MyAwLTEuODMtLjcxOC0yLjc0Ni0yLjE1NS0yLjc0Ni0uNzA0IDAtMS4yNTQuMjMyLTEuNjUuNjk3LS40My41MDgtLjY0NiAxLjI1Ni0uNjQ2IDIuMjQ1IDAgLjk3Mi4xOSAxLjY4Ni41NzQgMi4xNC4zNS40MS44NzcuNjE1IDEuNTgzLjYxNS4yNjQgMCAuNTA2LS4wMzMuNzI1LS4wOThsMS4zMjUuNzcyLjM2LS42MjJ6TTE1LjUgMTcuNTg4Yy0uMjI1LS4zNi0uMzM3LS45NC0uMzM3LTEuNzM2IDAtMS4zOTMuNDI0LTIuMDkgMS4yNy0yLjA5LjQ0MyAwIC43Ny4xNjcuOTc3LjUuMjI0LjM2Mi4zMzYuOTM2LjMzNiAxLjcyMyAwIDEuNDA0LS40MjQgMi4xMDgtMS4yNyAyLjEwOC0uNDQ1IDAtLjc3LS4xNjctLjk3OC0uNXpNMTMuODQyIDE3LjE2M2MwIC40Ny0uMTcyLjg1Ni0uNTE2IDEuMTU2LS4zNDQuMy0uODAzLjQ1LTEuMzg0LjQ1LS41NDMgMC0xLjA2NC0uMTcyLTEuNTczLS41MTVsLjIzNy0uNDc2Yy40MzguMjIuODMzLjMyOCAxLjE5LjMyOC4zMzIgMCAuNTkzLS4wNzMuNzgzLS4yMmEuNzU0Ljc1NCAwIDAwLjMtLjYxNWMwLS4zMy0uMjMtLjYxLS42NDgtLjg0NS0uMzg4LS4yMTMtMS4xNjMtLjY1Ny0xLjE2My0uNjU3LS40MjItLjMwNy0uNjMyLS42MzYtLjYzMi0xLjE3NyAwLS40NS4xNTctLjgxLjQ3LTEuMDg1LjMxNS0uMjc4LjcyLS40MTUgMS4yMi0uNDE1LjUxMiAwIC45OC4xMzYgMS40LjQxbC0uMjEzLjQ3NmEyLjcyNiAyLjcyNiAwIDAwLTEuMDY0LS4yM2MtLjI4MyAwLS41MDIuMDY4LS42NTQuMjA2YS42ODUuNjg1IDAgMDAtLjI0OC41MjRjMCAuMzI4LjIzNC42MS42NjYuODUuMzkzLjIxNSAxLjE4Ny42NyAxLjE4Ny42Ny40MzMuMzA1LjY0OC42My42NDggMS4xNjh6IiBmaWxsPSIjRjI5MTExIi8+PC9zdmc+"/>
+  </g>
+  <g class="toolsb6">
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+RG9ja2VyPC90aXRsZT48cGF0aCBkPSJNMTMuOTgzIDExLjA3OGgyLjExOWEuMTg2LjE4NiAwIDAwLjE4Ni0uMTg1VjkuMDA2YS4xODYuMTg2IDAgMDAtLjE4Ni0uMTg2aC0yLjExOWEuMTg1LjE4NSAwIDAwLS4xODUuMTg1djEuODg4YzAgLjEwMi4wODMuMTg1LjE4NS4xODVtLTIuOTU0LTUuNDNoMi4xMThhLjE4Ni4xODYgMCAwMC4xODYtLjE4NlYzLjU3NGEuMTg2LjE4NiAwIDAwLS4xODYtLjE4NWgtMi4xMThhLjE4NS4xODUgMCAwMC0uMTg1LjE4NXYxLjg4OGMwIC4xMDIuMDgyLjE4NS4xODUuMTg1bTAgMi43MTZoMi4xMThhLjE4Ny4xODcgMCAwMC4xODYtLjE4NlY2LjI5YS4xODYuMTg2IDAgMDAtLjE4Ni0uMTg1aC0yLjExOGEuMTg1LjE4NSAwIDAwLS4xODUuMTg1djEuODg3YzAgLjEwMi4wODIuMTg1LjE4NS4xODZtLTIuOTMgMGgyLjEyYS4xODYuMTg2IDAgMDAuMTg0LS4xODZWNi4yOWEuMTg1LjE4NSAwIDAwLS4xODUtLjE4NUg4LjFhLjE4NS4xODUgMCAwMC0uMTg1LjE4NXYxLjg4N2MwIC4xMDIuMDgzLjE4NS4xODUuMTg2bS0yLjk2NCAwaDIuMTE5YS4xODYuMTg2IDAgMDAuMTg1LS4xODZWNi4yOWEuMTg1LjE4NSAwIDAwLS4xODUtLjE4NUg1LjEzNmEuMTg2LjE4NiAwIDAwLS4xODYuMTg1djEuODg3YzAgLjEwMi4wODQuMTg1LjE4Ni4xODZtNS44OTMgMi43MTVoMi4xMThhLjE4Ni4xODYgMCAwMC4xODYtLjE4NVY5LjAwNmEuMTg2LjE4NiAwIDAwLS4xODYtLjE4NmgtMi4xMThhLjE4NS4xODUgMCAwMC0uMTg1LjE4NXYxLjg4OGMwIC4xMDIuMDgyLjE4NS4xODUuMTg1bS0yLjkzIDBoMi4xMmEuMTg1LjE4NSAwIDAwLjE4NC0uMTg1VjkuMDA2YS4xODUuMTg1IDAgMDAtLjE4NC0uMTg2aC0yLjEyYS4xODUuMTg1IDAgMDAtLjE4NC4xODV2MS44ODhjMCAuMTAyLjA4My4xODUuMTg1LjE4NW0tMi45NjQgMGgyLjExOWEuMTg1LjE4NSAwIDAwLjE4NS0uMTg1VjkuMDA2YS4xODUuMTg1IDAgMDAtLjE4NC0uMTg2aC0yLjEyYS4xODYuMTg2IDAgMDAtLjE4Ni4xODZ2MS44ODdjMCAuMTAyLjA4NC4xODUuMTg2LjE4NW0tMi45MiAwaDIuMTJhLjE4NS4xODUgMCAwMC4xODQtLjE4NVY5LjAwNmEuMTg1LjE4NSAwIDAwLS4xODQtLjE4NmgtMi4xMmEuMTg1LjE4NSAwIDAwLS4xODQuMTg1djEuODg4YzAgLjEwMi4wODIuMTg1LjE4NS4xODVNMjMuNzYzIDkuODljLS4wNjUtLjA1MS0uNjcyLS41MS0xLjk1NC0uNTEtLjMzOC4wMDEtLjY3Ni4wMy0xLjAxLjA4Ny0uMjQ4LTEuNy0xLjY1My0yLjUzLTEuNzE2LTIuNTY2bC0uMzQ0LS4xOTktLjIyNi4zMjdjLS4yODQuNDM4LS40OS45MjItLjYxMiAxLjQzLS4yMy45Ny0uMDkgMS44ODIuNDAzIDIuNjYxLS41OTUuMzMyLTEuNTUuNDEzLTEuNzQ0LjQySC43NTFhLjc1MS43NTEgMCAwMC0uNzUuNzQ4IDExLjM3NiAxMS4zNzYgMCAwMC42OTIgNC4wNjJjLjU0NSAxLjQyOCAxLjM1NSAyLjQ4IDIuNDEgMy4xMjQgMS4xOC43MjMgMy4xIDEuMTM3IDUuMjc1IDEuMTM3Ljk4My4wMDMgMS45NjMtLjA4NiAyLjkzLS4yNjZhMTIuMjQ4IDEyLjI0OCAwIDAwMy44MjMtMS4zODljLjk4LS41NjcgMS44Ni0xLjI4OCAyLjYxLTIuMTM2IDEuMjUyLTEuNDE4IDEuOTk4LTIuOTk3IDIuNTUzLTQuNGguMjIxYzEuMzcyIDAgMi4yMTUtLjU0OSAyLjY4LTEuMDA5LjMwOS0uMjkzLjU1LS42NS43MDctMS4wNDZsLjA5OC0uMjg4WiIgZmlsbD0iIzI0OTZlZCIvPjwvc3ZnPg=="/>
+  </g>
+  <g class="toolsb7">
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+TUFUTEFCPC90aXRsZT48cGF0aCBkPSJNNC4zMjMgMTYuMjVDMy4xMyAxNS4zNTQgMS42NCAxNC4zMSAwIDEzLjEybDUuODE0LTIuMjM3IDIuMzg2IDEuNzljLTEuNzkgMi4wODYtMi45ODIgMi44MzEtMy44NzcgMy41Nzd6IiBmaWxsPSIjMDA3NkE4Ii8+PHBhdGggZD0iTTIwLjI3NSA5Ljk4OWMtLjQ0Ny0xLjE5My0uNzQ1LTIuMzg1LTEuMTkzLTMuNTc4LS40NDctMS4zNDMtLjg5NC0yLjUzNS0xLjY0LTMuNTc5LS4yOTktLjQ0Ny0uODk1LTEuNDktMS42NC0xLjQ5LS4xNSAwLS4yOTkuMTQ4LS40NDguMTQ4LS40NDcuMTUtMS4wNDMgMS4wNDMtMS4xOTMgMS42NC0uNDQ3Ljc0NS0xLjM0MiAxLjkzOC0xLjkzOCAyLjY4My0uMTQ5LjI5OS0uNDQ3LjU5Ny0uNTk2Ljc0Ni0uNDQ3LjI5OC0uODk0Ljc0NS0xLjQ5MSAxLjA0My0uMTUgMC0uMjk4LjE0OS0uNDQ3LjE0OS0uNDQ3IDAtLjc0NS4yOTgtMS4wNDMuNDQ3LS40NDcuNDQ3LS44OTQgMS4wNDMtMS4zNDIgMS40OSAwIC4xNS0uMTUuMjk5LS4yOTguNDQ4bDIuMjM2IDEuNjRjMS42NC0xLjkzOCAzLjU3OC0zLjg3NiA0LjkyLTcuNjAzIDAgMC0uNDQ4IDQuMDI2LTQuMDI2IDguMzQ5LTIuMjM2IDIuNTM0LTQuMDI1IDMuODc2LTQuMzI0IDQuMTc0IDAgMCAuNTk3LS4xNDkgMS4xOTQuMTUgMS4xOTMuNDQ2IDEuNzg5IDIuMDg3IDIuMjM2IDMuMjc5LjI5OC44OTQuNzQ1IDEuNjQgMS4wNDMgMi41MzQgMS4xOTMtLjI5OCAxLjkzOC0uNzQ1IDIuNjgzLTEuNDkxLjc0NS0uNzQ2IDEuNDkxLTEuNjQgMi4yMzYtMi4zODUgMS4zNDItMS42NCAyLjk4Mi0zLjcyOCA1LjA2OS0yLjY4NC4yOTguMTUuNzQ1LjQ0Ny44OTQuNTk2LjQ0Ny4yOTguNzQ1LjU5NiAxLjE5MyAxLjA0My43NDUuNTk3IDEuMDQzIDEuMDQ0IDEuNjQgMS4zNDMtMS40OTEtMi45ODItMi41MzQtNS45NjQtMy43MjctOS4wOTR6IiBmaWxsPSIjZTE2NzM3Ii8+PC9zdmc+"/>
+  </g>
+  <g class="toolsb8">
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+QWRvYmU8L3RpdGxlPjxwYXRoIGQ9Ik0xMy45NjYgMjIuNjI0bC0xLjY5LTQuMjgxSDguMTIybDMuODkyLTkuMTQ0IDUuNjYyIDEzLjQyNXpNOC44ODQgMS4zNzZIMHYyMS4yNDh6bTE1LjExNiAwaC04Ljg4NEwyNCAyMi42MjRaIiBmaWxsPSIjZmYwMDAwIi8+PC9zdmc+"/>
+  </g>
+  <g class="toolsb9">
+    <image x="-18" y="-18" width="36" height="36" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+RmlnbWE8L3RpdGxlPjxwYXRoIGQ9Ik0xNS44NTIgOC45ODFoLTQuNTg4VjBoNC41ODhjMi40NzYgMCA0LjQ5IDIuMDE0IDQuNDkgNC40OXMtMi4wMTQgNC40OTEtNC40OSA0LjQ5MXpNMTIuNzM1IDcuNTFoMy4xMTdjMS42NjUgMCAzLjAxOS0xLjM1NSAzLjAxOS0zLjAxOXMtMS4zNTUtMy4wMTktMy4wMTktMy4wMTloLTMuMTE3VjcuNTF6bTAgMS40NzFIOC4xNDhjLTIuNDc2IDAtNC40OS0yLjAxNC00LjQ5LTQuNDlTNS42NzIgMCA4LjE0OCAwaDQuNTg4djguOTgxem0tNC41ODctNy41MWMtMS42NjUgMC0zLjAxOSAxLjM1NS0zLjAxOSAzLjAxOXMxLjM1NCAzLjAyIDMuMDE5IDMuMDJoMy4xMTdWMS40NzFIOC4xNDh6bTQuNTg3IDE1LjAxOUg4LjE0OGMtMi40NzYgMC00LjQ5LTIuMDE0LTQuNDktNC40OXMyLjAxNC00LjQ5IDQuNDktNC40OWg0LjU4OHY4Ljk4ek04LjE0OCA4Ljk4MWMtMS42NjUgMC0zLjAxOSAxLjM1NS0zLjAxOSAzLjAxOXMxLjM1NSAzLjAxOSAzLjAxOSAzLjAxOWgzLjExN1Y4Ljk4MUg4LjE0OHpNOC4xNzIgMjRjLTIuNDg5IDAtNC41MTUtMi4wMTQtNC41MTUtNC40OXMyLjAxNC00LjQ5IDQuNDktNC40OWg0LjU4OHY0LjQ0MWMwIDIuNTAzLTIuMDQ3IDQuNTM5LTQuNTYzIDQuNTM5em0tLjAyNC03LjUxYTMuMDIzIDMuMDIzIDAgMCAwLTMuMDE5IDMuMDE5YzAgMS42NjUgMS4zNjUgMy4wMTkgMy4wNDQgMy4wMTkgMS43MDUgMCAzLjA5My0xLjM3NiAzLjA5My0zLjA2OHYtMi45N0g4LjE0OHptNy43MDQgMGgtLjA5OGMtMi40NzYgMC00LjQ5LTIuMDE0LTQuNDktNC40OXMyLjAxNC00LjQ5IDQuNDktNC40OWguMDk4YzIuNDc2IDAgNC40OSAyLjAxNCA0LjQ5IDQuNDlzLTIuMDE0IDQuNDktNC40OSA0LjQ5em0tLjA5Ny03LjUwOWMtMS42NjUgMC0zLjAxOSAxLjM1NS0zLjAxOSAzLjAxOXMxLjM1NSAzLjAxOSAzLjAxOSAzLjAxOWguMDk4YzEuNjY1IDAgMy4wMTktMS4zNTUgMy4wMTktMy4wMTlzLTEuMzU1LTMuMDE5LTMuMDE5LTMuMDE5aC0uMDk4eiIgZmlsbD0iI2YyNGUxZSIvPjwvc3ZnPg=="/>
+  </g>
+  </g>
+  <g class="toolst0" opacity="0">
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#f05033" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#f05033" stroke-width="1.5"
+          class="toolstooltip-border" filter="url(#toolstooltip-glow)"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">Git</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Distributed version control</text>
+  </g>
+  <g class="toolst1" opacity="0">
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#5c2d91" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#5c2d91" stroke-width="1.5"
+          class="toolstooltip-border" filter="url(#toolstooltip-glow)"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">Visual Studio</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Full-featured IDE for C++ &amp; .NET</text>
+  </g>
+  <g class="toolst2" opacity="0">
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#007acc" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#007acc" stroke-width="1.5"
+          class="toolstooltip-border" filter="url(#toolstooltip-glow)"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">VS Code</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Lightweight, extensible code editor</text>
+  </g>
+  <g class="toolst3" opacity="0">
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#ff9900" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#ff9900" stroke-width="1.5"
+          class="toolstooltip-border" filter="url(#toolstooltip-glow)"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">AWS</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Scalable cloud infrastructure</text>
+  </g>
+  <g class="toolst4" opacity="0">
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#003b57" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#003b57" stroke-width="1.5"
+          class="toolstooltip-border" filter="url(#toolstooltip-glow)"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">SQLite</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Embedded relational database</text>
+  </g>
+  <g class="toolst5" opacity="0">
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#4479a1" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#4479a1" stroke-width="1.5"
+          class="toolstooltip-border" filter="url(#toolstooltip-glow)"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">MySQL</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Open-source relational database</text>
+  </g>
+  <g class="toolst6" opacity="0">
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#2496ed" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#2496ed" stroke-width="1.5"
+          class="toolstooltip-border" filter="url(#toolstooltip-glow)"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">Docker</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Container-based deployment</text>
+  </g>
+  <g class="toolst7" opacity="0">
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#e16737" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#e16737" stroke-width="1.5"
+          class="toolstooltip-border" filter="url(#toolstooltip-glow)"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">MATLAB</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Numerical computing &amp; simulation</text>
+  </g>
+  <g class="toolst8" opacity="0">
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#ff0000" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#ff0000" stroke-width="1.5"
+          class="toolstooltip-border" filter="url(#toolstooltip-glow)"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">Adobe</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Creative Suite for design</text>
+  </g>
+  <g class="toolst9" opacity="0">
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="#0b0f1a"
+          stroke="#f24e1e" stroke-opacity="0.4" stroke-width="0.5"/>
+    <rect x="245" y="88" width="230" height="46" rx="8"
+          fill="none"
+          stroke="#f24e1e" stroke-width="1.5"
+          class="toolstooltip-border" filter="url(#toolstooltip-glow)"/>
+    <text x="360" y="106" text-anchor="middle"
+          fill="#f1f5f9" font-size="12" font-weight="600"
+          font-family="Segoe UI,Ubuntu,sans-serif">Figma</text>
+    <text x="360" y="123" text-anchor="middle"
+          fill="#94a3b8" font-size="9.5"
+          font-family="Segoe UI,Ubuntu,sans-serif">Collaborative UI design tool</text>
+  </g>  </svg>
+</svg>

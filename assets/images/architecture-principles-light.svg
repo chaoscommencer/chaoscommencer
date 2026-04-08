@@ -1,0 +1,330 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 253" width="800" height="253">
+  <defs>
+    <linearGradient id="bg-grad-l" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#f0f6ff"/>
+      <stop offset="100%" stop-color="#f6f8fa"/>
+    </linearGradient>
+    <linearGradient id="border-grad-l" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#7c3aed"/>
+      <stop offset="50%"  stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="title-grad-l" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#5b21b6"/>
+      <stop offset="60%"  stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="right-fade-l" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="white"/>
+      <stop offset="100%" stop-color="black"/>
+    </linearGradient>
+    <filter id="glow-l">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="tower-clipl">
+      <rect x="1.5" y="1.5" width="797" height="250" rx="14" ry="14"/>
+    </clipPath>
+    <style>
+      /* ── container border pulse (cyclic) ── */
+      @keyframes border-pulse-l {
+        0%, 100% { opacity: 0.50; }
+        50%      { opacity: 1.00; }
+      }
+      .border-glow-l { animation: border-pulse-l 3.2s ease-in-out infinite; }
+      /* ── quote / label breathing (cyclic) ── */
+      @keyframes breathe-l {
+        0%, 100% { opacity: 0.82; }
+        50%      { opacity: 1.00; }
+      }
+      .quote-grp-l { animation: breathe-l 5s ease-in-out infinite; }
+      .div-lbl-l   { animation: breathe-l 3s ease-in-out infinite 1.2s; }
+      /* ── divider sparks: shoot outward from centre (cyclic) ── */
+      @keyframes spark-left-l {
+        0%   { transform: translateX(0); opacity: 0; }
+        8%   { opacity: 1.0; }
+        92%  { opacity: 1.0; }
+        100% { transform: translateX(-258px); opacity: 0; }
+      }
+      @keyframes spark-right-l {
+        0%   { transform: translateX(0); opacity: 0; }
+        8%   { opacity: 1.0; }
+        92%  { opacity: 1.0; }
+        100% { transform: translateX(258px);  opacity: 0; }
+      }
+      .spark-l-l { animation: spark-left-l  2.5s linear infinite; }
+      .spark-r-l { animation: spark-right-l 2.5s linear infinite; }
+      /* ── accent bar gentle pulse (cyclic) ── */
+      @keyframes bar-glow-l {
+        0%, 100% { opacity: 0.65; }
+        50%      { opacity: 1.00; }
+      }
+      .bar-l { animation: bar-glow-l 2.5s ease-in-out infinite; }
+      /* ── carousel: opacity guard — card invisible during idle (cyclic) ── */
+      /* Both 0% and 100% are opacity:0, so the card is invisible at every  */
+      /* iteration boundary regardless of paint-order between animations.   */
+      @keyframes card-vis-l {
+        0%                { opacity: 0; }
+        0.1%    { opacity: 1; }
+        18.0%  { opacity: 1; }
+        18.1%   { opacity: 0; }
+        100%              { opacity: 0; }
+      }
+      /* ── carousel: card slides in from right (cyclic) ── */
+      @keyframes card-slide-l {
+        0%                { transform: translateX(820px); }
+        4.0% { transform: translateX(0); }
+        100%              { transform: translateX(0); }
+      }
+      /* ── carousel: right-to-left wipe-out on mask rect (cyclic) ── */
+      @keyframes card-wipe-l {
+        0%                  { transform: scaleX(0); }
+        4.0%   { transform: scaleX(0); }
+        14.0% { transform: scaleX(0); }
+        18.0%   { transform: scaleX(1); }
+        100%               { transform: scaleX(1); }
+      }
+      .card-vis-0l { animation: card-vis-l 20.0s linear 0.0s infinite normal backwards; }
+      .card-slide-0l { animation: card-slide-l 20.0s linear 0.0s infinite normal backwards; }
+      .wipe-0l {
+        animation: card-wipe-l 20.0s linear 0.0s infinite normal backwards;
+        transform-box: fill-box;
+        transform-origin: right center;
+      }
+      .card-vis-1l { animation: card-vis-l 20.0s linear 4.0s infinite normal backwards; }
+      .card-slide-1l { animation: card-slide-l 20.0s linear 4.0s infinite normal backwards; }
+      .wipe-1l {
+        animation: card-wipe-l 20.0s linear 4.0s infinite normal backwards;
+        transform-box: fill-box;
+        transform-origin: right center;
+      }
+      .card-vis-2l { animation: card-vis-l 20.0s linear 8.0s infinite normal backwards; }
+      .card-slide-2l { animation: card-slide-l 20.0s linear 8.0s infinite normal backwards; }
+      .wipe-2l {
+        animation: card-wipe-l 20.0s linear 8.0s infinite normal backwards;
+        transform-box: fill-box;
+        transform-origin: right center;
+      }
+      .card-vis-3l { animation: card-vis-l 20.0s linear 12.0s infinite normal backwards; }
+      .card-slide-3l { animation: card-slide-l 20.0s linear 12.0s infinite normal backwards; }
+      .wipe-3l {
+        animation: card-wipe-l 20.0s linear 12.0s infinite normal backwards;
+        transform-box: fill-box;
+        transform-origin: right center;
+      }
+      .card-vis-4l { animation: card-vis-l 20.0s linear 16.0s infinite normal backwards; }
+      .card-slide-4l { animation: card-slide-l 20.0s linear 16.0s infinite normal backwards; }
+      .wipe-4l {
+        animation: card-wipe-l 20.0s linear 16.0s infinite normal backwards;
+        transform-box: fill-box;
+        transform-origin: right center;
+      }
+    </style>
+    <mask id="card-mask-0l" maskContentUnits="userSpaceOnUse">
+      <rect x="30" y="161" width="650" height="66" fill="white"/>
+      <rect x="680" y="161" width="90" height="66" fill="url(#right-fade-l)"/>
+      <rect x="30" y="161" width="740" height="66" fill="black" class="wipe-0l"/>
+    </mask>
+    <mask id="card-mask-1l" maskContentUnits="userSpaceOnUse">
+      <rect x="30" y="161" width="650" height="66" fill="white"/>
+      <rect x="680" y="161" width="90" height="66" fill="url(#right-fade-l)"/>
+      <rect x="30" y="161" width="740" height="66" fill="black" class="wipe-1l"/>
+    </mask>
+    <mask id="card-mask-2l" maskContentUnits="userSpaceOnUse">
+      <rect x="30" y="161" width="650" height="66" fill="white"/>
+      <rect x="680" y="161" width="90" height="66" fill="url(#right-fade-l)"/>
+      <rect x="30" y="161" width="740" height="66" fill="black" class="wipe-2l"/>
+    </mask>
+    <mask id="card-mask-3l" maskContentUnits="userSpaceOnUse">
+      <rect x="30" y="161" width="650" height="66" fill="white"/>
+      <rect x="680" y="161" width="90" height="66" fill="url(#right-fade-l)"/>
+      <rect x="30" y="161" width="740" height="66" fill="black" class="wipe-3l"/>
+    </mask>
+    <mask id="card-mask-4l" maskContentUnits="userSpaceOnUse">
+      <rect x="30" y="161" width="650" height="66" fill="white"/>
+      <rect x="680" y="161" width="90" height="66" fill="url(#right-fade-l)"/>
+      <rect x="30" y="161" width="740" height="66" fill="black" class="wipe-4l"/>
+    </mask>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="253" rx="14" ry="14" fill="url(#bg-grad-l)"/>
+
+  <!-- ── LEFT CASTLE TOWER bookend (right half visible) ── -->
+  <g clip-path="url(#tower-clipl)">
+  <rect x="-7" y="43" width="14" height="15" fill="#651009"/>
+  <rect x="-18" y="58" width="36" height="15" fill="#651009"/>
+  <rect x="-29" y="73" width="58" height="15" fill="#651009"/>
+  <rect x="-40" y="88" width="80" height="15" fill="#651009"/>
+  <rect x="-51" y="103" width="102" height="15" fill="#651009"/>
+  <rect x="-30" y="118" width="10" height="15" fill="#e5e9f2"/>
+  <rect x="-15" y="118" width="10" height="15" fill="#e5e9f2"/>
+  <rect x="0" y="118" width="10" height="15" fill="#e5e9f2"/>
+  <rect x="15" y="118" width="10" height="15" fill="#e5e9f2"/>
+  <rect x="-30" y="133" width="60" height="7" fill="#e5e9f2"/>
+  <rect x="-30" y="140" width="60" height="111" fill="#e5e9f2"/>
+  <rect x="-30" y="153" width="60" height="1" fill="#cdd4e2"/>
+  <rect x="-30" y="203" width="60" height="1" fill="#cdd4e2"/>
+  <rect x="-30" y="228" width="60" height="1" fill="#cdd4e2"/>
+  <rect x="10" y="160" width="10" height="32" fill="#f6f8fa"/>
+  </g>
+
+  <!-- ── RIGHT CASTLE TOWER bookend (left half visible) ── -->
+  <g clip-path="url(#tower-clipl)">
+  <rect x="793" y="43" width="14" height="15" fill="#651009"/>
+  <rect x="782" y="58" width="36" height="15" fill="#651009"/>
+  <rect x="771" y="73" width="58" height="15" fill="#651009"/>
+  <rect x="760" y="88" width="80" height="15" fill="#651009"/>
+  <rect x="749" y="103" width="102" height="15" fill="#651009"/>
+  <rect x="770" y="118" width="10" height="15" fill="#e5e9f2"/>
+  <rect x="785" y="118" width="10" height="15" fill="#e5e9f2"/>
+  <rect x="800" y="118" width="10" height="15" fill="#e5e9f2"/>
+  <rect x="815" y="118" width="10" height="15" fill="#e5e9f2"/>
+  <rect x="770" y="133" width="60" height="7" fill="#e5e9f2"/>
+  <rect x="770" y="140" width="60" height="111" fill="#e5e9f2"/>
+  <rect x="770" y="153" width="60" height="1" fill="#cdd4e2"/>
+  <rect x="770" y="203" width="60" height="1" fill="#cdd4e2"/>
+  <rect x="770" y="228" width="60" height="1" fill="#cdd4e2"/>
+  <rect x="780" y="160" width="10" height="32" fill="#f6f8fa"/>
+  </g>
+
+  <!-- ── SECTION TITLE ── -->
+  <text x="400" y="40"
+        font-family="'Segoe UI', Ubuntu, Arial, sans-serif"
+        font-size="20" font-weight="700" text-anchor="middle"
+        fill="url(#title-grad-l)" filter="url(#glow-l)">🏛️ Architecture &amp; Design Philosophy</text>
+  <line x1="200" y1="53"
+        x2="600" y2="53"
+        stroke="url(#border-grad-l)" stroke-width="1" opacity="0.45"/>
+
+  <!-- ── QUOTE SECTION (breathing, cyclic) ── -->
+  <g class="quote-grp-l">
+    <text x="400" y="73" font-size="13" font-family="Georgia, 'Times New Roman', serif"
+          fill="#24292f" text-anchor="middle" font-style="italic">
+      “Good architecture makes the system easy to understand,
+    </text>
+    <text x="400" y="90" font-size="13" font-family="Georgia, 'Times New Roman', serif"
+          fill="#24292f" text-anchor="middle" font-style="italic">
+      develop, test, and deploy.”
+    </text>
+    <line x1="320" y1="103" x2="480" y2="103"
+          stroke="#d0d7de" stroke-width="0.8"/>
+    <text x="400" y="116" font-size="10" font-family="Georgia, 'Times New Roman', serif"
+          fill="#57606a" text-anchor="middle" font-style="italic">
+      — Robert C. Martin
+    </text>
+    <path d="M180 125 Q400 130 620 125"
+          stroke="#6e40c9" stroke-width="1"
+          fill="none" opacity="0.35" filter="url(#glow-l)"/>
+  </g>
+
+  <!-- ── DIVIDER: static lines + travelling sparks (cyclic) ── -->
+  <line x1="30" y1="141" x2="288" y2="141"
+        stroke="#d0d7de" stroke-width="1"/>
+  <line x1="512" y1="141" x2="770" y2="141"
+        stroke="#d0d7de" stroke-width="1"/>
+  <circle cx="288" cy="141" r="2.5"
+          fill="#6e40c9" filter="url(#glow-l)" class="spark-l-l"/>
+  <circle cx="512" cy="141" r="2.5"
+          fill="#6e40c9" filter="url(#glow-l)" class="spark-r-l"/>
+  <g class="div-lbl-l">
+    <polygon points="293,137 299,141 293,145 287,141" fill="#8c959f"/>
+    <text x="400" y="145" font-size="10" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+          fill="#57606a" text-anchor="middle" letter-spacing="3">GUIDING PRINCIPLES</text>
+    <polygon points="507,137 513,141 507,145 501,141" fill="#8c959f"/>
+  </g>
+
+  <!-- ── PRINCIPLE CARDS (carousel: one at a time) ── -->
+
+  <!-- Card 1: Clean Architecture -->
+  <g class="card-vis-0l">
+    <g class="card-slide-0l" mask="url(#card-mask-0l)">
+      <g transform="translate(30,161)">
+        <rect width="740" height="66" rx="8" ry="8"
+              fill="#ffffff"
+              stroke="#0969da" stroke-width="0.8" stroke-opacity="0.35"/>
+        <rect width="4" height="66" rx="1.5" ry="1.5"
+              fill="#0969da" class="bar-l"/>
+        <text x="22" y="26" font-size="13" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+              font-weight="600" fill="#1f2328">Clean Architecture</text>
+        <text x="22" y="46" font-size="12" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+              fill="#57606a">Enables effortless refactoring — swap infrastructure without touching business logic</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Card 2: SOLID -->
+  <g class="card-vis-1l">
+    <g class="card-slide-1l" mask="url(#card-mask-1l)">
+      <g transform="translate(30,161)">
+        <rect width="740" height="66" rx="8" ry="8"
+              fill="#ffffff"
+              stroke="#1a7f37" stroke-width="0.8" stroke-opacity="0.35"/>
+        <rect width="4" height="66" rx="1.5" ry="1.5"
+              fill="#1a7f37" class="bar-l"/>
+        <text x="22" y="26" font-size="13" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+              font-weight="600" fill="#1f2328">SOLID</text>
+        <text x="22" y="46" font-size="12" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+              fill="#57606a">Prevents brittle, tangled code that crumbles silently under change</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Card 3: Domain-Driven Design -->
+  <g class="card-vis-2l">
+    <g class="card-slide-2l" mask="url(#card-mask-2l)">
+      <g transform="translate(30,161)">
+        <rect width="740" height="66" rx="8" ry="8"
+              fill="#ffffff"
+              stroke="#cf222e" stroke-width="0.8" stroke-opacity="0.35"/>
+        <rect width="4" height="66" rx="1.5" ry="1.5"
+              fill="#cf222e" class="bar-l"/>
+        <text x="22" y="26" font-size="13" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+              font-weight="600" fill="#1f2328">Domain-Driven Design</text>
+        <text x="22" y="46" font-size="12" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+              fill="#57606a">Aligns the codebase with business reality through shared language and clear boundaries</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Card 4: Code Readability -->
+  <g class="card-vis-3l">
+    <g class="card-slide-3l" mask="url(#card-mask-3l)">
+      <g transform="translate(30,161)">
+        <rect width="740" height="66" rx="8" ry="8"
+              fill="#ffffff"
+              stroke="#8250df" stroke-width="0.8" stroke-opacity="0.35"/>
+        <rect width="4" height="66" rx="1.5" ry="1.5"
+              fill="#8250df" class="bar-l"/>
+        <text x="22" y="26" font-size="13" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+              font-weight="600" fill="#1f2328">Code Readability</text>
+        <text x="22" y="46" font-size="12" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+              fill="#57606a">Reduces cognitive overhead — enables the next engineer to reason about the code with confidence</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Card 5: Test-Driven Development -->
+  <g class="card-vis-4l">
+    <g class="card-slide-4l" mask="url(#card-mask-4l)">
+      <g transform="translate(30,161)">
+        <rect width="740" height="66" rx="8" ry="8"
+              fill="#ffffff"
+              stroke="#bc4c00" stroke-width="0.8" stroke-opacity="0.35"/>
+        <rect width="4" height="66" rx="1.5" ry="1.5"
+              fill="#bc4c00" class="bar-l"/>
+        <text x="22" y="26" font-size="13" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+              font-weight="600" fill="#1f2328">Test-Driven Development</text>
+        <text x="22" y="46" font-size="12" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+              fill="#57606a">Enhances interface design, and catches regressions before they reach production</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Pulsing gradient border (matching about-me.svg / currently.svg) -->
+  <rect x="1.5" y="1.5" width="797" height="250" rx="14" ry="14"
+        fill="none" stroke="url(#border-grad-l)" stroke-width="1.5"
+        class="border-glow-l" filter="url(#glow-l)"/>
+  <rect x="1.5" y="1.5" width="797" height="250" rx="14" ry="14"
+        fill="none" stroke="url(#border-grad-l)" stroke-width="0.5" opacity="0.7"/>
+</svg>

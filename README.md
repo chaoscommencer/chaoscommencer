@@ -6,56 +6,24 @@
   <img src="assets/images/wave-tagline-banner.svg" alt="Architect, engineer, mathematician, artist — Renaissance man" width="100%">
 </div>
 
-## 🧠 About Me
-
-I'm a software engineer with a passion for **clean, well-structured systems** that stand the test of time.
-I believe great software starts with great architecture — and that code should be as **readable** as it is reliable.
-
-| |
-|---|
-| 🏗️ End-to-end delivery owner — from inception to production, with quality baked in from day one |
-| 🎯 Committed advocate for **SOLID principles**, **Clean Architecture**, and **Domain-Driven Design** |
-| 🤝 Experienced, cross-team collaborator aligning technical decisions with business goals |
-| 🔍 Detail-oriented code reviewer who values clarity, testability, and maintainability |
-| ⚡ Translator of ambiguous requirements into scalable, elegant solutions |
-
----
-
-## ⚡ Currently
-
-| |
-|---|
-| 🔭 Always chasing the next interesting problem — **architecture**, **systems design**, and **developer tooling** |
-| 🌱 Deep-diving into **Rust** and exploring the world of **WebAssembly** |
-| 💬 Investigating **formal verification** — using math to prove software correct before it ever runs |
-| 🛠️ Automating everything I find myself doing more than twice |
-
----
-
-## 🏛️ Architecture & Design Philosophy
-
-> *"Good architecture makes the system easy to understand, develop, test, and deploy."*
-
-Approach every project with these guiding principles:
-
-| Principle | In Practice |
-|---|---|
-| **Clean Architecture** | Enables effortless refactoring — swap infrastructure without touching business logic |
-| **SOLID** | Prevents brittle, tangled code that crumbles silently under change |
-| **Domain-Driven Design** | Aligns the codebase with business reality through shared language and clear boundaries |
-| **Code Readability** | Reduces cognitive overhead, enabling the next engineer to reason about the code with confidence |
-| **Test-Driven Development** | Enhances interface design, and catches regressions before they reach production |
-
----
-
-## 🛠️ Tech Stack
-
 <div align="center">
-  <img src="assets/images/tech-stack-languages.svg" alt="Languages tech-stack carousel" width="100%">
+  <img src="assets/images/about-me.svg" alt="About Me — animated card" width="100%">
 </div>
 
 <div align="center">
-  <img src="assets/images/tech-stack-tools.svg" alt="Tools tech-stack carousel" width="100%">
+  <img src="assets/images/currently.svg" alt="Currently — animated card" width="100%">
+</div>
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)"  srcset="assets/images/architecture-principles-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/images/architecture-principles-light.svg">
+    <img alt="Architecture and Design Philosophy — animated principles overview" src="assets/images/architecture-principles-light.svg" width="100%">
+  </picture>
+</div>
+
+<div align="center">
+  <img src="assets/images/tech-stack.svg" alt="Tech Stack — Languages and Tools animated carousel card" width="100%">
 </div>
 
 ---
@@ -126,6 +94,6 @@ I'm always open to discussing architecture, engineering best practices, or inter
 
 <div align="center">
 
-[![GitHub](assets/icons/badges/github.svg)](https://github.com/chaoscommencer)
+[![GitHub](assets/icons/github.svg)](https://github.com/chaoscommencer)
 
 </div>

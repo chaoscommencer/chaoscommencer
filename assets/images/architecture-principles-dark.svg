@@ -1,0 +1,366 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 253" width="800" height="253">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1e0a3c"/>
+      <stop offset="40%"  stop-color="#0f1a2e"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#7c3aed"/>
+      <stop offset="50%"  stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#c4b5fd"/>
+      <stop offset="60%"  stop-color="#93c5fd"/>
+      <stop offset="100%" stop-color="#67e8f9"/>
+    </linearGradient>
+    <linearGradient id="right-fade-d" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="white"/>
+      <stop offset="100%" stop-color="black"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="tower-clip">
+      <rect x="1.5" y="1.5" width="797" height="250" rx="14" ry="14"/>
+    </clipPath>
+    <style>
+      /* ── twinkling stars (cyclic) ── */
+      @keyframes twinkle-a {
+        0%, 100% { opacity: 0.85; }
+        25%      { opacity: 0.25; }
+        50%      { opacity: 0.80; }
+        75%      { opacity: 0.10; }
+      }
+      @keyframes twinkle-b {
+        0%, 100% { opacity: 0.70; }
+        35%      { opacity: 0.10; }
+        65%      { opacity: 0.90; }
+      }
+      @keyframes twinkle-c {
+        0%, 100% { opacity: 0.80; }
+        20%      { opacity: 0.95; }
+        50%      { opacity: 0.15; }
+        80%      { opacity: 0.60; }
+      }
+      .s1 { animation: twinkle-a 3.2s ease-in-out infinite 0.0s; }
+      .s2 { animation: twinkle-b 2.7s ease-in-out infinite 0.8s; }
+      .s3 { animation: twinkle-c 4.1s ease-in-out infinite 1.5s; }
+      .s4 { animation: twinkle-a 2.3s ease-in-out infinite 2.2s; }
+      .s5 { animation: twinkle-b 3.7s ease-in-out infinite 0.5s; }
+      .s6 { animation: twinkle-c 2.9s ease-in-out infinite 1.1s; }
+      .s7 { animation: twinkle-a 3.5s ease-in-out infinite 2.8s; }
+      .s8 { animation: twinkle-b 2.1s ease-in-out infinite 0.3s; }
+      /* ── container border pulse (cyclic) ── */
+      @keyframes border-pulse {
+        0%, 100% { opacity: 0.50; }
+        50%      { opacity: 1.00; }
+      }
+      .border-glow { animation: border-pulse 3.2s ease-in-out infinite; }
+      /* ── quote / label breathing (cyclic) ── */
+      @keyframes breathe {
+        0%, 100% { opacity: 0.82; }
+        50%      { opacity: 1.00; }
+      }
+      .quote-grp { animation: breathe 5s ease-in-out infinite; }
+      .div-lbl   { animation: breathe 3s ease-in-out infinite 1.2s; }
+      /* ── divider sparks: shoot outward from centre (cyclic) ── */
+      @keyframes spark-left {
+        0%   { transform: translateX(0); opacity: 0; }
+        8%   { opacity: 1.0; }
+        92%  { opacity: 1.0; }
+        100% { transform: translateX(-258px); opacity: 0; }
+      }
+      @keyframes spark-right {
+        0%   { transform: translateX(0); opacity: 0; }
+        8%   { opacity: 1.0; }
+        92%  { opacity: 1.0; }
+        100% { transform: translateX(258px);  opacity: 0; }
+      }
+      .spark-l { animation: spark-left  2.5s linear infinite; }
+      .spark-r { animation: spark-right 2.5s linear infinite; }
+      /* ── accent bar gentle pulse (cyclic) ── */
+      @keyframes bar-glow {
+        0%, 100% { opacity: 0.65; }
+        50%      { opacity: 1.00; }
+      }
+      .bar { animation: bar-glow 2.5s ease-in-out infinite; }
+      /* ── carousel: opacity guard — card invisible during idle (cyclic) ── */
+      /* Both 0% and 100% are opacity:0, so the card is invisible at every  */
+      /* iteration boundary regardless of paint-order between animations.   */
+      @keyframes card-vis {
+        0%                { opacity: 0; }
+        0.1%    { opacity: 1; }
+        18.0%  { opacity: 1; }
+        18.1%   { opacity: 0; }
+        100%              { opacity: 0; }
+      }
+      /* ── carousel: card slides in from right (cyclic) ── */
+      @keyframes card-slide {
+        0%                { transform: translateX(820px); }
+        4.0% { transform: translateX(0); }
+        100%              { transform: translateX(0); }
+      }
+      /* ── carousel: right-to-left wipe-out on mask rect (cyclic) ── */
+      @keyframes card-wipe {
+        0%                  { transform: scaleX(0); }
+        4.0%   { transform: scaleX(0); }
+        14.0% { transform: scaleX(0); }
+        18.0%   { transform: scaleX(1); }
+        100%               { transform: scaleX(1); }
+      }
+      .card-vis-0 { animation: card-vis 20.0s linear 0.0s infinite normal backwards; }
+      .card-slide-0 { animation: card-slide 20.0s linear 0.0s infinite normal backwards; }
+      .wipe-0 {
+        animation: card-wipe 20.0s linear 0.0s infinite normal backwards;
+        transform-box: fill-box;
+        transform-origin: right center;
+      }
+      .card-vis-1 { animation: card-vis 20.0s linear 4.0s infinite normal backwards; }
+      .card-slide-1 { animation: card-slide 20.0s linear 4.0s infinite normal backwards; }
+      .wipe-1 {
+        animation: card-wipe 20.0s linear 4.0s infinite normal backwards;
+        transform-box: fill-box;
+        transform-origin: right center;
+      }
+      .card-vis-2 { animation: card-vis 20.0s linear 8.0s infinite normal backwards; }
+      .card-slide-2 { animation: card-slide 20.0s linear 8.0s infinite normal backwards; }
+      .wipe-2 {
+        animation: card-wipe 20.0s linear 8.0s infinite normal backwards;
+        transform-box: fill-box;
+        transform-origin: right center;
+      }
+      .card-vis-3 { animation: card-vis 20.0s linear 12.0s infinite normal backwards; }
+      .card-slide-3 { animation: card-slide 20.0s linear 12.0s infinite normal backwards; }
+      .wipe-3 {
+        animation: card-wipe 20.0s linear 12.0s infinite normal backwards;
+        transform-box: fill-box;
+        transform-origin: right center;
+      }
+      .card-vis-4 { animation: card-vis 20.0s linear 16.0s infinite normal backwards; }
+      .card-slide-4 { animation: card-slide 20.0s linear 16.0s infinite normal backwards; }
+      .wipe-4 {
+        animation: card-wipe 20.0s linear 16.0s infinite normal backwards;
+        transform-box: fill-box;
+        transform-origin: right center;
+      }
+    </style>
+    <mask id="card-mask-0" maskContentUnits="userSpaceOnUse">
+      <rect x="30" y="161" width="650" height="66" fill="white"/>
+      <rect x="680" y="161" width="90" height="66" fill="url(#right-fade-d)"/>
+      <rect x="30" y="161" width="740" height="66" fill="black" class="wipe-0"/>
+    </mask>
+    <mask id="card-mask-1" maskContentUnits="userSpaceOnUse">
+      <rect x="30" y="161" width="650" height="66" fill="white"/>
+      <rect x="680" y="161" width="90" height="66" fill="url(#right-fade-d)"/>
+      <rect x="30" y="161" width="740" height="66" fill="black" class="wipe-1"/>
+    </mask>
+    <mask id="card-mask-2" maskContentUnits="userSpaceOnUse">
+      <rect x="30" y="161" width="650" height="66" fill="white"/>
+      <rect x="680" y="161" width="90" height="66" fill="url(#right-fade-d)"/>
+      <rect x="30" y="161" width="740" height="66" fill="black" class="wipe-2"/>
+    </mask>
+    <mask id="card-mask-3" maskContentUnits="userSpaceOnUse">
+      <rect x="30" y="161" width="650" height="66" fill="white"/>
+      <rect x="680" y="161" width="90" height="66" fill="url(#right-fade-d)"/>
+      <rect x="30" y="161" width="740" height="66" fill="black" class="wipe-3"/>
+    </mask>
+    <mask id="card-mask-4" maskContentUnits="userSpaceOnUse">
+      <rect x="30" y="161" width="650" height="66" fill="white"/>
+      <rect x="680" y="161" width="90" height="66" fill="url(#right-fade-d)"/>
+      <rect x="30" y="161" width="740" height="66" fill="black" class="wipe-4"/>
+    </mask>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="253" rx="14" ry="14" fill="url(#bg-grad)"/>
+  <!-- Twinkling stars -->
+  <circle cx="55" cy="18" r="1.2" fill="#c4b5fd" class="s1"/>
+  <circle cx="140" cy="44" r="0.8" fill="#93c5fd" class="s2"/>
+  <circle cx="240" cy="12" r="1.4" fill="#c4b5fd" class="s3"/>
+  <circle cx="385" cy="58" r="0.9" fill="#818cf8" class="s4"/>
+  <circle cx="505" cy="22" r="1.1" fill="#93c5fd" class="s5"/>
+  <circle cx="625" cy="9" r="1.0" fill="#c4b5fd" class="s6"/>
+  <circle cx="718" cy="50" r="1.3" fill="#818cf8" class="s7"/>
+  <circle cx="762" cy="20" r="0.8" fill="#93c5fd" class="s8"/>
+
+  <!-- ── LEFT CASTLE TOWER bookend (right half visible) ── -->
+  <g clip-path="url(#tower-clip)">
+  <rect x="-7" y="43" width="14" height="15" fill="#651009"/>
+  <rect x="-18" y="58" width="36" height="15" fill="#651009"/>
+  <rect x="-29" y="73" width="58" height="15" fill="#651009"/>
+  <rect x="-40" y="88" width="80" height="15" fill="#651009"/>
+  <rect x="-51" y="103" width="102" height="15" fill="#651009"/>
+  <rect x="-30" y="118" width="10" height="15" fill="#2a3050"/>
+  <rect x="-15" y="118" width="10" height="15" fill="#2a3050"/>
+  <rect x="0" y="118" width="10" height="15" fill="#2a3050"/>
+  <rect x="15" y="118" width="10" height="15" fill="#2a3050"/>
+  <rect x="-30" y="133" width="60" height="7" fill="#2a3050"/>
+  <rect x="-30" y="140" width="60" height="111" fill="#2a3050"/>
+  <rect x="-30" y="153" width="60" height="1" fill="#3a4570"/>
+  <rect x="-30" y="203" width="60" height="1" fill="#3a4570"/>
+  <rect x="-30" y="228" width="60" height="1" fill="#3a4570"/>
+  <rect x="10" y="160" width="10" height="32" fill="#0d1117"/>
+  </g>
+
+  <!-- ── RIGHT CASTLE TOWER bookend (left half visible) ── -->
+  <g clip-path="url(#tower-clip)">
+  <rect x="793" y="43" width="14" height="15" fill="#651009"/>
+  <rect x="782" y="58" width="36" height="15" fill="#651009"/>
+  <rect x="771" y="73" width="58" height="15" fill="#651009"/>
+  <rect x="760" y="88" width="80" height="15" fill="#651009"/>
+  <rect x="749" y="103" width="102" height="15" fill="#651009"/>
+  <rect x="770" y="118" width="10" height="15" fill="#2a3050"/>
+  <rect x="785" y="118" width="10" height="15" fill="#2a3050"/>
+  <rect x="800" y="118" width="10" height="15" fill="#2a3050"/>
+  <rect x="815" y="118" width="10" height="15" fill="#2a3050"/>
+  <rect x="770" y="133" width="60" height="7" fill="#2a3050"/>
+  <rect x="770" y="140" width="60" height="111" fill="#2a3050"/>
+  <rect x="770" y="153" width="60" height="1" fill="#3a4570"/>
+  <rect x="770" y="203" width="60" height="1" fill="#3a4570"/>
+  <rect x="770" y="228" width="60" height="1" fill="#3a4570"/>
+  <rect x="780" y="160" width="10" height="32" fill="#0d1117"/>
+  </g>
+
+  <!-- ── SECTION TITLE ── -->
+  <text x="400" y="40"
+        font-family="'Segoe UI', Ubuntu, Arial, sans-serif"
+        font-size="20" font-weight="700" text-anchor="middle"
+        fill="url(#title-grad)" filter="url(#glow)">🏛️ Architecture &amp; Design Philosophy</text>
+  <line x1="200" y1="53"
+        x2="600" y2="53"
+        stroke="url(#border-grad)" stroke-width="1" opacity="0.45"/>
+
+  <!-- ── QUOTE SECTION (breathing, cyclic) ── -->
+  <g class="quote-grp">
+    <text x="400" y="73" font-size="13" font-family="Georgia, 'Times New Roman', serif"
+          fill="#c9d1d9" text-anchor="middle" font-style="italic">
+      “Good architecture makes the system easy to understand,
+    </text>
+    <text x="400" y="90" font-size="13" font-family="Georgia, 'Times New Roman', serif"
+          fill="#c9d1d9" text-anchor="middle" font-style="italic">
+      develop, test, and deploy.”
+    </text>
+    <line x1="320" y1="103" x2="480" y2="103"
+          stroke="#4b5563" stroke-width="0.8"/>
+    <text x="400" y="116" font-size="10" font-family="Georgia, 'Times New Roman', serif"
+          fill="#94a3b8" text-anchor="middle" font-style="italic">
+      — Robert C. Martin
+    </text>
+    <path d="M180 125 Q400 130 620 125"
+          stroke="#7c3aed" stroke-width="1"
+          fill="none" opacity="0.45" filter="url(#glow)"/>
+  </g>
+
+  <!-- ── DIVIDER: static lines + travelling sparks (cyclic) ── -->
+  <line x1="30" y1="141" x2="288" y2="141"
+        stroke="#374151" stroke-width="1"/>
+  <line x1="512" y1="141" x2="770" y2="141"
+        stroke="#374151" stroke-width="1"/>
+  <circle cx="288" cy="141" r="2.5"
+          fill="#7c3aed" filter="url(#glow)" class="spark-l"/>
+  <circle cx="512" cy="141" r="2.5"
+          fill="#7c3aed" filter="url(#glow)" class="spark-r"/>
+  <g class="div-lbl">
+    <polygon points="293,137 299,141 293,145 287,141" fill="#6b7280"/>
+    <text x="400" y="145" font-size="10" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+          fill="#6b7280" text-anchor="middle" letter-spacing="3">GUIDING PRINCIPLES</text>
+    <polygon points="507,137 513,141 507,145 501,141" fill="#6b7280"/>
+  </g>
+
+  <!-- ── PRINCIPLE CARDS (carousel: one at a time) ── -->
+
+  <!-- Card 1: Clean Architecture -->
+  <g class="card-vis-0">
+    <g class="card-slide-0" mask="url(#card-mask-0)">
+      <g transform="translate(30,161)">
+        <rect width="740" height="66" rx="8" ry="8"
+              fill="#0b0f1a"
+              stroke="#58a6ff" stroke-width="0.8" stroke-opacity="0.35"/>
+        <rect width="4" height="66" rx="1.5" ry="1.5"
+              fill="#58a6ff" class="bar"/>
+        <text x="22" y="26" font-size="13" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+              font-weight="600" fill="#e6edf3">Clean Architecture</text>
+        <text x="22" y="46" font-size="12" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+              fill="#8b949e">Enables effortless refactoring — swap infrastructure without touching business logic</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Card 2: SOLID -->
+  <g class="card-vis-1">
+    <g class="card-slide-1" mask="url(#card-mask-1)">
+      <g transform="translate(30,161)">
+        <rect width="740" height="66" rx="8" ry="8"
+              fill="#0b0f1a"
+              stroke="#3fb950" stroke-width="0.8" stroke-opacity="0.35"/>
+        <rect width="4" height="66" rx="1.5" ry="1.5"
+              fill="#3fb950" class="bar"/>
+        <text x="22" y="26" font-size="13" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+              font-weight="600" fill="#e6edf3">SOLID</text>
+        <text x="22" y="46" font-size="12" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+              fill="#8b949e">Prevents brittle, tangled code that crumbles silently under change</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Card 3: Domain-Driven Design -->
+  <g class="card-vis-2">
+    <g class="card-slide-2" mask="url(#card-mask-2)">
+      <g transform="translate(30,161)">
+        <rect width="740" height="66" rx="8" ry="8"
+              fill="#0b0f1a"
+              stroke="#f78166" stroke-width="0.8" stroke-opacity="0.35"/>
+        <rect width="4" height="66" rx="1.5" ry="1.5"
+              fill="#f78166" class="bar"/>
+        <text x="22" y="26" font-size="13" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+              font-weight="600" fill="#e6edf3">Domain-Driven Design</text>
+        <text x="22" y="46" font-size="12" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+              fill="#8b949e">Aligns the codebase with business reality through shared language and clear boundaries</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Card 4: Code Readability -->
+  <g class="card-vis-3">
+    <g class="card-slide-3" mask="url(#card-mask-3)">
+      <g transform="translate(30,161)">
+        <rect width="740" height="66" rx="8" ry="8"
+              fill="#0b0f1a"
+              stroke="#d2a8ff" stroke-width="0.8" stroke-opacity="0.35"/>
+        <rect width="4" height="66" rx="1.5" ry="1.5"
+              fill="#d2a8ff" class="bar"/>
+        <text x="22" y="26" font-size="13" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+              font-weight="600" fill="#e6edf3">Code Readability</text>
+        <text x="22" y="46" font-size="12" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+              fill="#8b949e">Reduces cognitive overhead — enables the next engineer to reason about the code with confidence</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Card 5: Test-Driven Development -->
+  <g class="card-vis-4">
+    <g class="card-slide-4" mask="url(#card-mask-4)">
+      <g transform="translate(30,161)">
+        <rect width="740" height="66" rx="8" ry="8"
+              fill="#0b0f1a"
+              stroke="#ffa657" stroke-width="0.8" stroke-opacity="0.35"/>
+        <rect width="4" height="66" rx="1.5" ry="1.5"
+              fill="#ffa657" class="bar"/>
+        <text x="22" y="26" font-size="13" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+              font-weight="600" fill="#e6edf3">Test-Driven Development</text>
+        <text x="22" y="46" font-size="12" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+              fill="#8b949e">Enhances interface design, and catches regressions before they reach production</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Pulsing gradient border (matching about-me.svg / currently.svg) -->
+  <rect x="1.5" y="1.5" width="797" height="250" rx="14" ry="14"
+        fill="none" stroke="url(#border-grad)" stroke-width="1.5"
+        class="border-glow" filter="url(#glow)"/>
+  <rect x="1.5" y="1.5" width="797" height="250" rx="14" ry="14"
+        fill="none" stroke="url(#border-grad)" stroke-width="0.5" opacity="0.7"/>
+</svg>
