@@ -14,5 +14,5 @@
   <!-- Title -->
   <text x="450" y="168"
         font-family="'Segoe UI', Ubuntu, Arial, sans-serif" font-size="26" font-weight="700" text-anchor="middle"
-        fill="url(#wc-title)" filter="url(#wc-glow)">Hi, I&#x2019;m David &#x1F44B;</text>
+        fill="url(#wc-title)" filter="url(#wc-glow)">&#x1F44B; Hi, I&#x2019;m David</text>
 </svg>

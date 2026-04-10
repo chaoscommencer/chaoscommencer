@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 830 90" width="830" height="90">
+  <defs>
+    <linearGradient id="rah-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#0d1117"/>
+      <stop offset="50%"  stop-color="#130c26"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="rah-border" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#7c3aed"/>
+      <stop offset="50%"  stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="rah-title" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#c4b5fd"/>
+      <stop offset="60%"  stop-color="#93c5fd"/>
+      <stop offset="100%" stop-color="#67e8f9"/>
+    </linearGradient>
+    <filter id="rah-glow" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      @keyframes rah-border-pulse {
+        0%, 100% { opacity: 0.50; }
+        50%      { opacity: 1.00; }
+      }
+      .rah-border-glow { animation: rah-border-pulse 3.2s ease-in-out infinite; }
+      @keyframes rah-twinkle-a {
+        0%, 100% { opacity: 0.90; }
+        35%      { opacity: 0.20; }
+        70%      { opacity: 0.75; }
+      }
+      @keyframes rah-twinkle-b {
+        0%, 100% { opacity: 0.65; }
+        25%      { opacity: 0.95; }
+        60%      { opacity: 0.10; }
+      }
+      @keyframes rah-twinkle-c {
+        0%, 100% { opacity: 0.80; }
+        15%      { opacity: 0.10; }
+        55%      { opacity: 0.95; }
+      }
+      .rah-star-a { animation: rah-twinkle-a 3.2s ease-in-out infinite; }
+      .rah-star-b { animation: rah-twinkle-b 2.8s ease-in-out infinite; }
+      .rah-star-c { animation: rah-twinkle-c 4.0s ease-in-out infinite; }
+    </style>
+  </defs>
+  <!-- Background (rounded top, flat bottom) -->
+  <rect width="830" height="90" rx="14" fill="url(#rah-bg)"/>
+  <rect y="45" width="830" height="45" fill="url(#rah-bg)"/>
+  <circle cx="50" cy="20" r="1.0" fill="#c4b5fd" class="rah-star-a" style="animation-delay:0.0s"/>
+  <circle cx="150" cy="35" r="0.8" fill="#93c5fd" class="rah-star-b" style="animation-delay:1.2s"/>
+  <circle cx="280" cy="18" r="1.2" fill="#818cf8" class="rah-star-c" style="animation-delay:2.5s"/>
+  <circle cx="100" cy="55" r="0.9" fill="#c4b5fd" class="rah-star-a" style="animation-delay:0.7s"/>
+  <circle cx="350" cy="40" r="0.7" fill="#93c5fd" class="rah-star-b" style="animation-delay:1.8s"/>
+  <circle cx="600" cy="22" r="1.1" fill="#818cf8" class="rah-star-c" style="animation-delay:0.4s"/>
+  <circle cx="700" cy="42" r="0.9" fill="#c4b5fd" class="rah-star-a" style="animation-delay:2.1s"/>
+  <circle cx="780" cy="18" r="1.3" fill="#93c5fd" class="rah-star-b" style="animation-delay:0.9s"/>
+  <circle cx="820" cy="50" r="0.8" fill="#818cf8" class="rah-star-c" style="animation-delay:1.5s"/>
+  <!-- Border: top + sides (open bottom); layered glow -->
+  <path d="M1.5,90 V14 A12.5,12.5 0 0,1 14,1.5 H816 A12.5,12.5 0 0,1 828.5,14 V90" fill="none" stroke="url(#rah-border)" stroke-width="7" stroke-opacity="0.08" class="rah-border-glow"/>
+  <path d="M1.5,90 V14 A12.5,12.5 0 0,1 14,1.5 H816 A12.5,12.5 0 0,1 828.5,14 V90" fill="none" stroke="url(#rah-border)" stroke-width="4" stroke-opacity="0.15"/>
+  <path d="M1.5,90 V14 A12.5,12.5 0 0,1 14,1.5 H816 A12.5,12.5 0 0,1 828.5,14 V90" fill="none" stroke="url(#rah-border)" stroke-width="1.5" stroke-opacity="0.55" class="rah-border-glow"/>
+  <path d="M1.5,90 V14 A12.5,12.5 0 0,1 14,1.5 H816 A12.5,12.5 0 0,1 828.5,14 V90" fill="none" stroke="url(#rah-border)" stroke-width="0.5" stroke-opacity="0.7"/>
+  <!-- Title -->
+  <text x="415" y="44" text-anchor="middle"
+        font-family="'Segoe UI', Ubuntu, Arial, sans-serif" font-size="20" font-weight="700"
+        fill="url(#rah-title)" filter="url(#rah-glow)">📊 Recent Activity</text>
+  <line x1="208" y1="55" x2="622" y2="55"
+        stroke="url(#rah-border)" stroke-width="1" opacity="0.45"/>
+  <!-- Description -->
+  <text x="415" y="76" text-anchor="middle"
+        font-family="'Segoe UI', Ubuntu, Arial, sans-serif" font-size="11.5" fill="#94a3b8" opacity="0.85"
+        >Latest contributions and events across my repositories</text>
+</svg>

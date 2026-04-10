@@ -35,6 +35,19 @@
     <clipPath id="cur-stage-clip">
       <rect x="0" y="62" width="830" height="116"/>
     </clipPath>
+    <clipPath id="cur-card-clip">
+      <rect x="0" y="0" width="830" height="184"
+            rx="14" ry="14"/>
+    </clipPath>
+    <!-- Handle gradient: pale-weathered tip → honey-amber → dark charcoal kink → russet ferrule -->
+    <linearGradient id="cur-handle-grad" gradientUnits="userSpaceOnUse"
+                    x1="-54" y1="0" x2="31" y2="0">
+      <stop offset="0%"   stop-color="#907055"/>
+      <stop offset="25%"  stop-color="#c67c1c"/>
+      <stop offset="55%"  stop-color="#4e2508"/>
+      <stop offset="80%"  stop-color="#7c3f14"/>
+      <stop offset="100%" stop-color="#a07034"/>
+    </linearGradient>
     <filter id="cur-glow" x="-15%" y="-15%" width="130%" height="130%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
@@ -91,6 +104,47 @@
   <rect x="1.5" y="1.5" width="827" height="181"
         rx="14" ry="14"
         fill="none" stroke="url(#cur-border)" stroke-width="0.5" opacity="0.7"/>
+  <!-- Straw broomstick (figure-8, path-tracking rotation, perspective scale) -->
+  <g clip-path="url(#cur-card-clip)" opacity="0.65">
+    <g filter="url(#cur-glow)">
+      <animateTransform attributeName="transform" type="translate"
+                        values="415 90; 474 105; 530 118; 582 127; 627 130; 664 127; 692 118; 709 105; 715 90; 709 75; 692 62; 664 53; 627 50; 582 53; 530 62; 474 75; 415 90; 356 105; 300 118; 248 127; 203 130; 166 127; 138 118; 121 105; 115 90; 121 75; 138 62; 166 53; 203 50; 248 53; 300 62; 356 75; 415 90"
+                        keyTimes="0.0000; 0.0312; 0.0625; 0.0938; 0.1250; 0.1562; 0.1875; 0.2188; 0.2500; 0.2812; 0.3125; 0.3438; 0.3750; 0.4062; 0.4375; 0.4688; 0.5000; 0.5312; 0.5625; 0.5938; 0.6250; 0.6562; 0.6875; 0.7188; 0.7500; 0.7812; 0.8125; 0.8438; 0.8750; 0.9062; 0.9375; 0.9688; 1.0000"
+                        calcMode="linear"
+                        dur="12.0s" repeatCount="indefinite"/>
+      <g>
+        <animateTransform attributeName="transform" type="rotate"
+                          values="-165.07 0 0; -165.90 0 0; -168.46 0 0; -173.00 0 0; -180.00 0 0; -190.41 0 0; -206.23 0 0; -231.63 0 0; -270.00 0 0; -308.37 0 0; -333.77 0 0; -349.59 0 0; -360.00 0 0; -367.00 0 0; -371.54 0 0; -374.10 0 0; -374.93 0 0; -374.10 0 0; -371.54 0 0; -367.00 0 0; -360.00 0 0; -349.59 0 0; -333.77 0 0; -308.37 0 0; -270.00 0 0; -231.63 0 0; -206.23 0 0; -190.41 0 0; -180.00 0 0; -173.00 0 0; -168.46 0 0; -165.90 0 0; -165.07 0 0"
+                          keyTimes="0.0000; 0.0312; 0.0625; 0.0938; 0.1250; 0.1562; 0.1875; 0.2188; 0.2500; 0.2812; 0.3125; 0.3438; 0.3750; 0.4062; 0.4375; 0.4688; 0.5000; 0.5312; 0.5625; 0.5938; 0.6250; 0.6562; 0.6875; 0.7188; 0.7500; 0.7812; 0.8125; 0.8438; 0.8750; 0.9062; 0.9375; 0.9688; 1.0000"
+                          calcMode="linear"
+                          dur="12.0s" repeatCount="indefinite"/>
+        <g>
+          <animateTransform attributeName="transform" type="scale"
+                            values="0.900; 0.883; 0.834; 0.761; 0.675; 0.589; 0.516; 0.467; 0.450; 0.467; 0.516; 0.589; 0.675; 0.761; 0.834; 0.883; 0.900; 0.883; 0.834; 0.761; 0.675; 0.589; 0.516; 0.467; 0.450; 0.467; 0.516; 0.589; 0.675; 0.761; 0.834; 0.883; 0.900"
+                            keyTimes="0.0000; 0.0312; 0.0625; 0.0938; 0.1250; 0.1562; 0.1875; 0.2188; 0.2500; 0.2812; 0.3125; 0.3438; 0.3750; 0.4062; 0.4375; 0.4688; 0.5000; 0.5312; 0.5625; 0.5938; 0.6250; 0.6562; 0.6875; 0.7188; 0.7500; 0.7812; 0.8125; 0.8438; 0.8750; 0.9062; 0.9375; 0.9688; 1.0000"
+                            calcMode="linear"
+                            dur="12.0s" repeatCount="indefinite"/>
+          <polyline points="-54,0 -28,0 -3,11 31,0" stroke="url(#cur-handle-grad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <polyline points="-52,-2 -28,-2 -3,9 30,-2" stroke="#d97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.50"/>
+          <polyline points="-51,-1.5 -30,-1.5" stroke="#2a1206" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.70"/>
+          <polyline points="-27,1.5 -4,12" stroke="#2a1206" stroke-width="2.0" stroke-linecap="round" fill="none" opacity="0.75"/>
+          <polyline points="-50,2.5 -30,2.5" stroke="#a09080" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.65"/>
+          <polyline points="-2,10 29,0" stroke="#8c4018" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.65"/>
+          <polyline points="-26,3 -4,13.5" stroke="#706050" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.65"/>
+          <rect x="28" y="-8" width="14" height="18" rx="2" ry="2" fill="#f59e0b"/>
+          <line x1="40" y1="-3.0" x2="72" y2="-27.0" stroke="#9a7a45" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="40" y1="-2.5" x2="72" y2="-20.0" stroke="#b89060" stroke-width="1.7" stroke-linecap="round"/>
+          <line x1="40" y1="-1.5" x2="72" y2="-12.0" stroke="#d4a870" stroke-width="2.0" stroke-linecap="round"/>
+          <line x1="40" y1="-0.5" x2="72" y2="-5.0" stroke="#ecc870" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="40" y1="0.0" x2="72" y2="0.0" stroke="#fef08a" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="40" y1="0.5" x2="72" y2="5.0" stroke="#ecc870" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="40" y1="1.5" x2="72" y2="12.0" stroke="#c8a060" stroke-width="2.0" stroke-linecap="round"/>
+          <line x1="40" y1="2.5" x2="72" y2="20.0" stroke="#a87840" stroke-width="1.7" stroke-linecap="round"/>
+          <line x1="40" y1="3.0" x2="72" y2="27.0" stroke="#8a6030" stroke-width="1.4" stroke-linecap="round"/>
+        </g>
+      </g>
+    </g>
+  </g>
   <!-- Stage ambient track (clip + mask keep it within the stage window) -->
   <g clip-path="url(#cur-stage-clip)" mask="url(#cur-stage-mask)">
     <line x1="415" y1="62" x2="415" y2="178"
