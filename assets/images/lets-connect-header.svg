@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 830 114" width="830" height="114">
+  <defs>
+    <linearGradient id="lch-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#0d1117"/>
+      <stop offset="50%"  stop-color="#130c26"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="lch-border" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#7c3aed"/>
+      <stop offset="50%"  stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="lch-title" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#c4b5fd"/>
+      <stop offset="60%"  stop-color="#93c5fd"/>
+      <stop offset="100%" stop-color="#67e8f9"/>
+    </linearGradient>
+    <filter id="lch-glow" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      @keyframes lch-border-pulse {
+        0%, 100% { opacity: 0.50; }
+        50%      { opacity: 1.00; }
+      }
+      .lch-border-glow { animation: lch-border-pulse 3.2s ease-in-out infinite; }
+      @keyframes lch-twinkle-a {
+        0%, 100% { opacity: 0.90; }
+        35%      { opacity: 0.20; }
+        70%      { opacity: 0.75; }
+      }
+      @keyframes lch-twinkle-b {
+        0%, 100% { opacity: 0.65; }
+        25%      { opacity: 0.95; }
+        60%      { opacity: 0.10; }
+      }
+      @keyframes lch-twinkle-c {
+        0%, 100% { opacity: 0.80; }
+        15%      { opacity: 0.10; }
+        55%      { opacity: 0.95; }
+      }
+      .lch-star-a { animation: lch-twinkle-a 3.2s ease-in-out infinite; }
+      .lch-star-b { animation: lch-twinkle-b 2.8s ease-in-out infinite; }
+      .lch-star-c { animation: lch-twinkle-c 4.0s ease-in-out infinite; }
+    </style>
+  </defs>
+  <!-- Background (rounded top, flat bottom) -->
+  <rect width="830" height="114" rx="14" fill="url(#lch-bg)"/>
+  <rect y="57" width="830" height="57" fill="url(#lch-bg)"/>
+  <circle cx="50" cy="20" r="1.0" fill="#c4b5fd" class="lch-star-a" style="animation-delay:0.0s"/>
+  <circle cx="150" cy="35" r="0.8" fill="#93c5fd" class="lch-star-b" style="animation-delay:1.2s"/>
+  <circle cx="280" cy="18" r="1.2" fill="#818cf8" class="lch-star-c" style="animation-delay:2.5s"/>
+  <circle cx="100" cy="55" r="0.9" fill="#c4b5fd" class="lch-star-a" style="animation-delay:0.7s"/>
+  <circle cx="350" cy="40" r="0.7" fill="#93c5fd" class="lch-star-b" style="animation-delay:1.8s"/>
+  <circle cx="600" cy="22" r="1.1" fill="#818cf8" class="lch-star-c" style="animation-delay:0.4s"/>
+  <circle cx="700" cy="42" r="0.9" fill="#c4b5fd" class="lch-star-a" style="animation-delay:2.1s"/>
+  <circle cx="780" cy="18" r="1.3" fill="#93c5fd" class="lch-star-b" style="animation-delay:0.9s"/>
+  <circle cx="820" cy="50" r="0.8" fill="#818cf8" class="lch-star-c" style="animation-delay:1.5s"/>
+  <!-- Border: top + sides (open bottom); layered glow -->
+  <path d="M1.5,114 V14 A12.5,12.5 0 0,1 14,1.5 H816 A12.5,12.5 0 0,1 828.5,14 V114" fill="none" stroke="url(#lch-border)" stroke-width="7" stroke-opacity="0.08" class="lch-border-glow"/>
+  <path d="M1.5,114 V14 A12.5,12.5 0 0,1 14,1.5 H816 A12.5,12.5 0 0,1 828.5,14 V114" fill="none" stroke="url(#lch-border)" stroke-width="4" stroke-opacity="0.15"/>
+  <path d="M1.5,114 V14 A12.5,12.5 0 0,1 14,1.5 H816 A12.5,12.5 0 0,1 828.5,14 V114" fill="none" stroke="url(#lch-border)" stroke-width="1.5" stroke-opacity="0.55" class="lch-border-glow"/>
+  <path d="M1.5,114 V14 A12.5,12.5 0 0,1 14,1.5 H816 A12.5,12.5 0 0,1 828.5,14 V114" fill="none" stroke="url(#lch-border)" stroke-width="0.5" stroke-opacity="0.7"/>
+  <!-- Title -->
+  <text x="415" y="44" text-anchor="middle"
+        font-family="'Segoe UI', Ubuntu, Arial, sans-serif" font-size="20" font-weight="700"
+        fill="url(#lch-title)" filter="url(#lch-glow)">💬 Let’s Connect</text>
+  <line x1="208" y1="55" x2="622" y2="55"
+        stroke="url(#lch-border)" stroke-width="1" opacity="0.45"/>
+  <!-- Description -->
+  <text x="415" y="80" text-anchor="middle"
+        font-family="'Segoe UI', Ubuntu, Arial, sans-serif" font-size="11.5" fill="#94a3b8" opacity="0.85"
+        >Open to discussing architecture, engineering best practices,</text>
+  <text x="415" y="97" text-anchor="middle"
+        font-family="'Segoe UI', Ubuntu, Arial, sans-serif" font-size="11.5" fill="#94a3b8" opacity="0.85"
+        >or any interesting problems worth solving.</text>
+</svg>

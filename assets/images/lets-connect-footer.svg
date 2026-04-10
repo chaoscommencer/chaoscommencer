@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 830 22" width="830" height="22">
+  <defs>
+    <linearGradient id="lcf-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#0d1117"/>
+      <stop offset="50%"  stop-color="#130c26"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="lcf-border" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#7c3aed"/>
+      <stop offset="50%"  stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="lcf-glow" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      @keyframes lcf-border-pulse {
+        0%, 100% { opacity: 0.50; }
+        50%      { opacity: 1.00; }
+      }
+      .lcf-border-glow { animation: lcf-border-pulse 3.2s ease-in-out infinite; }
+    </style>
+  </defs>
+  <!-- Background (flat top, rounded bottom) -->
+  <rect width="830" height="22" rx="14" fill="url(#lcf-bg)"/>
+  <rect width="830" height="14" fill="url(#lcf-bg)"/>
+  <!-- Border: sides + bottom (open top); layered glow -->
+  <path d="M1.5,0 V8 A12.5,12.5 0 0,0 14,20.5 H816 A12.5,12.5 0 0,0 828.5,8 V0" fill="none" stroke="url(#lcf-border)" stroke-width="7" stroke-opacity="0.08" class="lcf-border-glow"/>
+  <path d="M1.5,0 V8 A12.5,12.5 0 0,0 14,20.5 H816 A12.5,12.5 0 0,0 828.5,8 V0" fill="none" stroke="url(#lcf-border)" stroke-width="4" stroke-opacity="0.15"/>
+  <path d="M1.5,0 V8 A12.5,12.5 0 0,0 14,20.5 H816 A12.5,12.5 0 0,0 828.5,8 V0" fill="none" stroke="url(#lcf-border)" stroke-width="1.5" stroke-opacity="0.55" class="lcf-border-glow"/>
+  <path d="M1.5,0 V8 A12.5,12.5 0 0,0 14,20.5 H816 A12.5,12.5 0 0,0 828.5,8 V0" fill="none" stroke="url(#lcf-border)" stroke-width="0.5" stroke-opacity="0.7"/>
+</svg>
