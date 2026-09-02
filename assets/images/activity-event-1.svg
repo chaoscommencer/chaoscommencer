@@ -34,17 +34,17 @@
   <!-- Inner sub-card (the clickable region) -->
   <rect x="16" y="4" width="798" height="40"
         rx="8" fill="#0b0f1a"
-        stroke="#ef4444" stroke-width="0.5" stroke-opacity="0.35"/>
+        stroke="#8b5cf6" stroke-width="0.5" stroke-opacity="0.35"/>
   <!-- Neon accent bar inside sub-card -->
   <rect x="20" y="8" width="3" height="32"
-        rx="1.5" fill="#ef4444" opacity="0.85" filter="url(#rae-glow)"/>
+        rx="1.5" fill="#8b5cf6" opacity="0.85" filter="url(#rae-glow)"/>
   <!-- Emoji -->
   <text x="34" y="24" dominant-baseline="middle"
-        font-family="'Segoe UI', Ubuntu, Arial, sans-serif" font-size="15">❗</text>
+        font-family="'Segoe UI', Ubuntu, Arial, sans-serif" font-size="15">🗑️</text>
   <!-- Event text -->
   <text x="56" y="24" dominant-baseline="middle"
-        font-family="'Segoe UI', Ubuntu, Arial, sans-serif" font-size="12.5" fill="#e2e8f0">Opened issue #138 in `chaoscommencer/chaoscommencer` — Scheduled Cron Job Triggerring Files</text>
+        font-family="'Segoe UI', Ubuntu, Arial, sans-serif" font-size="12.5" fill="#e2e8f0">Deleted branch `bot/deliver-profile-content-trigger-scheduled-2026-08-16_00-20-54` in `chaosco…</text>
   <!-- Arrow hint -->
   <text x="810" y="24" dominant-baseline="middle" text-anchor="middle"
-        font-family="'Segoe UI', Ubuntu, Arial, sans-serif" font-size="10" fill="#ef4444" opacity="0.55">↗</text>
+        font-family="'Segoe UI', Ubuntu, Arial, sans-serif" font-size="10" fill="#8b5cf6" opacity="0.55">↗</text>
 </svg>

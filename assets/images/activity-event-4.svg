@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 830 48" width="830" height="48"
-     overflow="visible">
+     viewBox="0 0 830 48" width="830" height="48">
   <defs>
     <linearGradient id="rae-bg" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%"   stop-color="#0d1117"/>
@@ -27,26 +26,25 @@
   </defs>
   <!-- Full-width background (symmetric vertical gradient for seamless stacking) -->
   <rect width="830" height="48" fill="url(#rae-bg)"/>
-  <!-- Side gutter borders — extend 4px beyond viewBox top/bottom for seamless stacking -->
-  <path d="M1.5,-4 V52 M828.5,-4 V52"
-        fill="none" stroke="url(#rae-border)" stroke-width="1.5"
-        class="rae-border-glow" filter="url(#rae-glow)"/>
-  <path d="M1.5,-4 V52 M828.5,-4 V52"
-        fill="none" stroke="url(#rae-border)" stroke-width="0.5" opacity="0.7"/>
+  <!-- Side gutter borders — layered glow for seamless stacking -->
+  <path d="M1.5,0 V48 M828.5,0 V48" fill="none" stroke="url(#rae-border)" stroke-width="7" stroke-opacity="0.08" class="rae-border-glow"/>
+  <path d="M1.5,0 V48 M828.5,0 V48" fill="none" stroke="url(#rae-border)" stroke-width="4" stroke-opacity="0.15"/>
+  <path d="M1.5,0 V48 M828.5,0 V48" fill="none" stroke="url(#rae-border)" stroke-width="1.5" stroke-opacity="0.55" class="rae-border-glow"/>
+  <path d="M1.5,0 V48 M828.5,0 V48" fill="none" stroke="url(#rae-border)" stroke-width="0.5" stroke-opacity="0.7"/>
   <!-- Inner sub-card (the clickable region) -->
   <rect x="16" y="4" width="798" height="40"
         rx="8" fill="#0b0f1a"
-        stroke="#22c55e" stroke-width="0.5" stroke-opacity="0.35"/>
+        stroke="#a855f7" stroke-width="0.5" stroke-opacity="0.35"/>
   <!-- Neon accent bar inside sub-card -->
   <rect x="20" y="8" width="3" height="32"
-        rx="1.5" fill="#22c55e" opacity="0.85" filter="url(#rae-glow)"/>
+        rx="1.5" fill="#a855f7" opacity="0.85" filter="url(#rae-glow)"/>
   <!-- Emoji -->
   <text x="34" y="24" dominant-baseline="middle"
-        font-family="'Segoe UI', Ubuntu, Arial, sans-serif" font-size="15">✅</text>
+        font-family="'Segoe UI', Ubuntu, Arial, sans-serif" font-size="15">🎉</text>
   <!-- Event text -->
   <text x="56" y="24" dominant-baseline="middle"
-        font-family="'Segoe UI', Ubuntu, Arial, sans-serif" font-size="12.5" fill="#e2e8f0">Closed issue #129 in `chaoscommencer/chaoscommencer` — PRs Bug</text>
+        font-family="'Segoe UI', Ubuntu, Arial, sans-serif" font-size="12.5" fill="#e2e8f0">Opened PR #13 in `chaoscommencer/chaoscommencer`</text>
   <!-- Arrow hint -->
   <text x="810" y="24" dominant-baseline="middle" text-anchor="middle"
-        font-family="'Segoe UI', Ubuntu, Arial, sans-serif" font-size="10" fill="#22c55e" opacity="0.55">↗</text>
+        font-family="'Segoe UI', Ubuntu, Arial, sans-serif" font-size="10" fill="#a855f7" opacity="0.55">↗</text>
 </svg>
