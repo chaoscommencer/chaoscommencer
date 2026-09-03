@@ -55,11 +55,11 @@
 <!--START_SECTION:activity-->
 <div align="center">
   <img src="assets/images/activity-header.svg" alt="Recent Activity" width="100%" align="top">
-  <a href="https://github.com/chaoscommencer/chaoscommencer/issues/138"><img src="assets/images/activity-event-1.svg" alt="Opened issue #138 in `chaoscommencer/chaoscommencer` — Scheduled Cron Job Triggerring Files" width="100%" align="top"></a>
-  <a href="https://github.com/chaoscommencer/chaoscommencer"><img src="assets/images/activity-event-2.svg" alt="Deleted branch `copilot/fix-pr-count-display-issue` in `chaoscommencer/chaoscommencer`" width="100%" align="top"></a>
-  <a href="https://github.com/chaoscommencer/chaoscommencer"><img src="assets/images/activity-event-3.svg" alt="Pushed 1 commit to `chaoscommencer/chaoscommencer` on `main`" width="100%" align="top"></a>
-  <a href="https://github.com/chaoscommencer/chaoscommencer/issues/129"><img src="assets/images/activity-event-4.svg" alt="Closed issue #129 in `chaoscommencer/chaoscommencer` — PRs Bug" width="100%" align="top"></a>
-  <a href="https://github.com/chaoscommencer/chaoscommencer/pull/130"><img src="assets/images/activity-event-5.svg" alt="Reviewed PR #130 in `chaoscommencer/chaoscommencer` — fix: use REST search API for accurate PR count across user&#x27;s repositories" width="100%" align="top"></a>
+  <a href="https://github.com/chaoscommencer/chaoscommencer"><img src="assets/images/activity-event-1.svg" alt="Deleted branch `bot/deliver-profile-content-trigger-scheduled-2026-08-16_00-20-54` in `chaoscommencer/chaoscommencer`" width="100%" align="top"></a>
+  <a href="https://github.com/chaoscommencer/chaoscommencer"><img src="assets/images/activity-event-2.svg" alt="Pushed 1 commit to `chaoscommencer/chaoscommencer` on `main`" width="100%" align="top"></a>
+  <a href="https://github.com/chaoscommencer/chaoscommencer/pull/13"><img src="assets/images/activity-event-3.svg" alt="Reviewed PR #13 in `chaoscommencer/chaoscommencer` — chore: deliver profile README and assets" width="100%" align="top"></a>
+  <a href="https://github.com/chaoscommencer/chaoscommencer/pull/13"><img src="assets/images/activity-event-4.svg" alt="Opened PR #13 in `chaoscommencer/chaoscommencer`" width="100%" align="top"></a>
+  <a href="https://github.com/chaoscommencer/chaoscommencer/tree/bot/deliver-profile-content-trigger-scheduled-2026-08-16_00-20-54"><img src="assets/images/activity-event-5.svg" alt="Created branch `bot/deliver-profile-content-trigger-scheduled-2026-08-16_00-20-54` in `chaoscommencer/chaoscommencer`" width="100%" align="top"></a>
   <img src="assets/images/activity-footer.svg" alt="" width="100%">
 </div>
 <!--END_SECTION:activity-->
