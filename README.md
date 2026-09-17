@@ -75,3 +75,18 @@
   <img src="assets/images/lets-connect-footer.svg" alt="" width="100%">
 </div>
 <!--END_SECTION:lets-connect-->
+
+---
+
+## Licensing
+
+Everything in this repository is my own work — © 2026 David Chamberlain, all
+rights reserved. No third-party code, artwork, or text is included.
+
+This work is not open source. No permission is granted to use, copy, modify,
+distribute, or reuse any part of it — the generator scripts, the workflows,
+the SVG artwork, or this text. See
+[LICENSE](https://github.com/chaoscommencer/GitHub-Profile-README/blob/main/LICENSE)
+for the full terms.
+
+If you would like to use something here, [ask me first](https://github.com/chaoscommencer).
