@@ -22,9 +22,13 @@
       <feGaussianBlur stdDeviation="2.5" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <clipPath id="tower-clipl">
-      <rect x="1.5" y="1.5" width="797" height="250" rx="14" ry="14"/>
+    <clipPath id="wd-scene-clip-l">
+      <rect x="2.25" y="2.25" width="795.5" height="248.5" rx="13.25" ry="13.25"/>
     </clipPath>
+    <clipPath id="wd-sill-clip-l">
+      <rect x="0" y="0" width="800" height="160"/>
+    </clipPath>
+    <image id="wd-s0l" width="10" height="10" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAJ0lEQVR42mNggAL5rdf+M6CD+s//EYIgFSCBL1++gGkUHSgqsZkJAML1HED/+3T3AAAAAElFTkSuQmCC"/>
     <style>
       /* ── container border pulse (cyclic) ── */
       @keyframes border-pulse-l {
@@ -119,6 +123,362 @@
         transform-box: fill-box;
         transform-origin: right center;
       }
+      /* ── wizard duel (issue #542): one shared loop (cyclic) ── */
+      @keyframes wd-st-r-l {
+        0.000% { fill: #c9d0dd; }
+        18.182% { fill: #ffe14d; }
+        18.818% { fill: #c9d0dd; }
+        19.455% { fill: #ffe14d; }
+        20.091% { fill: #c9d0dd; }
+        20.727% { fill: #ffe14d; }
+        21.364% { fill: #c9d0dd; }
+        22.000% { fill: #ffe14d; }
+        22.636% { fill: #c9d0dd; }
+        100.000% { fill: #c9d0dd; }
+      }
+      .wd-st-r-l { animation: wd-st-r-l 11s step-end infinite; }
+      @keyframes wd-sp-r-l {
+        0.000% { fill: #651009; }
+        18.182% { fill: #f2a900; }
+        18.818% { fill: #651009; }
+        19.455% { fill: #f2a900; }
+        20.091% { fill: #651009; }
+        20.727% { fill: #f2a900; }
+        21.364% { fill: #651009; }
+        22.000% { fill: #f2a900; }
+        22.636% { fill: #651009; }
+        100.000% { fill: #651009; }
+      }
+      .wd-sp-r-l { animation: wd-sp-r-l 11s step-end infinite; }
+      @keyframes wd-ln-r-l {
+        0.000% { fill: #aab4c7; }
+        18.182% { fill: #b07d00; }
+        18.818% { fill: #aab4c7; }
+        19.455% { fill: #b07d00; }
+        20.091% { fill: #aab4c7; }
+        20.727% { fill: #b07d00; }
+        21.364% { fill: #aab4c7; }
+        22.000% { fill: #b07d00; }
+        22.636% { fill: #aab4c7; }
+        100.000% { fill: #aab4c7; }
+      }
+      .wd-ln-r-l { animation: wd-ln-r-l 11s step-end infinite; }
+      @keyframes wd-shake-r-l {
+        0.000% { transform: translate(0px,0px); }
+        18.182% { transform: translate(3px,1px); }
+        18.636% { transform: translate(-3px,-1px); }
+        19.091% { transform: translate(3px,0px); }
+        19.545% { transform: translate(-2px,1px); }
+        20.000% { transform: translate(2px,-1px); }
+        20.455% { transform: translate(-1px,0px); }
+        20.909% { transform: translate(1px,0px); }
+        21.364% { transform: translate(0px,0px); }
+        100.000% { transform: translate(0px,0px); }
+      }
+      .wd-shake-r-l { animation: wd-shake-r-l 11s step-end infinite; }
+      @keyframes wd-st-l-l {
+        0.000% { fill: #c9d0dd; }
+        70.869% { fill: #ff8a3c; }
+        71.506% { fill: #c9d0dd; }
+        72.142% { fill: #ff8a3c; }
+        72.779% { fill: #c9d0dd; }
+        73.415% { fill: #ff8a3c; }
+        74.051% { fill: #c9d0dd; }
+        74.688% { fill: #ff8a3c; }
+        75.324% { fill: #c9d0dd; }
+        100.000% { fill: #c9d0dd; }
+      }
+      .wd-st-l-l { animation: wd-st-l-l 11s step-end infinite; }
+      @keyframes wd-sp-l-l {
+        0.000% { fill: #1b2f6b; }
+        70.869% { fill: #ffd23f; }
+        71.506% { fill: #1b2f6b; }
+        72.142% { fill: #ffd23f; }
+        72.779% { fill: #1b2f6b; }
+        73.415% { fill: #ffd23f; }
+        74.051% { fill: #1b2f6b; }
+        74.688% { fill: #ffd23f; }
+        75.324% { fill: #1b2f6b; }
+        100.000% { fill: #1b2f6b; }
+      }
+      .wd-sp-l-l { animation: wd-sp-l-l 11s step-end infinite; }
+      @keyframes wd-ln-l-l {
+        0.000% { fill: #aab4c7; }
+        70.869% { fill: #d6361f; }
+        71.506% { fill: #aab4c7; }
+        72.142% { fill: #d6361f; }
+        72.779% { fill: #aab4c7; }
+        73.415% { fill: #d6361f; }
+        74.051% { fill: #aab4c7; }
+        74.688% { fill: #d6361f; }
+        75.324% { fill: #aab4c7; }
+        100.000% { fill: #aab4c7; }
+      }
+      .wd-ln-l-l { animation: wd-ln-l-l 11s step-end infinite; }
+      @keyframes wd-shake-l-l {
+        0.000% { transform: translate(0px,0px); }
+        70.869% { transform: translate(3px,1px); }
+        71.324% { transform: translate(-3px,-1px); }
+        71.779% { transform: translate(3px,0px); }
+        72.233% { transform: translate(-2px,1px); }
+        72.688% { transform: translate(2px,-1px); }
+        73.142% { transform: translate(-1px,0px); }
+        73.597% { transform: translate(1px,0px); }
+        74.051% { transform: translate(0px,0px); }
+        100.000% { transform: translate(0px,0px); }
+      }
+      .wd-shake-l-l { animation: wd-shake-l-l 11s step-end infinite; }
+      @keyframes wd-blue-l {
+        0.000% { transform: translate(0px,46px) rotate(0deg); }
+        3.636% { transform: translate(0px,46px) rotate(0deg); animation-timing-function: ease-out; }
+        6.818% { transform: translate(0px,0px) rotate(0deg); animation-timing-function: ease-in-out; }
+        9.545% { transform: translate(4px,0px) rotate(20deg); }
+        25.909% { transform: translate(4px,0px) rotate(20deg); animation-timing-function: ease-in-out; }
+        28.182% { transform: translate(0px,0px) rotate(0deg); animation-timing-function: ease-in; }
+        31.364% { transform: translate(0px,46px) rotate(0deg); }
+        100.000% { transform: translate(0px,46px) rotate(0deg); }
+      }
+      .wd-blue-l { animation: wd-blue-l 11s linear infinite; }
+      @keyframes wd-blue-rest-l {
+        0.000% { opacity: 1; }
+        10.455% { opacity: 0; }
+        25.000% { opacity: 1; }
+        100.000% { opacity: 1; }
+      }
+      .wd-blue-rest-l { animation: wd-blue-rest-l 11s step-end infinite; }
+      @keyframes wd-blue-cast-l {
+        0.000% { opacity: 0; }
+        10.455% { opacity: 1; }
+        25.000% { opacity: 0; }
+        100.000% { opacity: 0; }
+      }
+      .wd-blue-cast-l { animation: wd-blue-cast-l 11s step-end infinite; }
+      @keyframes wd-red-l {
+        0.000% { transform: translate(0px,46px) rotate(0deg); }
+        38.182% { transform: translate(0px,46px) rotate(0deg); animation-timing-function: ease-out; }
+        41.364% { transform: translate(0px,0px) rotate(0deg); animation-timing-function: ease-in-out; }
+        44.545% { transform: translate(-4px,0px) rotate(-28deg); }
+        73.597% { transform: translate(-4px,0px) rotate(-28deg); animation-timing-function: ease-in-out; }
+        75.869% { transform: translate(0px,0px) rotate(0deg); animation-timing-function: ease-in; }
+        79.051% { transform: translate(0px,46px) rotate(0deg); }
+        100.000% { transform: translate(0px,46px) rotate(0deg); }
+      }
+      .wd-red-l { animation: wd-red-l 11s linear infinite; }
+      @keyframes wd-red-rest-l {
+        0.000% { opacity: 1; }
+        45.455% { opacity: 0; }
+        51.818% { opacity: 1; }
+        100.000% { opacity: 1; }
+      }
+      .wd-red-rest-l { animation: wd-red-rest-l 11s step-end infinite; }
+      @keyframes wd-red-cast-l {
+        0.000% { opacity: 0; }
+        45.455% { opacity: 1; }
+        51.818% { opacity: 0; }
+        100.000% { opacity: 0; }
+      }
+      .wd-red-cast-l { animation: wd-red-cast-l 11s step-end infinite; }
+      @keyframes wd-gem-l {
+        0.000% { opacity: 0; }
+        10.455% { opacity: 1; }
+        11.364% { opacity: 0; }
+        12.273% { opacity: 1; }
+        13.182% { opacity: 0; }
+        14.091% { opacity: 1; }
+        15.000% { opacity: 0; }
+        15.909% { opacity: 1; }
+        16.818% { opacity: 0; }
+        17.727% { opacity: 1; }
+        18.636% { opacity: 0; }
+        19.545% { opacity: 1; }
+        20.455% { opacity: 0; }
+        21.364% { opacity: 1; }
+        22.273% { opacity: 0; }
+        23.182% { opacity: 1; }
+        24.091% { opacity: 0; }
+        100.000% { opacity: 0; }
+      }
+      .wd-gem-l { animation: wd-gem-l 11s step-end infinite; }
+      @keyframes wd-spark-0-l {
+        0.000% { opacity: 0; transform: translate(0px,0px); }
+        11.727% { opacity: 0; transform: translate(0px,0px); }
+        11.818% { opacity: 1; transform: translate(0px,0px); }
+        18.182% { opacity: 1; transform: translate(-4px,-36px); }
+        18.273% { opacity: 0; transform: translate(-4px,-36px); }
+        100.000% { opacity: 0; transform: translate(-4px,-36px); }
+      }
+      .wd-spark-0-l { animation: wd-spark-0-l 11s linear infinite; }
+      @keyframes wd-spark-1-l {
+        0.000% { opacity: 0; transform: translate(0px,0px); }
+        14.000% { opacity: 0; transform: translate(0px,0px); }
+        14.091% { opacity: 1; transform: translate(0px,0px); }
+        20.455% { opacity: 1; transform: translate(3px,-36px); }
+        20.545% { opacity: 0; transform: translate(3px,-36px); }
+        100.000% { opacity: 0; transform: translate(3px,-36px); }
+      }
+      .wd-spark-1-l { animation: wd-spark-1-l 11s linear infinite; }
+      @keyframes wd-spark-2-l {
+        0.000% { opacity: 0; transform: translate(0px,0px); }
+        16.273% { opacity: 0; transform: translate(0px,0px); }
+        16.364% { opacity: 1; transform: translate(0px,0px); }
+        22.727% { opacity: 1; transform: translate(-1px,-36px); }
+        22.818% { opacity: 0; transform: translate(-1px,-36px); }
+        100.000% { opacity: 0; transform: translate(-1px,-36px); }
+      }
+      .wd-spark-2-l { animation: wd-spark-2-l 11s linear infinite; }
+      @keyframes wd-flame-0-l {
+        0.000% { opacity: 0; }
+        46.364% { opacity: 1; }
+        47.091% { opacity: 0; }
+        47.818% { opacity: 1; }
+        48.545% { opacity: 0; }
+        100.000% { opacity: 0; }
+      }
+      .wd-flame-0-l { animation: wd-flame-0-l 11s step-end infinite; }
+      @keyframes wd-flame-1-l {
+        0.000% { opacity: 0; }
+        47.091% { opacity: 1; }
+        47.818% { opacity: 0; }
+        48.545% { opacity: 1; }
+        49.091% { opacity: 0; }
+        100.000% { opacity: 0; }
+      }
+      .wd-flame-1-l { animation: wd-flame-1-l 11s step-end infinite; }
+      @keyframes wd-bolt-0-l {
+        0.000% { opacity: 0; }
+        18.182% { opacity: 1; }
+        18.682% { opacity: 0; }
+        19.682% { opacity: 1; }
+        20.182% { opacity: 0; }
+        21.182% { opacity: 1; }
+        21.682% { opacity: 0; }
+        100.000% { opacity: 0; }
+      }
+      .wd-bolt-0-l { animation: wd-bolt-0-l 11s step-end infinite; }
+      @keyframes wd-bolt-1-l {
+        0.000% { opacity: 0; }
+        18.682% { opacity: 1; }
+        19.182% { opacity: 0; }
+        20.182% { opacity: 1; }
+        20.682% { opacity: 0; }
+        100.000% { opacity: 0; }
+      }
+      .wd-bolt-1-l { animation: wd-bolt-1-l 11s step-end infinite; }
+      @keyframes wd-cloud-lit-l {
+        0.000% { opacity: 0; }
+        18.182% { opacity: 1; }
+        19.182% { opacity: 0; }
+        19.682% { opacity: 1; }
+        20.682% { opacity: 0; }
+        21.182% { opacity: 1; }
+        21.682% { opacity: 0; }
+        100.000% { opacity: 0; }
+      }
+      .wd-cloud-lit-l { animation: wd-cloud-lit-l 11s step-end infinite; }
+      @keyframes wd-zap-l {
+        0.000% { opacity: 0; }
+        18.182% { opacity: 1; }
+        19.182% { opacity: 0; }
+        19.682% { opacity: 1; }
+        20.682% { opacity: 0; }
+        21.182% { opacity: 1; }
+        21.682% { opacity: 0; }
+        100.000% { opacity: 0; }
+      }
+      .wd-zap-l { animation: wd-zap-l 11s step-end infinite; }
+      @keyframes wd-cloud-l {
+        0.000% { transform: scale(0); }
+        12.273% { transform: scale(0.4); }
+        13.182% { transform: scale(0.7); }
+        14.091% { transform: scale(1); }
+        25.909% { transform: scale(0.7); }
+        26.818% { transform: scale(0.4); }
+        27.727% { transform: scale(0); }
+        100.000% { transform: scale(0); }
+      }
+      .wd-cloud-l { animation: wd-cloud-l 11s step-end infinite; }
+      @keyframes wd-fb-x-l {
+        0.000% { transform: translate(756.69px,0px); }
+        49.091% { transform: translate(756.69px,0px); }
+        70.869% { transform: translate(38px,0px); }
+        100.000% { transform: translate(38px,0px); }
+      }
+      .wd-fb-x-l { animation: wd-fb-x-l 11s linear infinite; }
+      @keyframes wd-fb-y-l {
+        0.000% { transform: translate(0px,146.68px); }
+        49.091% { transform: translate(0px,146.68px); animation-timing-function: cubic-bezier(0.33,0,0.67,0.33); }
+        51.813% { transform: translate(0px,241px); animation-timing-function: cubic-bezier(0.33,0.67,0.67,1); }
+        54.536% { transform: translate(0px,146.68px); animation-timing-function: cubic-bezier(0.33,0,0.67,0.33); }
+        57.258% { transform: translate(0px,241px); animation-timing-function: cubic-bezier(0.33,0.67,0.67,1); }
+        59.980% { transform: translate(0px,146.68px); animation-timing-function: cubic-bezier(0.33,0,0.67,0.33); }
+        62.703% { transform: translate(0px,241px); animation-timing-function: cubic-bezier(0.33,0.67,0.67,1); }
+        65.425% { transform: translate(0px,146.68px); animation-timing-function: cubic-bezier(0.33,0,0.67,0.33); }
+        68.147% { transform: translate(0px,241px); animation-timing-function: cubic-bezier(0.33,0.67,0.67,1); }
+        70.869% { transform: translate(0px,146.68px); }
+        100.000% { transform: translate(0px,146.68px); }
+      }
+      .wd-fb-y-l { animation: wd-fb-y-l 11s linear infinite; }
+      @keyframes wd-fb-l {
+        0.000% { opacity: 0; }
+        49.091% { opacity: 1; }
+        70.869% { opacity: 0; }
+        100.000% { opacity: 0; }
+      }
+      .wd-fb-l { animation: wd-fb-l 11s step-end infinite; }
+      @keyframes wd-fb-spin-l {
+        0.000% { transform: rotate(0deg); }
+        49.091% { transform: rotate(0deg); }
+        49.636% { transform: rotate(90deg); }
+        50.182% { transform: rotate(180deg); }
+        50.727% { transform: rotate(270deg); }
+        51.273% { transform: rotate(0deg); }
+        51.818% { transform: rotate(90deg); }
+        52.364% { transform: rotate(180deg); }
+        52.909% { transform: rotate(270deg); }
+        53.455% { transform: rotate(0deg); }
+        54.000% { transform: rotate(90deg); }
+        54.545% { transform: rotate(180deg); }
+        55.091% { transform: rotate(270deg); }
+        55.636% { transform: rotate(0deg); }
+        56.182% { transform: rotate(90deg); }
+        56.727% { transform: rotate(180deg); }
+        57.273% { transform: rotate(270deg); }
+        57.818% { transform: rotate(0deg); }
+        58.364% { transform: rotate(90deg); }
+        58.909% { transform: rotate(180deg); }
+        59.455% { transform: rotate(270deg); }
+        60.000% { transform: rotate(0deg); }
+        60.545% { transform: rotate(90deg); }
+        61.091% { transform: rotate(180deg); }
+        61.636% { transform: rotate(270deg); }
+        62.182% { transform: rotate(0deg); }
+        62.727% { transform: rotate(90deg); }
+        63.273% { transform: rotate(180deg); }
+        63.818% { transform: rotate(270deg); }
+        64.364% { transform: rotate(0deg); }
+        64.909% { transform: rotate(90deg); }
+        65.455% { transform: rotate(180deg); }
+        66.000% { transform: rotate(270deg); }
+        66.545% { transform: rotate(0deg); }
+        67.091% { transform: rotate(90deg); }
+        67.636% { transform: rotate(180deg); }
+        68.182% { transform: rotate(270deg); }
+        68.727% { transform: rotate(0deg); }
+        69.273% { transform: rotate(90deg); }
+        69.818% { transform: rotate(180deg); }
+        70.364% { transform: rotate(270deg); }
+        100.000% { transform: rotate(270deg); }
+      }
+      .wd-fb-spin-l { animation: wd-fb-spin-l 11s step-end infinite; }
+      @keyframes wd-boom-l {
+        0.000% { opacity: 0; transform: scale(0.5); }
+        70.869% { opacity: 1; transform: scale(0.5); }
+        71.597% { opacity: 1; transform: scale(1); }
+        72.506% { opacity: 1; transform: scale(1.3); }
+        73.597% { opacity: 0; transform: scale(1.3); }
+        100.000% { opacity: 0; transform: scale(1.3); }
+      }
+      .wd-boom-l { animation: wd-boom-l 11s step-end infinite; }
     </style>
     <mask id="card-mask-0l" maskContentUnits="userSpaceOnUse">
       <rect x="30" y="161" width="650" height="66" fill="white"/>
@@ -150,42 +510,126 @@
   <!-- Background -->
   <rect width="800" height="253" rx="14" ry="14" fill="url(#bg-grad-l)"/>
 
-  <!-- ── LEFT CASTLE TOWER bookend (right half visible) ── -->
-  <g clip-path="url(#tower-clipl)">
-  <rect x="-7" y="43" width="14" height="15" fill="#651009"/>
-  <rect x="-18" y="58" width="36" height="15" fill="#651009"/>
-  <rect x="-29" y="73" width="58" height="15" fill="#651009"/>
-  <rect x="-40" y="88" width="80" height="15" fill="#651009"/>
-  <rect x="-51" y="103" width="102" height="15" fill="#651009"/>
-  <rect x="-30" y="118" width="10" height="15" fill="#e5e9f2"/>
-  <rect x="-15" y="118" width="10" height="15" fill="#e5e9f2"/>
-  <rect x="0" y="118" width="10" height="15" fill="#e5e9f2"/>
-  <rect x="15" y="118" width="10" height="15" fill="#e5e9f2"/>
-  <rect x="-30" y="133" width="60" height="7" fill="#e5e9f2"/>
-  <rect x="-30" y="140" width="60" height="111" fill="#e5e9f2"/>
-  <rect x="-30" y="153" width="60" height="1" fill="#cdd4e2"/>
-  <rect x="-30" y="203" width="60" height="1" fill="#cdd4e2"/>
-  <rect x="-30" y="228" width="60" height="1" fill="#cdd4e2"/>
-  <rect x="10" y="160" width="10" height="32" fill="#f6f8fa"/>
+  <!-- ── WIZARD DUEL (issue #542), back layer: towers + spells, clipped inside the border ── -->
+  <g clip-path="url(#wd-scene-clip-l)">
+    <!-- LEFT CASTLE TOWER bookend (right half visible) -->
+    <g class="wd-shake-l-l">
+    <rect x="-7" y="43" width="14" height="15" fill="#1b2f6b" class="wd-sp-l-l"/>
+    <rect x="-18" y="58" width="36" height="15" fill="#1b2f6b" class="wd-sp-l-l"/>
+    <rect x="-29" y="73" width="58" height="15" fill="#1b2f6b" class="wd-sp-l-l"/>
+    <rect x="-40" y="88" width="80" height="15" fill="#1b2f6b" class="wd-sp-l-l"/>
+    <rect x="-51" y="103" width="102" height="15" fill="#1b2f6b" class="wd-sp-l-l"/>
+    <rect x="-30" y="118" width="60" height="139" fill="#c9d0dd" class="wd-st-l-l"/>
+    <rect x="-30" y="118" width="60" height="5" fill="#000000" fill-opacity="0.22"/>
+    <rect x="-30" y="123" width="60" height="5" fill="#000000" fill-opacity="0.1"/>
+    <rect x="-30" y="178" width="60" height="1" fill="#aab4c7" class="wd-ln-l-l"/>
+    <rect x="-30" y="203" width="60" height="1" fill="#aab4c7" class="wd-ln-l-l"/>
+    <rect x="-30" y="228" width="60" height="1" fill="#aab4c7" class="wd-ln-l-l"/>
+    <rect x="13" y="136" width="9" height="3" fill="#2d3348"/>
+    <rect x="10" y="139" width="15" height="21" fill="#2d3348"/>
+    </g>
+    <!-- RIGHT CASTLE TOWER bookend (left half visible) -->
+    <g class="wd-shake-r-l">
+    <rect x="793" y="43" width="14" height="15" fill="#651009" class="wd-sp-r-l"/>
+    <rect x="782" y="58" width="36" height="15" fill="#651009" class="wd-sp-r-l"/>
+    <rect x="771" y="73" width="58" height="15" fill="#651009" class="wd-sp-r-l"/>
+    <rect x="760" y="88" width="80" height="15" fill="#651009" class="wd-sp-r-l"/>
+    <rect x="749" y="103" width="102" height="15" fill="#651009" class="wd-sp-r-l"/>
+    <rect x="770" y="118" width="60" height="139" fill="#c9d0dd" class="wd-st-r-l"/>
+    <rect x="770" y="118" width="60" height="5" fill="#000000" fill-opacity="0.22"/>
+    <rect x="770" y="123" width="60" height="5" fill="#000000" fill-opacity="0.1"/>
+    <rect x="770" y="178" width="60" height="1" fill="#aab4c7" class="wd-ln-r-l"/>
+    <rect x="770" y="203" width="60" height="1" fill="#aab4c7" class="wd-ln-r-l"/>
+    <rect x="770" y="228" width="60" height="1" fill="#aab4c7" class="wd-ln-r-l"/>
+    <rect x="778" y="136" width="9" height="3" fill="#2d3348"/>
+    <rect x="775" y="139" width="15" height="21" fill="#2d3348"/>
+    </g>
+    <!-- Lightning: painted beneath the text so the copy always stays legible -->
+    <g image-rendering="optimizeSpeed" style="image-rendering:pixelated">
+      <g class="wd-bolt-0-l" opacity="0"><image x="736" y="22" width="32" height="66" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAhCAYAAADQ1StpAAAAV0lEQVR42mNggIL/h7j+//+24T+IZiAHwA2giiGDwxVD2yvUM2Ak2z6aGodbeIzmCzJtR9FMigHYNBJtCC7FRBuCL8AIGkKMLTjVkOJPrGpJjevBV4sDAHj5zmKz2OMAAAAAAElFTkSuQmCC"/></g>
+      <g class="wd-bolt-1-l" opacity="0"><image x="734" y="22" width="34" height="66" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAhCAYAAAA/F0BXAAAAUElEQVR42mNgQAL/D3H9//9tw38QzUAuoNgQuAFUMWRou4JqLhk1iMaGoGgmxxB026ljANmGgGiquIIcl2CzeZAnumGcp0YL8mFfkA/v2gAAewXCYKfu6dIAAAAASUVORK5CYII="/></g>
+      <g class="wd-zap-l" opacity="0"><image x="756" y="77" width="18" height="18" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAOklEQVR42mOoCmP4z4AEcPL/H+KCS+BiwwX+f9uAwOgKwIqQFUAxip0YpiCZhuJGvCYR7SaCviMmnADvUnxldGZ4DwAAAABJRU5ErkJggg=="/></g>
+      <g transform="translate(744,16)"><g class="wd-cloud-l" transform="scale(0)">
+        <image x="-30" y="-10" width="60" height="20" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAKCAYAAACjd+4vAAAAeElEQVR42mNgIAHYOgf9R8YMtADoFoDo7snL/2/edRqMQWxky6niKGRLYBbAxNAxshwuRxHtS2wWkIOJ8j2yhTBXU9MBBC2lFcawHGZpdnEr1S0DmYlsLorlIA5MAbrl2MTQ5bDJI8shY6y+xqWYWhhvPNMSo9sHANqdChgq10pxAAAAAElFTkSuQmCC"/>
+        <g class="wd-cloud-lit-l" opacity="0"><image x="-30" y="-10" width="60" height="20" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAKCAYAAACjd+4vAAAAdUlEQVR42mNgIAHYOgf9R8YMtADoFoDo/59X/IcDIBvZcqo4CsUSqAVwMTSMIofDUUT7EpsF5GCifI9iIdTV1HQAYUtphDEsh1n64EgU1S0DmYlsLorlIA5MAbrl2MTQ5bDJI8shY6y+xqWYWhhvPNMSo9sHALdrgjrW95V2AAAAAElFTkSuQmCC"/></g>
+      </g></g>
+    </g>
   </g>
 
-  <!-- ── RIGHT CASTLE TOWER bookend (left half visible) ── -->
-  <g clip-path="url(#tower-clipl)">
-  <rect x="793" y="43" width="14" height="15" fill="#651009"/>
-  <rect x="782" y="58" width="36" height="15" fill="#651009"/>
-  <rect x="771" y="73" width="58" height="15" fill="#651009"/>
-  <rect x="760" y="88" width="80" height="15" fill="#651009"/>
-  <rect x="749" y="103" width="102" height="15" fill="#651009"/>
-  <rect x="770" y="118" width="10" height="15" fill="#e5e9f2"/>
-  <rect x="785" y="118" width="10" height="15" fill="#e5e9f2"/>
-  <rect x="800" y="118" width="10" height="15" fill="#e5e9f2"/>
-  <rect x="815" y="118" width="10" height="15" fill="#e5e9f2"/>
-  <rect x="770" y="133" width="60" height="7" fill="#e5e9f2"/>
-  <rect x="770" y="140" width="60" height="111" fill="#e5e9f2"/>
-  <rect x="770" y="153" width="60" height="1" fill="#cdd4e2"/>
-  <rect x="770" y="203" width="60" height="1" fill="#cdd4e2"/>
-  <rect x="770" y="228" width="60" height="1" fill="#cdd4e2"/>
-  <rect x="780" y="160" width="10" height="32" fill="#f6f8fa"/>
+  <!-- ── PRINCIPLE CARDS (carousel: one at a time), boxes ── -->
+  <!-- (the boxes never overlap the title / quote / divider, so they can -->
+  <!--  go first and let the fireball bounce over them, under all text)  -->
+
+  <!-- Card 1: Clean Architecture (box) -->
+  <g class="card-vis-0l">
+    <g class="card-slide-0l" mask="url(#card-mask-0l)">
+      <g transform="translate(30,161)">
+        <rect width="740" height="66" rx="8" ry="8"
+              fill="#ffffff"
+              stroke="#0969da" stroke-width="0.8" stroke-opacity="0.35"/>
+        <rect width="4" height="66" rx="1.5" ry="1.5"
+              fill="#0969da" class="bar-l"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Card 2: SOLID (box) -->
+  <g class="card-vis-1l">
+    <g class="card-slide-1l" mask="url(#card-mask-1l)">
+      <g transform="translate(30,161)">
+        <rect width="740" height="66" rx="8" ry="8"
+              fill="#ffffff"
+              stroke="#1a7f37" stroke-width="0.8" stroke-opacity="0.35"/>
+        <rect width="4" height="66" rx="1.5" ry="1.5"
+              fill="#1a7f37" class="bar-l"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Card 3: Domain-Driven Design (box) -->
+  <g class="card-vis-2l">
+    <g class="card-slide-2l" mask="url(#card-mask-2l)">
+      <g transform="translate(30,161)">
+        <rect width="740" height="66" rx="8" ry="8"
+              fill="#ffffff"
+              stroke="#cf222e" stroke-width="0.8" stroke-opacity="0.35"/>
+        <rect width="4" height="66" rx="1.5" ry="1.5"
+              fill="#cf222e" class="bar-l"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Card 4: Code Readability (box) -->
+  <g class="card-vis-3l">
+    <g class="card-slide-3l" mask="url(#card-mask-3l)">
+      <g transform="translate(30,161)">
+        <rect width="740" height="66" rx="8" ry="8"
+              fill="#ffffff"
+              stroke="#8250df" stroke-width="0.8" stroke-opacity="0.35"/>
+        <rect width="4" height="66" rx="1.5" ry="1.5"
+              fill="#8250df" class="bar-l"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Card 5: Test-Driven Development (box) -->
+  <g class="card-vis-4l">
+    <g class="card-slide-4l" mask="url(#card-mask-4l)">
+      <g transform="translate(30,161)">
+        <rect width="740" height="66" rx="8" ry="8"
+              fill="#ffffff"
+              stroke="#bc4c00" stroke-width="0.8" stroke-opacity="0.35"/>
+        <rect width="4" height="66" rx="1.5" ry="1.5"
+              fill="#bc4c00" class="bar-l"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ── WIZARD DUEL (issue #542), fireball: over the card boxes, under all text ── -->
+  <g clip-path="url(#wd-scene-clip-l)">
+    <g image-rendering="optimizeSpeed" style="image-rendering:pixelated">
+      <g class="wd-fb-x-l" transform="translate(756.69,0)"><g class="wd-fb-y-l" transform="translate(0,146.68)"><g class="wd-fb-spin-l"><g class="wd-fb-l" opacity="0"><image x="-8" y="-8" width="16" height="16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAARElEQVR42mNggAIvHo7/yJgBGYAE/l+yh+AueTCGK4JLfjmEouCaGVQRim6cCkCCaJL9skJoCpAkURTA3IEsgSJJyJsAe91tX5rI7g8AAAAASUVORK5CYII="/></g></g></g></g>
+    </g>
   </g>
 
   <!-- ── SECTION TITLE ── -->
@@ -230,95 +674,101 @@
   <g class="div-lbl-l">
     <polygon points="293,137 299,141 293,145 287,141" fill="#8c959f"/>
     <text x="400" y="145" font-size="10" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
-          fill="#57606a" text-anchor="middle" letter-spacing="3">GUIDING PRINCIPLES</text>
+          fill="#57606a" text-anchor="middle" letter-spacing="3"
+          stroke="#f3f7fd" stroke-width="3" stroke-linejoin="round" paint-order="stroke">GUIDING PRINCIPLES</text>
     <polygon points="507,137 513,141 507,145 501,141" fill="#8c959f"/>
   </g>
 
-  <!-- ── PRINCIPLE CARDS (carousel: one at a time) ── -->
+  <!-- ── PRINCIPLE CARDS, text (same carousel animations as the boxes) ── -->
 
-  <!-- Card 1: Clean Architecture -->
+  <!-- Card 1: Clean Architecture (text) -->
   <g class="card-vis-0l">
     <g class="card-slide-0l" mask="url(#card-mask-0l)">
       <g transform="translate(30,161)">
-        <rect width="740" height="66" rx="8" ry="8"
-              fill="#ffffff"
-              stroke="#0969da" stroke-width="0.8" stroke-opacity="0.35"/>
-        <rect width="4" height="66" rx="1.5" ry="1.5"
-              fill="#0969da" class="bar-l"/>
         <text x="22" y="26" font-size="13" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
-              font-weight="600" fill="#1f2328">Clean Architecture</text>
+              font-weight="600" fill="#1f2328" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Clean Architecture</text>
         <text x="22" y="46" font-size="12" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
-              fill="#57606a">Enables effortless refactoring — swap infrastructure without touching business logic</text>
+              fill="#57606a" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Enables effortless refactoring — swap infrastructure without touching business logic</text>
       </g>
     </g>
   </g>
 
-  <!-- Card 2: SOLID -->
+  <!-- Card 2: SOLID (text) -->
   <g class="card-vis-1l">
     <g class="card-slide-1l" mask="url(#card-mask-1l)">
       <g transform="translate(30,161)">
-        <rect width="740" height="66" rx="8" ry="8"
-              fill="#ffffff"
-              stroke="#1a7f37" stroke-width="0.8" stroke-opacity="0.35"/>
-        <rect width="4" height="66" rx="1.5" ry="1.5"
-              fill="#1a7f37" class="bar-l"/>
         <text x="22" y="26" font-size="13" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
-              font-weight="600" fill="#1f2328">SOLID</text>
+              font-weight="600" fill="#1f2328" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">SOLID</text>
         <text x="22" y="46" font-size="12" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
-              fill="#57606a">Prevents brittle, tangled code that crumbles silently under change</text>
+              fill="#57606a" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Prevents brittle, tangled code that crumbles silently under change</text>
       </g>
     </g>
   </g>
 
-  <!-- Card 3: Domain-Driven Design -->
+  <!-- Card 3: Domain-Driven Design (text) -->
   <g class="card-vis-2l">
     <g class="card-slide-2l" mask="url(#card-mask-2l)">
       <g transform="translate(30,161)">
-        <rect width="740" height="66" rx="8" ry="8"
-              fill="#ffffff"
-              stroke="#cf222e" stroke-width="0.8" stroke-opacity="0.35"/>
-        <rect width="4" height="66" rx="1.5" ry="1.5"
-              fill="#cf222e" class="bar-l"/>
         <text x="22" y="26" font-size="13" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
-              font-weight="600" fill="#1f2328">Domain-Driven Design</text>
+              font-weight="600" fill="#1f2328" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Domain-Driven Design</text>
         <text x="22" y="46" font-size="12" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
-              fill="#57606a">Aligns the codebase with business reality through shared language and clear boundaries</text>
+              fill="#57606a" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Aligns the codebase with business reality through shared language and clear boundaries</text>
       </g>
     </g>
   </g>
 
-  <!-- Card 4: Code Readability -->
+  <!-- Card 4: Code Readability (text) -->
   <g class="card-vis-3l">
     <g class="card-slide-3l" mask="url(#card-mask-3l)">
       <g transform="translate(30,161)">
-        <rect width="740" height="66" rx="8" ry="8"
-              fill="#ffffff"
-              stroke="#8250df" stroke-width="0.8" stroke-opacity="0.35"/>
-        <rect width="4" height="66" rx="1.5" ry="1.5"
-              fill="#8250df" class="bar-l"/>
         <text x="22" y="26" font-size="13" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
-              font-weight="600" fill="#1f2328">Code Readability</text>
+              font-weight="600" fill="#1f2328" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Code Readability</text>
         <text x="22" y="46" font-size="12" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
-              fill="#57606a">Reduces cognitive overhead — enables the next engineer to reason about the code with confidence</text>
+              fill="#57606a" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Reduces cognitive overhead — enables the next engineer to reason about the code with confidence</text>
       </g>
     </g>
   </g>
 
-  <!-- Card 5: Test-Driven Development -->
+  <!-- Card 5: Test-Driven Development (text) -->
   <g class="card-vis-4l">
     <g class="card-slide-4l" mask="url(#card-mask-4l)">
       <g transform="translate(30,161)">
-        <rect width="740" height="66" rx="8" ry="8"
-              fill="#ffffff"
-              stroke="#bc4c00" stroke-width="0.8" stroke-opacity="0.35"/>
-        <rect width="4" height="66" rx="1.5" ry="1.5"
-              fill="#bc4c00" class="bar-l"/>
         <text x="22" y="26" font-size="13" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
-              font-weight="600" fill="#1f2328">Test-Driven Development</text>
+              font-weight="600" fill="#1f2328" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Test-Driven Development</text>
         <text x="22" y="46" font-size="12" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
-              fill="#57606a">Enhances interface design, and catches regressions before they reach production</text>
+              fill="#57606a" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Enhances interface design, and catches regressions before they reach production</text>
       </g>
     </g>
+  </g>
+
+  <!-- ── WIZARD DUEL (issue #542), front layer: wizards, sills + impact, clipped inside the border ── -->
+  <g clip-path="url(#wd-scene-clip-l)">
+    <!-- Wizards: clipped at the sill line so they rise from behind the wall -->
+    <g clip-path="url(#wd-sill-clip-l)" image-rendering="optimizeSpeed" style="image-rendering:pixelated">
+      <g transform="translate(17.5,160)"><g class="wd-blue-l" transform="translate(0,46)">
+        <g class="wd-blue-rest-l"><image x="-17" y="-42" width="34" height="50" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAZCAYAAADXPsWXAAAAx0lEQVR42mNgGAXc/Cr/KVIIEq///P8/QYNACvSjb2BVCDNEfus1/AbBDMmf/R+nQUQZgM+QWUkm/6NMxAkb8v+SPU6D8BqC7ApkjG4QSYbAXINuEFZDYAEla9VPEIPUEXTJp0MTMDBMHK9LCBmCbiBBQ758+QLGyBphYgRdgmwAPozTJcjJnJABIHUYhmBLofgMQA43eNpBNwSbi5DVEG0IskHYUjFGuOAyBKYYmwEYMYTPEORkTzVDYMmedoYQk/GQMyC6IQDnTUSPFeQZZwAAAABJRU5ErkJggg=="/></g>
+        <g class="wd-blue-cast-l" opacity="0"><image x="-17" y="-42" width="34" height="50" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAZCAYAAADXPsWXAAAA1klEQVR42mNgIANw86v8Z6AEgAyo//z/P9kGwQwAYfmt1ygziGgDcCmalWTyP8pEnDgD9KNvYLWNZEPyZ2MGIFGGwAzAZgiI/enQBDDGGyYwQ/5fsscwiChDkF2BjGEGwcIJ5CWivILsGphBeA0BSYCwrFU/QUyUS2B+RsYwcZhLyTIE3UCChnz58gWMkTXCxAi6BNkAfBhvwMJCnpABMJegpFpsKRSfAVgTGboh2FyErIZoQ5ANQk+AJBkC04CeBUg2BDnZU80QWLKnnSHEZDzkDIhuBgBGTzbnXY7HWwAAAABJRU5ErkJggg=="/>
+          <g class="wd-gem-l" opacity="0"><use href="#wd-s0l" x="5" y="-43"/></g>
+          <g class="wd-spark-0-l" opacity="0"><use href="#wd-s0l" x="5" y="-43"/></g>
+          <g class="wd-spark-1-l" opacity="0"><use href="#wd-s0l" x="5" y="-43"/></g>
+          <g class="wd-spark-2-l" opacity="0"><use href="#wd-s0l" x="5" y="-43"/></g></g>
+      </g></g>
+      <g transform="translate(782.5,160)"><g class="wd-red-l" transform="translate(0,46)">
+        <g class="wd-red-rest-l"><image x="-17" y="-42" width="34" height="50" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAZCAYAAADXPsWXAAAAo0lEQVR42mNgGAUUAW5+lf8gTJEBJwx0wJgsg0Ca/mf7U8cAig353yVPniHoriDZNTADasXF4a4gyhBYFII0EsIEoxsk+enQhP8wGh0T9A4ujSQZAjPIyysIjJE1w8SIcgks8GCakDGyPMGkjc0gbPIEDUE2CFkObwpGz2TY2EQZghw72FxG0BD0KCbLEOSQRwmDS/akGQJK0hg2D5ghpGCQHgB04KK3HWHmpAAAAABJRU5ErkJggg=="/></g>
+        <g class="wd-red-cast-l" opacity="0"><image x="-17" y="-42" width="34" height="50" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAZCAYAAADXPsWXAAAAqElEQVR42mNgGAUUAW5+lf8gTJEBJwx0wJgsg0Ca/mf7U8cAvIbg8yvMkP9d8rgNAQl+OjQBjNEVoLsCp2twGQIzoFZcHO4KvF6ChTzMWyCNhDDWIEA3COYymCuRMd4YghmETSPJhoBoL68gMEbWDBMjmFawGYSMkeUJJm1sBmGTJ2gIskHIcnhTMDZDYAqR+QSzAS6DBoch/y/ZE28ILMkPHkNIwSA9AN4fwU943EvGAAAAAElFTkSuQmCC"/>
+          <g class="wd-flame-0-l" opacity="0"><image x="-18" y="-32" width="10" height="12" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAGCAYAAAAL+1RLAAAANklEQVR42mNggIJrZvL/GZABSOB/l/x/FAmQwP9L9mAJFFUwQbBqsCBI4MshMA03AsSAYRAfAJHdMtiKz1pOAAAAAElFTkSuQmCC"/></g>
+          <g class="wd-flame-1-l" opacity="0"><image x="-18" y="-32" width="10" height="12" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAGCAYAAAAL+1RLAAAANklEQVR42mNgAIJrZvL/GbCB/13y/1EkQQL/L9n/B9EMMK1wQSAGqwYLggS+HEIIwlTDMIgPANlHMRZMA7DJAAAAAElFTkSuQmCC"/></g></g>
+      </g></g>
+    </g>
+    <!-- Window sills, over the wizards' waists (rumble with their towers) -->
+    <g class="wd-shake-l-l">
+    <rect x="7" y="160" width="21" height="3" fill="#aab4c7" class="wd-ln-l-l"/>
+    </g>
+    <g class="wd-shake-r-l">
+    <rect x="772" y="160" width="21" height="3" fill="#aab4c7" class="wd-ln-r-l"/>
+    </g>
+    <!-- Fireball impact burst on the left tower -->
+    <g transform="translate(30,146.68)" image-rendering="optimizeSpeed" style="image-rendering:pixelated"><g class="wd-boom-l" opacity="0"><image x="-9" y="-9" width="18" height="18" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAO0lEQVR42mO4Zib/nwEJ4OT/v2QPl8DFhgv8/3IIgdEVgBUhK4BiFDsxTEEyDcWNeE0i2k0EfUdMOAEAv8uDyR8e8dcAAAAASUVORK5CYII="/></g></g>
   </g>
 
   <!-- Pulsing gradient border (matching about-me.svg / currently.svg) -->
